@@ -1,0 +1,102 @@
+Editing pjse.coder.plugin.dll
+=============================
+
+Notes
+-----
+1) The pjse.coder.plugin.dll is in the Plugins sub-directory
+2) As all classes for a namespace MUST be in the same assembly (.dll) file, it is NOT possible to use the "pjse.BhavOperandWizards" namespace
+
+
+Actions
+-------
+1) BACK IT UP!!!
+
+2) De-compile it with Microsoft Visual Studio disassembler (from a cmd window run as administrator)
+
+d:
+cd "\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.plugin.dll_ORIGINAL /OUT=pjse.coder.plugin.il
+
+3) At the very top of the pjse.coder.plugin.il file, add a reference to the new whse.bhavoperandwizards.dll
+
+.assembly extern mscorlib
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 2:0:0:0
+}
+.assembly extern whse.bhavoperandwizards
+{
+  .ver 1:0:0:0
+}
+.assembly extern simpe.helper
+{
+  .ver 0:73:44:37511
+}
+
+4) Search for the "WizPrim" class you want to add a wizard to, eg WizPrim0x002a
+
+5) Insert the code to implement the virtual Wizard() method
+
+  } // end of method WizPrim0x002a::.ctor
+
+  .method public hidebysig virtual instance class pjse.ABhavOperandWiz 
+          Wizard() cil managed
+  {
+    // Code size       12 (0xc)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  ldfld      class SimPe.PackedFiles.Wrapper.Instruction pjse.BhavWiz::instruction
+    IL_0006:  newobj     instance void [whse.bhavoperandwizards]whse.BhavOperandWizards.BhavOperandWiz0x002a::.ctor(class SimPe.PackedFiles.Wrapper.Instruction)
+    IL_000b:  ret
+  } // end of method WizPrim0x002a::Wizard
+
+  .method family hidebysig virtual instance string 
+          Operands(bool lng) cil managed
+
+6) Save the edits
+
+7) Re-compile it with Microsoft Visual Studio assembler (from a cmd window run as administrator)
+
+d:
+cd "\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins"
+"C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" pjse.coder.plugin.il /RESOURCE=pjse.coder.plugin.res /DLL
+
+8) Copy the whse.bhavoperandwizards.dll into the Plugins sub-directory
+
+
+Creating a New Primitive Wizard
+===============================
+
+Must NOT use the "pjse.BhavOperandWizards" namespace!
+
+In the SimpePrimitiveWizards project
+Add a folder for the primitive
+Within that folder create the BhavOperandWiz class, eg
+
+using SimPe.PackedFiles.Wrapper;
+using whse.BhavOperandWizards.Wiz0x002a;
+
+namespace whse.BhavOperandWizards
+{
+    public class BhavOperandWiz0x002a : pjse.ABhavOperandWiz
+    {
+        public BhavOperandWiz0x002a(Instruction i) : base(i)
+        {
+            this.myForm = new UI();
+        }
+
+        public override void Dispose()
+        {
+            if (this.myForm != null)
+            {
+                // Clean up as necessary
+
+                this.myForm = null;
+            }
+        }
+    }
+}
+
+And create the associate UI class
+
+
