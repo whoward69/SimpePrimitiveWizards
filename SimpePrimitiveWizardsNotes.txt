@@ -13,8 +13,8 @@ Actions
 
 2) De-compile it with Microsoft Visual Studio disassembler (from a cmd window run as administrator)
 
-d:
-cd "\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins"
+c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\PjseCoderPlugin"
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.plugin.dll_ORIGINAL /OUT=pjse.coder.plugin.il
 
 3) At the very top of the pjse.coder.plugin.il file, add a reference to the new whse.bhavoperandwizards.dll
@@ -57,8 +57,8 @@ cd "\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins"
 
 7) Re-compile it with Microsoft Visual Studio assembler (from a cmd window run as administrator)
 
-d:
-cd "\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins"
+c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\PjseCoderPlugin"
 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" pjse.coder.plugin.il /RESOURCE=pjse.coder.plugin.res /DLL
 
 8) Copy the whse.bhavoperandwizards.dll into the Plugins sub-directory
