@@ -3,6 +3,7 @@ using whse.BhavOperandWizards.Wiz0x002a;
 
 namespace whse.BhavOperandWizards
 {
+    // 0x002A - Create New Object Instance (CNOI)
     public class BhavOperandWiz0x002a : pjse.ABhavOperandWiz
     {
         public BhavOperandWiz0x002a(Instruction i) : base(i)

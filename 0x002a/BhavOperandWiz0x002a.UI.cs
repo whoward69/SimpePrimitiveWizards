@@ -3,7 +3,11 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-// See https://modthesims.info/wiki.php?title=0x002A
+/*
+ * 0x002A - Create New Object Instance (CNOI)
+ * 
+ * See https://modthesims.info/wiki.php?title=0x002A
+ */
 namespace whse.BhavOperandWizards.Wiz0x002a
 {
     public partial class UI : UserControl, pjse.iBhavOperandWizForm
