@@ -14,17 +14,22 @@ Actions
 2) De-compile it with Microsoft Visual Studio disassembler (from a cmd window run as administrator)
 
 c:
-cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\PjseCoderPlugin"
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_73_44-QA\PjseCoderPlugin"
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.plugin.dll_ORIGINAL /OUT=pjse.coder.plugin.il
 
-3) At the very top of the pjse.coder.plugin.il file, add a reference to the new whse.bhavoperandwizards.dll
+c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_77_69\PjseCoder"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.dll_ORIGINAL /OUT=pjse.coder.il
+
+
+3) At the very top of the pjse.coder.plugin.il file, add a reference to the new whse.primitivewizards.dll
 
 .assembly extern mscorlib
 {
   .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
   .ver 2:0:0:0
 }
-.assembly extern whse.bhavoperandwizards
+.assembly extern whse.primitivewizards
 {
   .ver 1:0:0:0
 }
@@ -46,7 +51,7 @@ cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\Pjs
     .maxstack  8
     IL_0000:  ldarg.0
     IL_0001:  ldfld      class SimPe.PackedFiles.Wrapper.Instruction pjse.BhavWiz::instruction
-    IL_0006:  newobj     instance void [whse.bhavoperandwizards]whse.BhavOperandWizards.BhavOperandWiz0x002a::.ctor(class SimPe.PackedFiles.Wrapper.Instruction)
+    IL_0006:  newobj     instance void [whse.primitivewizards]whse.PrimitiveWizards.BhavOperandWiz0x002a::.ctor(class SimPe.PackedFiles.Wrapper.Instruction)
     IL_000b:  ret
   } // end of method WizPrim0x002a::Wizard
 
@@ -58,10 +63,14 @@ cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\Pjs
 7) Re-compile it with Microsoft Visual Studio assembler (from a cmd window run as administrator)
 
 c:
-cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\PjseCoderPlugin"
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_73_44-QA\PjseCoderPlugin"
 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" pjse.coder.plugin.il /RESOURCE=pjse.coder.plugin.res /DLL
 
-8) Copy the whse.bhavoperandwizards.dll into the Plugins sub-directory
+c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_77_69\PjseCoder"
+"C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" pjse.coder.il /RESOURCE=pjse.coder.res /DLL
+
+8) Copy the whse.primitivewizards.dll into the Plugins sub-directory
 
 
 Creating a New Primitive Wizard
@@ -74,9 +83,9 @@ Add a folder for the primitive
 Within that folder create the BhavOperandWiz class, eg
 
 using SimPe.PackedFiles.Wrapper;
-using whse.BhavOperandWizards.Wiz0x002a;
+using whse.PrimitiveWizards.Wiz0x002a;
 
-namespace whse.BhavOperandWizards
+namespace whse.PrimitiveWizards
 {
     public class BhavOperandWiz0x002a : pjse.ABhavOperandWiz
     {
