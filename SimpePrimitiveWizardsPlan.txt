@@ -1,33 +1,41 @@
+Total Primitives:	60
+PJSE Wizards:		16 (27%)
+WHSE Wizards:		11 (18%)
+Total Wizards:		27 (45%)
+
 Primitives WITHOUT Wizards WITH Operand Table (33)
 =============================================
-  Group 1 - Should Have (12)
+  Group 1a - Should Have (11)
   ---------------------
-	0x000B	Get Distance To
+	0x000B	Distance
 	0x000D	Push Interaction
 	0x0012	Remove Object Instance
 	0x001D	Set Motive Change
 	0x002A	Create New Object Instance
 	0x002E	Snap
-	0x006C	Animate Stop
 	0x0071	Snap Into
 	0x0074	Reach/Put
 	0x0077	Message
 	0x0079	Change Outfit
 	0x007E	LUA
 
-  Group 2 - Nice To Have (11)
+  Group 1b - Should Have (3)
+  ---------------------
+	0x006C	Animate Stop
+	0x0070	Effect Stop/Start
+	0x007A	On Timer
+
+  Group 2 - Nice To Have (9)
   ----------------------
 	0x0007	Refresh
-	0x000C	Get Direction To
+	0x000C	Direction
 	0x0011	Idle for Input
 	0x0016	Turn Body Towards
 	0x0023	Camera Control
 	0x006E	Look At
 	0x006F	Change Light
-	0x0070	Effect Stop/Start
 	0x0072	Assign Locomotion Animations
 	0x0078	RayTrace
-	0x007A	On Timer
 
   Group 3 - Unlikely To Have (10)
   --------------------------

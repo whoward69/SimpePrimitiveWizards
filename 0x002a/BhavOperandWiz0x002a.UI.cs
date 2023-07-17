@@ -1,4 +1,17 @@
-﻿using SimPe.PackedFiles.Wrapper;
+﻿/*
+ * SimpePrimitiveWizards - additional primitive wizards for SimPe
+ *                       - see https://www.picknmixmods.com/Sims2/Notes/SimpePrimitiveWizards/SimpePrimitiveWizards.html
+ *
+ * William Howard - 2023-2023
+ *
+ * Permission granted to use this code in any way, except to claim it as your own or sell it
+ *
+ * NOTE: Code should not be "using Simpe;" or "using pjse;" but fully qualifying classes in those high level namespaces
+ *
+ */
+
+using pjse.BhavOperandWizards;
+using SimPe.PackedFiles.Wrapper;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -13,6 +26,8 @@ namespace whse.BhavOperandWizards.Wiz0x002a
     public partial class UI : UserControl, pjse.iBhavOperandWizForm
     {
         private Instruction inst;
+
+        DataOwnerControl doLocal, doSlot;
 
         private bool internalchg;
 
@@ -29,39 +44,34 @@ namespace whse.BhavOperandWizards.Wiz0x002a
             wrappedByteArray operands = inst.Operands;
             wrappedByteArray reserved1 = inst.Reserved1;
 
+            Boolset boolset5 = (Boolset)operands[OperandConstants.Operand5];
+            Boolset boolset10 = (Boolset)reserved1[OperandConstants.Operand10];
+
             internalchg = true;
 
             // Operands 0 thru 3, the GUID
-            SetGUID((byte[])operands, 0, textGUID, lblGuid);
+            WizardHelpers.SetGUID((byte[])operands, 0, textGUID, lblGuid);
 
             // Operand 4, where to create the object
-            comboCreateWhere.SelectedIndex = operands[4];
+            comboCreateWhere.SelectedIndex = operands[OperandConstants.Operand4];
 
             // Operand 5, bit flags
-            comboCreateHow.SelectedIndex = (operands[5] & 0x03);
-            Boolset boolset5 = (Boolset)operands[5];
-            checkNidInSO.Checked = boolset5[2];
-            checkFailIfTileNonEmpty.Checked = boolset5[3];
-            checkPassT0ToMain.Checked = boolset5[4];
-            checkMyTempToken.Checked = boolset5[6];
-            checkTemps.Checked = boolset5[7];
+            comboCreateHow.SelectedIndex = (operands[OperandConstants.Operand5] & 0x03);
+            checkFailIfTileNonEmpty.Checked = boolset5[OperandConstants.Bit4];
+            checkPassT0ToMain.Checked = boolset5[OperandConstants.Bit5];
+            comboCreateWhat.SelectedIndex = (boolset5[OperandConstants.Bit8] ? 1 : (boolset5[OperandConstants.Bit7] ? 2 : (boolset5[OperandConstants.Bit3] ? 3 : 0)));
 
-            // Operands 6 and 9, local variable used when op4 is 0x08 or 0x09 or slot used when op4 is 0x04
-            if (operands[4] == 0x04)
-            {
-                textLocalOrSlot.Text = reserved1[1].ToString();
-            }
-            else
-            {
-                textLocalOrSlot.Text = operands[6].ToString();
-            }
+            // Operand 6, local variable used when op4 is 0x08 or 0x09
+            doLocal = WizardHelpers.CreateDataControl(inst, textLocal, checkDecimal, operands[OperandConstants.Operand6]);
 
             // Operands 7 thru 8 appear to be unused
 
+            // Operand 9, slot used when op4 is 0x04
+            doSlot = WizardHelpers.CreateDataControl(inst, textSlot, checkDecimal, reserved1[OperandConstants.Operand9]);
+
             // Operand 10, bit flags
-            Boolset boolset10 = (Boolset)reserved1[2];
-            checkMoveInSim.Checked = boolset10[0];
-            checkCopyMaterials.Checked = boolset10[1];
+            checkMoveInSim.Checked = boolset10[OperandConstants.Bit1];
+            checkCopyMaterials.Checked = boolset10[OperandConstants.Bit2];
 
             // Operands 11 thru 15 appear to be unused
 
@@ -78,43 +88,39 @@ namespace whse.BhavOperandWizards.Wiz0x002a
                 wrappedByteArray reserved1 = inst.Reserved1;
 
                 // Operands 0 thru 3
-                uint uint32 = Convert.ToUInt32(this.textGUID.Text, 16);
-                operands[0] = (byte)(uint32 & (uint)byte.MaxValue);
-                operands[1] = (byte)(uint32 >> 8 & (uint)byte.MaxValue);
-                operands[2] = (byte)(uint32 >> 16 & (uint)byte.MaxValue);
-                operands[3] = (byte)(uint32 >> 24 & (uint)byte.MaxValue);
+                uint uint32 = Convert.ToUInt32(textGUID.Text, 16);
+                operands[OperandConstants.Operand0] = (byte)(uint32 & (uint)byte.MaxValue);
+                operands[OperandConstants.Operand1] = (byte)(uint32 >> 8 & (uint)byte.MaxValue);
+                operands[OperandConstants.Operand2] = (byte)(uint32 >> 16 & (uint)byte.MaxValue);
+                operands[OperandConstants.Operand3] = (byte)(uint32 >> 24 & (uint)byte.MaxValue);
 
                 // Operand 4
-                operands[4] = (byte)comboCreateWhere.SelectedIndex;
+                operands[OperandConstants.Operand4] = (byte)comboCreateWhere.SelectedIndex;
 
                 // Operand 5
-                Boolset boolset5 = (Boolset)operands[5];
-                boolset5[0] = (comboCreateHow.SelectedIndex == 1);
-                boolset5[1] = (comboCreateHow.SelectedIndex == 2);
-                boolset5[2] = checkNidInSO.Checked;
-                boolset5[3] = checkFailIfTileNonEmpty.Checked;
-                boolset5[4] = checkPassT0ToMain.Checked;
-                boolset5[6] = checkMyTempToken.Checked;
-                boolset5[7] = checkTemps.Checked;
-                operands[5] = (byte)boolset5;
+                Boolset boolset5 = (Boolset)operands[OperandConstants.Operand5];
+                boolset5[OperandConstants.Bit1] = (comboCreateHow.SelectedIndex == 1);
+                boolset5[OperandConstants.Bit2] = (comboCreateHow.SelectedIndex == 2);
+                boolset5[OperandConstants.Bit3] = (comboCreateWhat.SelectedIndex == 3);
+                boolset5[OperandConstants.Bit4] = checkFailIfTileNonEmpty.Checked;
+                boolset5[OperandConstants.Bit5] = checkPassT0ToMain.Checked;
+                boolset5[OperandConstants.Bit7] = (comboCreateWhat.SelectedIndex == 2);
+                boolset5[OperandConstants.Bit8] = (comboCreateWhat.SelectedIndex == 1);
+                operands[OperandConstants.Operand5] = (byte)boolset5;
 
-                // Operand 6 or 9
-                if (operands[4] == 0x08 || operands[4] == 0x09)
-                {
-                    operands[6] = (byte)UInt16.Parse(textLocalOrSlot.Text);
-                }
-                else if (operands[4] == 0x04)
-                {
-                    reserved1[1] = (byte)UInt16.Parse(textLocalOrSlot.Text);
-                }
+                // Operand 6
+                operands[OperandConstants.Operand6] = (byte)doLocal.Value;
 
                 // Operands 7 thru 8 appear to be unused
 
+                // Operand 9
+                reserved1[OperandConstants.Operand9] = (byte)doSlot.Value;
+
                 // Operand 10
-                Boolset boolset10 = (Boolset)reserved1[2];
-                boolset10[0] = checkMoveInSim.Checked;
-                boolset10[1] = checkCopyMaterials.Checked;
-                reserved1[2] = (byte)boolset10;
+                Boolset boolset10 = (Boolset)reserved1[OperandConstants.Operand10];
+                boolset10[OperandConstants.Bit1] = checkMoveInSim.Checked;
+                boolset10[OperandConstants.Bit2] = checkCopyMaterials.Checked;
+                reserved1[OperandConstants.Operand10] = (byte)boolset10;
 
                 // Operands 11 thru 15 appear to be unused
             }
@@ -124,62 +130,28 @@ namespace whse.BhavOperandWizards.Wiz0x002a
 
         private void UpdatePanelState()
         {
-            textGUID.Enabled = lblGuid.Visible = !(checkTemps.Checked || checkMyTempToken.Checked || checkNidInSO.Checked);
+            textGUID.Visible = lblGuid.Visible = (comboCreateWhat.SelectedIndex == 0);
 
-            lblLocalOrSlot.Visible = textLocalOrSlot.Visible = (comboCreateWhere.SelectedIndex == 4 || comboCreateWhere.SelectedIndex == 8 || comboCreateWhere.SelectedIndex == 9);
-        }
-
-        private bool Hex32_IsValid(object sender)
-        {
-            try
-            {
-                int uint32 = (int)Convert.ToUInt32(((Control)sender).Text, 16);
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private bool Hex8_IsValid(object sender)
-        {
-            try
-            {
-                int uint16 = (int)Convert.ToUInt16(((Control)sender).Text, 16);
-
-                return (uint16 <= 0xFF);
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        private void SetGUID(byte[] o, int sub, TextBox textBox, Label label) => this.SetGUID((uint)((int)o[sub] | (int)o[sub + 1] << 8 | (int)o[sub + 2] << 16 | (int)o[sub + 3] << 24), textBox, label);
-
-        private void SetGUID(uint guid, TextBox textBox, Label label)
-        {
-            if (textBox != null) textBox.Text = "0x" + SimPe.Helper.HexString(guid);
-            if (label != null) label.Text = pjse.BhavWiz.FormatGUID(true, guid);
+            textLocal.Visible = (comboCreateWhere.SelectedIndex == 8 || comboCreateWhere.SelectedIndex == 9);
+            textSlot.Visible = (comboCreateWhere.SelectedIndex == 4);
         }
 
         private void OnGuidChanged(object sender, EventArgs e)
         {
-            if (!Hex32_IsValid(sender)) return;
+            if (!WizardHelpers.Hex32_IsValid(sender)) return;
 
-            this.SetGUID(Convert.ToUInt32(((Control)sender).Text, 16), null, lblGuid);
+            WizardHelpers.SetGUID(Convert.ToUInt32(((Control)sender).Text, 16), null, lblGuid);
         }
 
         private void OnGuidValidating(object sender, CancelEventArgs e)
         {
-            if (Hex32_IsValid(sender)) return;
+            if (WizardHelpers.Hex32_IsValid(sender)) return;
 
             bool internalchg = this.internalchg;
             this.internalchg = true;
 
             e.Cancel = true;
-            ((Control)sender).Text = "0x" + SimPe.Helper.HexString((int)inst.Operands[0] | (int)inst.Operands[1] << 8 | (int)inst.Operands[2] << 16 | (int)inst.Operands[3] << 24);
+            ((Control)sender).Text = "0x" + SimPe.Helper.HexString(inst.Operands[OperandConstants.Operand0] | inst.Operands[OperandConstants.Operand1] << 8 | inst.Operands[OperandConstants.Operand2] << 16 | inst.Operands[OperandConstants.Operand3] << 24);
             ((TextBoxBase)sender).SelectAll();
 
             this.internalchg = internalchg;
@@ -196,72 +168,9 @@ namespace whse.BhavOperandWizards.Wiz0x002a
             this.internalchg = internalchg;
         }
 
-        private void OnLocalValidating(object sender, CancelEventArgs e)
+        private void OnControlChanged(object sender, EventArgs e)
         {
-            if (Hex8_IsValid(sender)) return;
-
-            bool internalchg = this.internalchg;
-            this.internalchg = true;
-
-            e.Cancel = true;
-            byte operand = (comboCreateWhere.SelectedIndex == 0x04) ? inst.Reserved1[1] : inst.Operands[6];
-            ((Control)sender).Text = "0x" + SimPe.Helper.HexString(operand);
-            ((TextBoxBase)sender).SelectAll();
-
-            this.internalchg = internalchg;
-        }
-
-        private void OnLocalValidated(object sender, EventArgs e)
-        {
-            bool internalchg = this.internalchg;
-            this.internalchg = true;
-
-            ((Control)sender).Text = "0x" + SimPe.Helper.HexString((byte)Convert.ToUInt16(((Control)sender).Text, 16));
-            ((TextBoxBase)sender).SelectAll();
-
-            this.internalchg = internalchg;
-        }
-
-        private void OnCreateWhereChanged(object sender, EventArgs e)
-        {
-            if (comboCreateWhere.SelectedIndex == 0x08 || comboCreateWhere.SelectedIndex == 0x09)
-            {
-                textLocalOrSlot.Text = inst.Operands[6].ToString();
-            }
-            else if (comboCreateWhere.SelectedIndex == 0x04)
-            {
-                textLocalOrSlot.Text = inst.Reserved1[1].ToString();
-            }
-
-            UpdatePanelState();
-        }
-
-        private void OnUseT0Changed(object sender, EventArgs e)
-        {
-            if (checkTemps.Checked)
-            {
-                checkMyTempToken.Checked = checkNidInSO.Checked = false;
-            }
-
-            UpdatePanelState();
-        }
-
-        private void OnUseMyTokenChanged(object sender, EventArgs e)
-        {
-            if (checkMyTempToken.Checked)
-            {
-                checkTemps.Checked = checkNidInSO.Checked = false;
-            }
-
-            UpdatePanelState();
-        }
-
-        private void OnUseNidChanged(object sender, EventArgs e)
-        {
-            if (checkNidInSO.Checked)
-            {
-                checkMyTempToken.Checked = checkTemps.Checked = false;
-            }
+            if (internalchg) return;
 
             UpdatePanelState();
         }

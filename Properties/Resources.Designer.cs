@@ -59,5 +59,15 @@ namespace whse.BhavOperandWizards.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MinionWithNotebook {
+            get {
+                object obj = ResourceManager.GetObject("MinionWithNotebook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

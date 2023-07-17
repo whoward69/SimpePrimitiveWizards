@@ -60,12 +60,26 @@
     <Reference Include="pjse.coder.plugin">
       <HintPath>D:\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins\pjse.coder.plugin.dll</HintPath>
     </Reference>
+    <Reference Include="pjse.filetable.plugin, Version=4.0.3349.37572, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins\pjse.filetable.plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="pjse.localisation, Version=4.0.3349.37570, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins\pjse.localisation.dll</HintPath>
+    </Reference>
     <Reference Include="pjse.SystemClasses, Version=1.0.3349.37509, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Sims2 2020\Utilities\SimPe_0_73_44-QA\Plugins\pjse.SystemClasses.dll</HintPath>
     </Reference>
+    <Reference Include="simpe.commonhandler">
+      <HintPath>D:\Sims2 2020\Utilities\SimPe_0_73_44-QA\simpe.commonhandler.dll</HintPath>
+    </Reference>
     <Reference Include="simpe.helper">
       <HintPath>D:\Sims2 2020\Utilities\SimPe_0_73_44-QA\simpe.helper.dll</HintPath>
+    </Reference>
+    <Reference Include="simpe.interfaces">
+      <HintPath>D:\Sims2 2020\Utilities\SimPe_0_73_44-QA\simpe.interfaces.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -77,6 +91,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="0x000b\BhavOperandWiz0x000b.cs" />
+    <Compile Include="0x000b\BhavOperandWiz0x000b.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x000b\BhavOperandWiz0x000b.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x000b.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x000d\BhavOperandWiz0x000d.cs" />
+    <Compile Include="0x000d\BhavOperandWiz0x000d.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x000d\BhavOperandWiz0x000d.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x000d.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x0012\BhavOperandWiz0x0012.cs" />
+    <Compile Include="0x0012\BhavOperandWiz0x0012.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0012\BhavOperandWiz0x0012.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0012.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x001d\BhavOperandWiz0x001d.cs" />
+    <Compile Include="0x001d\BhavOperandWiz0x001d.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x001d\BhavOperandWiz0x001d.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x001d.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x002e\BhavOperandWiz0x002e.cs" />
+    <Compile Include="0x002e\BhavOperandWiz0x002e.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x002e\BhavOperandWiz0x002e.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x002e.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x0071\BhavOperandWiz0x0071.cs" />
+    <Compile Include="0x0071\BhavOperandWiz0x0071.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0071\BhavOperandWiz0x0071.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0071.UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="0x002a\BhavOperandWiz0x002a.cs" />
     <Compile Include="0x002a\BhavOperandWiz0x002a.UI.cs">
       <SubType>UserControl</SubType>
@@ -84,9 +140,69 @@
     <Compile Include="0x002a\BhavOperandWiz0x002a.UI.Designer.cs">
       <DependentUpon>BhavOperandWiz0x002a.UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="0x0074\BhavOperandWiz0x0074.cs" />
+    <Compile Include="0x0074\BhavOperandWiz0x0074.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0074\BhavOperandWiz0x0074.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0074.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x0077\BhavOperandWiz0x0077.cs" />
+    <Compile Include="0x0077\BhavOperandWiz0x0077.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0077\BhavOperandWiz0x0077.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0077.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x0079\BhavOperandWiz0x0079.cs" />
+    <Compile Include="0x0079\BhavOperandWiz0x0079.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0079\BhavOperandWiz0x0079.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0079.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x007e\BhavOperandWiz0x007e.cs" />
+    <Compile Include="0x007e\BhavOperandWiz0x007e.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x007e\BhavOperandWiz0x007e.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x007e.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\OperandConstants.cs" />
+    <Compile Include="Helpers\WizardHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="0x000b\BhavOperandWiz0x000b.UI.resx">
+      <DependentUpon>BhavOperandWiz0x000b.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x000d\BhavOperandWiz0x000d.UI.resx">
+      <DependentUpon>BhavOperandWiz0x000d.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x0012\BhavOperandWiz0x0012.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0012.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x001d\BhavOperandWiz0x001d.UI.resx">
+      <DependentUpon>BhavOperandWiz0x001d.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x002e\BhavOperandWiz0x002e.UI.resx">
+      <DependentUpon>BhavOperandWiz0x002e.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x0071\BhavOperandWiz0x0071.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0071.UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0x002a\BhavOperandWiz0x002a.UI.resx">
       <DependentUpon>BhavOperandWiz0x002a.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x0074\BhavOperandWiz0x0074.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0074.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x0077\BhavOperandWiz0x0077.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0077.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x0079\BhavOperandWiz0x0079.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0079.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x007e\BhavOperandWiz0x007e.UI.resx">
+      <DependentUpon>BhavOperandWiz0x007e.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,6 +224,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\MinionWithNotebook.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,16 @@
-﻿namespace whse.BhavOperandWizards.Wiz0x002a
+﻿/*
+ * SimpePrimitiveWizards - additional primitive wizards for SimPe
+ *                       - see https://www.picknmixmods.com/Sims2/Notes/SimpePrimitiveWizards/SimpePrimitiveWizards.html
+ *
+ * William Howard - 2023-2023
+ *
+ * Permission granted to use this code in any way, except to claim it as your own or sell it
+ *
+ * NOTE: Code should not be "using Simpe;" or "using pjse;" but fully qualifying classes in those high level namespaces
+ *
+ */
+
+namespace whse.BhavOperandWizards.Wiz0x002a
 {
     partial class UI
     {
@@ -28,16 +40,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.lblMoveInSim = new System.Windows.Forms.Label();
+            this.lblFailIfTileNonEmpty = new System.Windows.Forms.Label();
+            this.lblCopyMaterial = new System.Windows.Forms.Label();
+            this.lblPassToToMain = new System.Windows.Forms.Label();
+            this.comboCreateWhat = new System.Windows.Forms.ComboBox();
+            this.textSlot = new System.Windows.Forms.TextBox();
+            this.checkDecimal = new System.Windows.Forms.CheckBox();
+            this.iconPnM = new System.Windows.Forms.PictureBox();
             this.checkCopyMaterials = new System.Windows.Forms.CheckBox();
             this.checkMoveInSim = new System.Windows.Forms.CheckBox();
-            this.lblLocalOrSlot = new System.Windows.Forms.Label();
-            this.textLocalOrSlot = new System.Windows.Forms.TextBox();
-            this.checkTemps = new System.Windows.Forms.CheckBox();
-            this.checkMyTempToken = new System.Windows.Forms.CheckBox();
+            this.textLocal = new System.Windows.Forms.TextBox();
             this.checkPassT0ToMain = new System.Windows.Forms.CheckBox();
             this.checkFailIfTileNonEmpty = new System.Windows.Forms.CheckBox();
-            this.checkNidInSO = new System.Windows.Forms.CheckBox();
             this.comboCreateHow = new System.Windows.Forms.ComboBox();
             this.lblCreateHow = new System.Windows.Forms.Label();
             this.comboCreateWhere = new System.Windows.Forms.ComboBox();
@@ -45,20 +62,26 @@
             this.lblGuid = new System.Windows.Forms.Label();
             this.textGUID = new System.Windows.Forms.TextBox();
             this.lblCreateWhat = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.lblMoveInSim);
+            this.panelMain.Controls.Add(this.lblFailIfTileNonEmpty);
+            this.panelMain.Controls.Add(this.lblCopyMaterial);
+            this.panelMain.Controls.Add(this.lblPassToToMain);
+            this.panelMain.Controls.Add(this.comboCreateWhat);
+            this.panelMain.Controls.Add(this.textSlot);
+            this.panelMain.Controls.Add(this.checkDecimal);
+            this.panelMain.Controls.Add(this.iconPnM);
             this.panelMain.Controls.Add(this.checkCopyMaterials);
             this.panelMain.Controls.Add(this.checkMoveInSim);
-            this.panelMain.Controls.Add(this.lblLocalOrSlot);
-            this.panelMain.Controls.Add(this.textLocalOrSlot);
-            this.panelMain.Controls.Add(this.checkTemps);
-            this.panelMain.Controls.Add(this.checkMyTempToken);
+            this.panelMain.Controls.Add(this.textLocal);
             this.panelMain.Controls.Add(this.checkPassT0ToMain);
             this.panelMain.Controls.Add(this.checkFailIfTileNonEmpty);
-            this.panelMain.Controls.Add(this.checkNidInSO);
             this.panelMain.Controls.Add(this.comboCreateHow);
             this.panelMain.Controls.Add(this.lblCreateHow);
             this.panelMain.Controls.Add(this.comboCreateWhere);
@@ -68,99 +91,138 @@
             this.panelMain.Controls.Add(this.lblCreateWhat);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(400, 200);
+            this.panelMain.Size = new System.Drawing.Size(440, 195);
             this.panelMain.TabIndex = 0;
+            // 
+            // lblMoveInSim
+            // 
+            this.lblMoveInSim.AutoSize = true;
+            this.lblMoveInSim.Location = new System.Drawing.Point(25, 166);
+            this.lblMoveInSim.Name = "lblMoveInSim";
+            this.lblMoveInSim.Size = new System.Drawing.Size(69, 13);
+            this.lblMoveInSim.TabIndex = 39;
+            this.lblMoveInSim.Text = "Move In Sim:";
+            this.lblMoveInSim.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblMoveInSim, "Move in a new Sim");
+            // 
+            // lblFailIfTileNonEmpty
+            // 
+            this.lblFailIfTileNonEmpty.AutoSize = true;
+            this.lblFailIfTileNonEmpty.Location = new System.Drawing.Point(4, 146);
+            this.lblFailIfTileNonEmpty.Name = "lblFailIfTileNonEmpty";
+            this.lblFailIfTileNonEmpty.Size = new System.Drawing.Size(90, 13);
+            this.lblFailIfTileNonEmpty.TabIndex = 38;
+            this.lblFailIfTileNonEmpty.Text = "Fail If Non-Empty:";
+            this.lblFailIfTileNonEmpty.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblFailIfTileNonEmpty, "Fail if tile isn\'t empty");
+            // 
+            // lblCopyMaterial
+            // 
+            this.lblCopyMaterial.AutoSize = true;
+            this.lblCopyMaterial.Location = new System.Drawing.Point(15, 126);
+            this.lblCopyMaterial.Name = "lblCopyMaterial";
+            this.lblCopyMaterial.Size = new System.Drawing.Size(79, 13);
+            this.lblCopyMaterial.TabIndex = 37;
+            this.lblCopyMaterial.Text = "Copy Materials:";
+            this.lblCopyMaterial.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblCopyMaterial, "Copy materials from object in Temp 5");
+            // 
+            // lblPassToToMain
+            // 
+            this.lblPassToToMain.AutoSize = true;
+            this.lblPassToToMain.Location = new System.Drawing.Point(7, 106);
+            this.lblPassToToMain.Name = "lblPassToToMain";
+            this.lblPassToToMain.Size = new System.Drawing.Size(87, 13);
+            this.lblPassToToMain.TabIndex = 36;
+            this.lblPassToToMain.Text = "Pass T0 to Main:";
+            this.lblPassToToMain.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // comboCreateWhat
+            // 
+            this.comboCreateWhat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCreateWhat.FormattingEnabled = true;
+            this.comboCreateWhat.Items.AddRange(new object[] {
+            "Object of GUID",
+            "Object of GUID in T0/1",
+            "Object from My Temp Token",
+            "Sim from NID in SO"});
+            this.comboCreateWhat.Location = new System.Drawing.Point(100, 4);
+            this.comboCreateWhat.Name = "comboCreateWhat";
+            this.comboCreateWhat.Size = new System.Drawing.Size(200, 21);
+            this.comboCreateWhat.TabIndex = 35;
+            this.comboCreateWhat.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
+            // 
+            // textSlot
+            // 
+            this.textSlot.Location = new System.Drawing.Point(310, 52);
+            this.textSlot.Name = "textSlot";
+            this.textSlot.Size = new System.Drawing.Size(50, 20);
+            this.textSlot.TabIndex = 34;
+            // 
+            // checkDecimal
+            // 
+            this.checkDecimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkDecimal.AutoSize = true;
+            this.checkDecimal.Location = new System.Drawing.Point(254, 175);
+            this.checkDecimal.Name = "checkDecimal";
+            this.checkDecimal.Size = new System.Drawing.Size(140, 17);
+            this.checkDecimal.TabIndex = 32;
+            this.checkDecimal.Text = "Decimal (except Consts)";
+            this.checkDecimal.UseVisualStyleBackColor = true;
+            // 
+            // iconPnM
+            // 
+            this.iconPnM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconPnM.Image = global::whse.BhavOperandWizards.Properties.Resources.MinionWithNotebook;
+            this.iconPnM.Location = new System.Drawing.Point(400, 160);
+            this.iconPnM.Name = "iconPnM";
+            this.iconPnM.Size = new System.Drawing.Size(32, 32);
+            this.iconPnM.TabIndex = 16;
+            this.iconPnM.TabStop = false;
+            this.toolTip.SetToolTip(this.iconPnM, "Primitive wizard by Pick\'n\'Mix (whoward69)\r\nhttps://www.picknmixmods.com/Sims2/");
             // 
             // checkCopyMaterials
             // 
             this.checkCopyMaterials.AutoSize = true;
-            this.checkCopyMaterials.Location = new System.Drawing.Point(164, 169);
+            this.checkCopyMaterials.Location = new System.Drawing.Point(100, 126);
             this.checkCopyMaterials.Name = "checkCopyMaterials";
-            this.checkCopyMaterials.Size = new System.Drawing.Size(182, 17);
+            this.checkCopyMaterials.Size = new System.Drawing.Size(15, 14);
             this.checkCopyMaterials.TabIndex = 15;
-            this.checkCopyMaterials.Text = "Copy Materials From Object in T5";
             this.checkCopyMaterials.UseVisualStyleBackColor = true;
             // 
             // checkMoveInSim
             // 
             this.checkMoveInSim.AutoSize = true;
-            this.checkMoveInSim.Location = new System.Drawing.Point(16, 169);
+            this.checkMoveInSim.Location = new System.Drawing.Point(100, 166);
             this.checkMoveInSim.Name = "checkMoveInSim";
-            this.checkMoveInSim.Size = new System.Drawing.Size(120, 17);
+            this.checkMoveInSim.Size = new System.Drawing.Size(15, 14);
             this.checkMoveInSim.TabIndex = 14;
-            this.checkMoveInSim.Text = "Move In A New Sim";
             this.checkMoveInSim.UseVisualStyleBackColor = true;
             // 
-            // lblLocalOrSlot
+            // textLocal
             // 
-            this.lblLocalOrSlot.AutoSize = true;
-            this.lblLocalOrSlot.Location = new System.Drawing.Point(259, 91);
-            this.lblLocalOrSlot.Name = "lblLocalOrSlot";
-            this.lblLocalOrSlot.Size = new System.Drawing.Size(62, 13);
-            this.lblLocalOrSlot.TabIndex = 13;
-            this.lblLocalOrSlot.Text = "Local / Slot";
-            // 
-            // textLocalOrSlot
-            // 
-            this.textLocalOrSlot.Location = new System.Drawing.Point(327, 89);
-            this.textLocalOrSlot.Name = "textLocalOrSlot";
-            this.textLocalOrSlot.Size = new System.Drawing.Size(28, 20);
-            this.textLocalOrSlot.TabIndex = 12;
-            this.textLocalOrSlot.Validating += new System.ComponentModel.CancelEventHandler(this.OnLocalValidating);
-            this.textLocalOrSlot.Validated += new System.EventHandler(this.OnLocalValidated);
-            // 
-            // checkTemps
-            // 
-            this.checkTemps.AutoSize = true;
-            this.checkTemps.Location = new System.Drawing.Point(86, 54);
-            this.checkTemps.Name = "checkTemps";
-            this.checkTemps.Size = new System.Drawing.Size(72, 17);
-            this.checkTemps.TabIndex = 11;
-            this.checkTemps.Text = "Use T0/1";
-            this.checkTemps.UseVisualStyleBackColor = true;
-            this.checkTemps.CheckedChanged += new System.EventHandler(this.OnUseT0Changed);
-            // 
-            // checkMyTempToken
-            // 
-            this.checkMyTempToken.AutoSize = true;
-            this.checkMyTempToken.Location = new System.Drawing.Point(164, 55);
-            this.checkMyTempToken.Name = "checkMyTempToken";
-            this.checkMyTempToken.Size = new System.Drawing.Size(126, 17);
-            this.checkMyTempToken.TabIndex = 10;
-            this.checkMyTempToken.Text = "Use My Temp Token";
-            this.checkMyTempToken.UseVisualStyleBackColor = true;
-            this.checkMyTempToken.CheckedChanged += new System.EventHandler(this.OnUseMyTokenChanged);
+            this.textLocal.Location = new System.Drawing.Point(310, 52);
+            this.textLocal.Name = "textLocal";
+            this.textLocal.Size = new System.Drawing.Size(50, 20);
+            this.textLocal.TabIndex = 12;
             // 
             // checkPassT0ToMain
             // 
             this.checkPassT0ToMain.AutoSize = true;
-            this.checkPassT0ToMain.Location = new System.Drawing.Point(262, 132);
+            this.checkPassT0ToMain.Location = new System.Drawing.Point(100, 106);
             this.checkPassT0ToMain.Name = "checkPassT0ToMain";
-            this.checkPassT0ToMain.Size = new System.Drawing.Size(103, 17);
+            this.checkPassT0ToMain.Size = new System.Drawing.Size(15, 14);
             this.checkPassT0ToMain.TabIndex = 9;
-            this.checkPassT0ToMain.Text = "Pass T0 to Main";
             this.checkPassT0ToMain.UseVisualStyleBackColor = true;
             // 
             // checkFailIfTileNonEmpty
             // 
             this.checkFailIfTileNonEmpty.AutoSize = true;
-            this.checkFailIfTileNonEmpty.Location = new System.Drawing.Point(262, 14);
+            this.checkFailIfTileNonEmpty.Location = new System.Drawing.Point(100, 146);
             this.checkFailIfTileNonEmpty.Name = "checkFailIfTileNonEmpty";
-            this.checkFailIfTileNonEmpty.Size = new System.Drawing.Size(118, 17);
+            this.checkFailIfTileNonEmpty.Size = new System.Drawing.Size(15, 14);
             this.checkFailIfTileNonEmpty.TabIndex = 8;
-            this.checkFailIfTileNonEmpty.Text = "Fail if tile isn\'t empty";
             this.checkFailIfTileNonEmpty.UseVisualStyleBackColor = true;
-            // 
-            // checkNidInSO
-            // 
-            this.checkNidInSO.AutoSize = true;
-            this.checkNidInSO.Location = new System.Drawing.Point(296, 54);
-            this.checkNidInSO.Name = "checkNidInSO";
-            this.checkNidInSO.Size = new System.Drawing.Size(96, 17);
-            this.checkNidInSO.TabIndex = 7;
-            this.checkNidInSO.Text = "Use NID in SO";
-            this.checkNidInSO.UseVisualStyleBackColor = true;
-            this.checkNidInSO.CheckedChanged += new System.EventHandler(this.OnUseNidChanged);
             // 
             // comboCreateHow
             // 
@@ -170,19 +232,20 @@
             "Normally",
             "Do Not Duplicate",
             "Transfer SO to new"});
-            this.comboCreateHow.Location = new System.Drawing.Point(86, 128);
+            this.comboCreateHow.Location = new System.Drawing.Point(100, 79);
             this.comboCreateHow.Name = "comboCreateHow";
-            this.comboCreateHow.Size = new System.Drawing.Size(167, 21);
+            this.comboCreateHow.Size = new System.Drawing.Size(200, 21);
             this.comboCreateHow.TabIndex = 6;
             // 
             // lblCreateHow
             // 
             this.lblCreateHow.AutoSize = true;
-            this.lblCreateHow.Location = new System.Drawing.Point(13, 131);
+            this.lblCreateHow.Location = new System.Drawing.Point(28, 82);
             this.lblCreateHow.Name = "lblCreateHow";
-            this.lblCreateHow.Size = new System.Drawing.Size(63, 13);
+            this.lblCreateHow.Size = new System.Drawing.Size(66, 13);
             this.lblCreateHow.TabIndex = 5;
-            this.lblCreateHow.Text = "Create How";
+            this.lblCreateHow.Text = "Create How:";
+            this.lblCreateHow.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // comboCreateWhere
             // 
@@ -193,32 +256,33 @@
             "On Top of Me",
             "In My Hand",
             "In Front of SO",
-            "In SO\'s Slot op9",
+            "In SO\'s Slot",
             "Underneath Me",
             "Out-of-World",
             "Below Object in Param 0",
-            "Below Object in Local op6",
-            "Next to Me in dir of Object in Local op6",
-            "In User Defined Slot of Object in Temp 0"});
-            this.comboCreateWhere.Location = new System.Drawing.Point(86, 88);
+            "Below Object in Local",
+            "Next to Me in Dir of Object in Local",
+            "In User Defined Slot of Object in T0"});
+            this.comboCreateWhere.Location = new System.Drawing.Point(100, 52);
             this.comboCreateWhere.Name = "comboCreateWhere";
-            this.comboCreateWhere.Size = new System.Drawing.Size(167, 21);
+            this.comboCreateWhere.Size = new System.Drawing.Size(200, 21);
             this.comboCreateWhere.TabIndex = 4;
-            this.comboCreateWhere.SelectedIndexChanged += new System.EventHandler(this.OnCreateWhereChanged);
+            this.comboCreateWhere.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblCreateWhere
             // 
             this.lblCreateWhere.AutoSize = true;
-            this.lblCreateWhere.Location = new System.Drawing.Point(13, 91);
+            this.lblCreateWhere.Location = new System.Drawing.Point(18, 56);
             this.lblCreateWhere.Name = "lblCreateWhere";
-            this.lblCreateWhere.Size = new System.Drawing.Size(73, 13);
+            this.lblCreateWhere.Size = new System.Drawing.Size(76, 13);
             this.lblCreateWhere.TabIndex = 3;
-            this.lblCreateWhere.Text = "Create Where";
+            this.lblCreateWhere.Text = "Create Where:";
+            this.lblCreateWhere.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblGuid
             // 
             this.lblGuid.AutoSize = true;
-            this.lblGuid.Location = new System.Drawing.Point(83, 34);
+            this.lblGuid.Location = new System.Drawing.Point(100, 30);
             this.lblGuid.Name = "lblGuid";
             this.lblGuid.Size = new System.Drawing.Size(118, 13);
             this.lblGuid.TabIndex = 2;
@@ -226,9 +290,9 @@
             // 
             // textGUID
             // 
-            this.textGUID.Location = new System.Drawing.Point(86, 11);
+            this.textGUID.Location = new System.Drawing.Point(310, 4);
             this.textGUID.Name = "textGUID";
-            this.textGUID.Size = new System.Drawing.Size(167, 20);
+            this.textGUID.Size = new System.Drawing.Size(120, 20);
             this.textGUID.TabIndex = 1;
             this.textGUID.TextChanged += new System.EventHandler(this.OnGuidChanged);
             this.textGUID.Validating += new System.ComponentModel.CancelEventHandler(this.OnGuidValidating);
@@ -237,11 +301,12 @@
             // lblCreateWhat
             // 
             this.lblCreateWhat.AutoSize = true;
-            this.lblCreateWhat.Location = new System.Drawing.Point(13, 14);
+            this.lblCreateWhat.Location = new System.Drawing.Point(24, 7);
             this.lblCreateWhat.Name = "lblCreateWhat";
-            this.lblCreateWhat.Size = new System.Drawing.Size(67, 13);
+            this.lblCreateWhat.Size = new System.Drawing.Size(70, 13);
             this.lblCreateWhat.TabIndex = 0;
-            this.lblCreateWhat.Text = "Create What";
+            this.lblCreateWhat.Text = "Create What:";
+            this.lblCreateWhat.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // UI
             // 
@@ -249,9 +314,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
             this.Name = "UI";
-            this.Size = new System.Drawing.Size(400, 200);
+            this.Size = new System.Drawing.Size(440, 195);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,15 +331,20 @@
         private System.Windows.Forms.ComboBox comboCreateWhere;
         private System.Windows.Forms.Label lblCreateWhere;
         private System.Windows.Forms.CheckBox checkFailIfTileNonEmpty;
-        private System.Windows.Forms.CheckBox checkNidInSO;
         private System.Windows.Forms.ComboBox comboCreateHow;
         private System.Windows.Forms.Label lblCreateHow;
-        private System.Windows.Forms.CheckBox checkTemps;
-        private System.Windows.Forms.CheckBox checkMyTempToken;
         private System.Windows.Forms.CheckBox checkPassT0ToMain;
         private System.Windows.Forms.CheckBox checkCopyMaterials;
         private System.Windows.Forms.CheckBox checkMoveInSim;
-        private System.Windows.Forms.Label lblLocalOrSlot;
-        private System.Windows.Forms.TextBox textLocalOrSlot;
+        private System.Windows.Forms.TextBox textLocal;
+        private System.Windows.Forms.PictureBox iconPnM;
+        private System.Windows.Forms.CheckBox checkDecimal;
+        private System.Windows.Forms.TextBox textSlot;
+        private System.Windows.Forms.ComboBox comboCreateWhat;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label lblCopyMaterial;
+        private System.Windows.Forms.Label lblPassToToMain;
+        private System.Windows.Forms.Label lblMoveInSim;
+        private System.Windows.Forms.Label lblFailIfTileNonEmpty;
     }
 }

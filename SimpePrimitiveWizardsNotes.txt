@@ -100,3 +100,21 @@ namespace whse.BhavOperandWizards
 And create the associate UI class
 
 
+CHANGE
+======
+   IL_0042:  switch     ( 
+                          IL_0051,
+                          IL_007e)
+    IL_004f:  br.s       IL_00a0
+	
+TO
+==
+
+   IL_0042:  switch     ( 
+                          IL_0051,
+                          IL_00a0)
+    IL_004f:  br.s       IL_007e
+	
+
+To fix the mistake with the Reach / Put primitive's action (op10) description
+
