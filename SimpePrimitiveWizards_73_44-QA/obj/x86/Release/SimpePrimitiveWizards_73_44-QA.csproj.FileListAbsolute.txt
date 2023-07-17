@@ -1,12 +1,5 @@
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\whse.primitivewizards_0_73_44.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\whse.primitivewizards_0_73_44.pdb
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\pjse.coder.plugin.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\pjse.filetable.plugin.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\pjse.localisation.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\pjse.SystemClasses.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\simpe.commonhandler.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\simpe.helper.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\simpe.interfaces.dll
+C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\bin\x86\Release\whse.primitivewizards_0_73_44.dll
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\SimpePrimitiveWizards_73_44-QA.csproj.AssemblyReference.cache
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\whse.PrimitiveWizards.Wiz0x000b.UI.resources
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\whse.PrimitiveWizards.Wiz0x000d.UI.resources
@@ -22,6 +15,4 @@ C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\Simpe
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\whse.PrimitiveWizards.Properties.Resources.resources
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\SimpePrimitiveWizards_73_44-QA.csproj.GenerateResource.cache
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\SimpePrimitiveWizards_73_44-QA.csproj.CoreCompileInputs.cache
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\SimpePrimitiveWizards_73_44-QA.csproj.CopyComplete
 C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\whse.primitivewizards_0_73_44.dll
-C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\obj\x86\Release\whse.primitivewizards_0_73_44.pdb

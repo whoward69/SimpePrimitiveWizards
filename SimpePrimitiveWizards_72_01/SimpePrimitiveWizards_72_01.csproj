@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9BC6A8B-0317-4DD6-A787-855170A8A609}</ProjectGuid>
+    <ProjectGuid>{A9BC6A8B-0317-4DD6-A787-855170A8A60A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>whse.PrimitiveWizards</RootNamespace>
-    <AssemblyName>whse.primitivewizards_0_77_69</AssemblyName>
+    <AssemblyName>whse.primitivewizards_0_72_01</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -48,16 +48,33 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="pjse.coder">
-      <HintPath>..\SimPe_0_77_69\pjse.coder.dll</HintPath>
+    <Reference Include="pjse.coder.plugin, Version=4.0.3187.33888, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SimPe_0_72_01\pjse.coder.plugin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="pjse.filetable.plugin">
+      <HintPath>..\SimPe_0_72_01\pjse.filetable.plugin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="pjse.localisation">
+      <HintPath>..\SimPe_0_72_01\pjse.localisation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="pjse.SystemClasses">
+      <HintPath>..\SimPe_0_72_01\pjse.SystemClasses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="simpe.commonhandler">
+      <HintPath>..\SimPe_0_72_01\simpe.commonhandler.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="simpe.helper">
-      <HintPath>..\SimPe_0_77_69\simpe.helper.dll</HintPath>
+      <HintPath>..\SimPe_0_72_01\simpe.helper.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="simpe.interfaces">
-      <HintPath>..\SimPe_0_77_69\simpe.interfaces.dll</HintPath>
+      <HintPath>..\SimPe_0_72_01\simpe.interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -271,8 +288,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\SimPe_0_77_69\PjseCoder\pjse.coder.dll">
-      <Link>pjse.coder.dll</Link>
+    <Content Include="..\SimPe_0_72_01\PjseCoderPlugin\pjse.coder.plugin.dll">
+      <Link>pjse.coder.plugin.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -42,7 +42,7 @@
     <OutputPath>bin\x86\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
@@ -50,24 +50,31 @@
   <ItemGroup>
     <Reference Include="pjse.coder.plugin">
       <HintPath>..\SimPe_0_73_44-QA\pjse.coder.plugin.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="pjse.filetable.plugin">
       <HintPath>..\SimPe_0_73_44-QA\pjse.filetable.plugin.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="pjse.localisation">
       <HintPath>..\SimPe_0_73_44-QA\pjse.localisation.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="pjse.SystemClasses">
       <HintPath>..\SimPe_0_73_44-QA\pjse.SystemClasses.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="simpe.commonhandler">
       <HintPath>..\SimPe_0_73_44-QA\simpe.commonhandler.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="simpe.helper">
       <HintPath>..\SimPe_0_73_44-QA\simpe.helper.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="simpe.interfaces">
       <HintPath>..\SimPe_0_73_44-QA\simpe.interfaces.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -217,6 +224,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MinionWithNotebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\SimPe_0_73_44-QA\PjseCoderPlugin\pjse.coder.plugin.dll">
+      <Link>pjse.coder.plugin.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
