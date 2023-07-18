@@ -14,6 +14,10 @@ Actions
 2) De-compile it with Microsoft Visual Studio disassembler (from a cmd window run as administrator)
 
 c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_72_01\PjseCoderPlugin"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.plugin.dll_ORIGINAL /OUT=pjse.coder.plugin.il
+
+c:
 cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_73_44-QA\PjseCoderPlugin"
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.plugin.dll_ORIGINAL /OUT=pjse.coder.plugin.il
 
@@ -61,6 +65,10 @@ cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\Sim
 6) Save the edits
 
 7) Re-compile it with Microsoft Visual Studio assembler (from a cmd window run as administrator)
+
+c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_72_01\PjseCoderPlugin"
+"C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" pjse.coder.plugin.il /RESOURCE=pjse.coder.plugin.res /DLL
 
 c:
 cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_73_44-QA\PjseCoderPlugin"
