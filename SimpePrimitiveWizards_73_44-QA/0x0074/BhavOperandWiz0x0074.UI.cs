@@ -67,7 +67,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             checkHandedness.Checked = boolset9[OperandConstants.Bit2];
             checkUseSimAge.Checked = boolset9[OperandConstants.Bit3];
 
-            comboAction.SelectedIndex = reserved1[OperandConstants.Operand10];
+            WizardHelpers.ComboSelectIndex(comboAction, reserved1[OperandConstants.Operand10]);
 
             doGraspAnim = WizardHelpers.CreateDataControl(inst, textGraspAnim, checkDecimal, reserved1[OperandConstants.Operand11], reserved1[OperandConstants.Operand12]);
             checkGraspAnim.Checked = (doGraspAnim.Value != 0xFFFF);
@@ -78,8 +78,8 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             internalchg = false;
 
             // Do these manually, as we want them after the Data Owner control handlers
-            textGraspAnim.TextChanged += new System.EventHandler(this.OnAnimsChanged);
-            textObjectAnim.TextChanged += new System.EventHandler(this.OnAnimsChanged);
+            textGraspAnim.TextChanged += new System.EventHandler(OnAnimsChanged);
+            textObjectAnim.TextChanged += new System.EventHandler(OnAnimsChanged);
 
             UpdateScriptNames();
             UpdatePanelState();

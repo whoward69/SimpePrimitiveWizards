@@ -48,11 +48,11 @@ namespace whse.PrimitiveWizards.Wiz0x0077
 
             internalchg = true;
 
-            comboLocation.SelectedIndex = operands[OperandConstants.Operand0];
+            WizardHelpers.ComboSelectIndex(comboLocation, operands[OperandConstants.Operand0]);
 
             doMessage = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner1, comboDataPicker1, textDataValue1, checkDecimal, checkAttrPicker, toolTip, reserved1[OperandConstants.Operand15], operands[OperandConstants.Operand1], operands[OperandConstants.Operand2]);
 
-            comboTarget.SelectedIndex = operands[OperandConstants.Operand3];
+            WizardHelpers.ComboSelectIndex(comboTarget, operands[OperandConstants.Operand3]);
 
             checkLocation.Checked = boolset4[OperandConstants.Bit1];
             checkTarget.Checked = boolset4[OperandConstants.Bit3];

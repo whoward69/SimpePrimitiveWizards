@@ -40,7 +40,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;SIMPE_72_01</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>none</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -87,6 +87,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0007\BhavOperandWiz0x0007.cs">
+      <Link>0x0007\BhavOperandWiz0x0007.cs</Link>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0007\BhavOperandWiz0x0007.UI.cs">
+      <Link>0x0007\BhavOperandWiz0x0007.UI.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0007\BhavOperandWiz0x0007.UI.designer.cs">
+      <Link>0x0007\BhavOperandWiz0x0007.UI.designer.cs</Link>
+      <DependentUpon>BhavOperandWiz0x0007.UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x000b\BhavOperandWiz0x000b.cs">
       <Link>0x000b\BhavOperandWiz0x000b.cs</Link>
     </Compile>
@@ -97,6 +108,17 @@
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x000b\BhavOperandWiz0x000b.UI.designer.cs">
       <Link>0x000b\BhavOperandWiz0x000b.UI.designer.cs</Link>
       <DependentUpon>BhavOperandWiz0x000b.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x000c\BhavOperandWiz0x000c.cs">
+      <Link>0x000c\BhavOperandWiz0x000c.cs</Link>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x000c\BhavOperandWiz0x000c.UI.cs">
+      <Link>0x000c\BhavOperandWiz0x000c.UI.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x000c\BhavOperandWiz0x000c.UI.designer.cs">
+      <Link>0x000c\BhavOperandWiz0x000c.UI.designer.cs</Link>
+      <DependentUpon>BhavOperandWiz0x000c.UI.cs</DependentUpon>
     </Compile>
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x000d\BhavOperandWiz0x000d.cs">
       <Link>0x000d\BhavOperandWiz0x000d.cs</Link>
@@ -119,6 +141,17 @@
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0012\BhavOperandWiz0x0012.UI.designer.cs">
       <Link>0x0012\BhavOperandWiz0x0012.UI.designer.cs</Link>
       <DependentUpon>BhavOperandWiz0x0012.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0016\BhavOperandWiz0x0016.cs">
+      <Link>0x0016\BhavOperandWiz0x0016.cs</Link>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0016\BhavOperandWiz0x0016.UI.cs">
+      <Link>0x0016\BhavOperandWiz0x0016.UI.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0016\BhavOperandWiz0x0016.UI.designer.cs">
+      <Link>0x0016\BhavOperandWiz0x0016.UI.designer.cs</Link>
+      <DependentUpon>BhavOperandWiz0x0016.UI.cs</DependentUpon>
     </Compile>
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x001d\BhavOperandWiz0x001d.cs">
       <Link>0x001d\BhavOperandWiz0x001d.cs</Link>
@@ -152,6 +185,28 @@
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x002e\BhavOperandWiz0x002e.UI.designer.cs">
       <Link>0x002e\BhavOperandWiz0x002e.UI.designer.cs</Link>
       <DependentUpon>BhavOperandWiz0x002e.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x006c\BhavOperandWiz0x006c.cs">
+      <Link>0x006c\BhavOperandWiz0x006c.cs</Link>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x006c\BhavOperandWiz0x006c.UI.cs">
+      <Link>0x006c\BhavOperandWiz0x006c.UI.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x006c\BhavOperandWiz0x006c.UI.designer.cs">
+      <Link>0x006c\BhavOperandWiz0x006c.UI.designer.cs</Link>
+      <DependentUpon>BhavOperandWiz0x006c.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0070\BhavOperandWiz0x0070.cs">
+      <Link>0x0070\BhavOperandWiz0x0070.cs</Link>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0070\BhavOperandWiz0x0070.UI.cs">
+      <Link>0x0070\BhavOperandWiz0x0070.UI.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0070\BhavOperandWiz0x0070.UI.designer.cs">
+      <Link>0x0070\BhavOperandWiz0x0070.UI.designer.cs</Link>
+      <DependentUpon>BhavOperandWiz0x0070.UI.cs</DependentUpon>
     </Compile>
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x0071\BhavOperandWiz0x0071.cs">
       <Link>0x0071\BhavOperandWiz0x0071.cs</Link>
@@ -197,6 +252,17 @@
       <Link>0x0079\BhavOperandWiz0x0079.UI.designer.cs</Link>
       <DependentUpon>BhavOperandWiz0x0079.UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x007a\BhavOperandWiz0x007a.cs">
+      <Link>0x007a\BhavOperandWiz0x007a.cs</Link>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x007a\BhavOperandWiz0x007a.UI.cs">
+      <Link>0x007a\BhavOperandWiz0x007a.UI.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x007a\BhavOperandWiz0x007a.UI.designer.cs">
+      <Link>0x007a\BhavOperandWiz0x007a.UI.designer.cs</Link>
+      <DependentUpon>BhavOperandWiz0x007a.UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="..\SimpePrimitiveWizards_73_44-QA\0x007e\BhavOperandWiz0x007e.cs">
       <Link>0x007e\BhavOperandWiz0x007e.cs</Link>
     </Compile>
@@ -218,9 +284,17 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x0007\BhavOperandWiz0x0007.UI.resx">
+      <Link>0x0007\BhavOperandWiz0x0007.UI.resx</Link>
+      <DependentUpon>BhavOperandWiz0x0007.UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x000b\BhavOperandWiz0x000b.UI.resx">
       <Link>0x000b\BhavOperandWiz0x000b.UI.resx</Link>
       <DependentUpon>BhavOperandWiz0x000b.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x000c\BhavOperandWiz0x000c.UI.resx">
+      <Link>0x000c\BhavOperandWiz0x000c.UI.resx</Link>
+      <DependentUpon>BhavOperandWiz0x000c.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x000d\BhavOperandWiz0x000d.UI.resx">
       <Link>0x000d\BhavOperandWiz0x000d.UI.resx</Link>
@@ -229,6 +303,10 @@
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x0012\BhavOperandWiz0x0012.UI.resx">
       <Link>0x0012\BhavOperandWiz0x0012.UI.resx</Link>
       <DependentUpon>BhavOperandWiz0x0012.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x0016\BhavOperandWiz0x0016.UI.resx">
+      <Link>0x0016\BhavOperandWiz0x0016.UI.resx</Link>
+      <DependentUpon>BhavOperandWiz0x0016.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x001d\BhavOperandWiz0x001d.UI.resx">
       <Link>0x001d\BhavOperandWiz0x001d.UI.resx</Link>
@@ -241,6 +319,14 @@
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x002e\BhavOperandWiz0x002e.UI.resx">
       <Link>0x002e\BhavOperandWiz0x002e.UI.resx</Link>
       <DependentUpon>BhavOperandWiz0x002e.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x006c\BhavOperandWiz0x006c.UI.resx">
+      <Link>0x006c\BhavOperandWiz0x006c.UI.resx</Link>
+      <DependentUpon>BhavOperandWiz0x006c.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x0070\BhavOperandWiz0x0070.UI.resx">
+      <Link>0x0070\BhavOperandWiz0x0070.UI.resx</Link>
+      <DependentUpon>BhavOperandWiz0x0070.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x0071\BhavOperandWiz0x0071.UI.resx">
       <Link>0x0071\BhavOperandWiz0x0071.UI.resx</Link>
@@ -257,6 +343,10 @@
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x0079\BhavOperandWiz0x0079.UI.resx">
       <Link>0x0079\BhavOperandWiz0x0079.UI.resx</Link>
       <DependentUpon>BhavOperandWiz0x0079.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x007a\BhavOperandWiz0x007a.UI.resx">
+      <Link>0x007a\BhavOperandWiz0x007a.UI.resx</Link>
+      <DependentUpon>BhavOperandWiz0x007a.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="..\SimpePrimitiveWizards_73_44-QA\0x007e\BhavOperandWiz0x007e.UI.resx">
       <Link>0x007e\BhavOperandWiz0x007e.UI.resx</Link>

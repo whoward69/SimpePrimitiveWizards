@@ -56,7 +56,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             doIntNumber = WizardHelpers.CreateDataControl(inst, textIntNumber, checkDecimal, operands[OperandConstants.Operand0]);
             doIntVariable = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner1, comboDataPicker1, textDataValue1, checkDecimal, checkAttrPicker, toolTip, operands[OperandConstants.Operand5], operands[OperandConstants.Operand6], operands[OperandConstants.Operand7]);
 
-            comboPriority.SelectedIndex = (operands[OperandConstants.Operand0] & 0x03);
+            WizardHelpers.ComboSelectIndex(comboPriority, (operands[OperandConstants.Operand2] & 0x03));
 
             comboIconObject.SelectedIndex = (boolset3[OperandConstants.Bit1] ? 1 : (boolset14[OperandConstants.Bit3] ? 2 : 0));
             doIconObject = WizardHelpers.CreateDataControl(inst, textIconObject, checkDecimal, operands[OperandConstants.Operand4]);

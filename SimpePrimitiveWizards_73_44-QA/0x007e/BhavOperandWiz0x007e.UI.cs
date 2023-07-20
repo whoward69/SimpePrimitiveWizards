@@ -33,9 +33,9 @@ namespace whse.PrimitiveWizards.Wiz0x007e
 
         private readonly pjse.Scope[] scopeArray = new pjse.Scope[3]
         {
-                pjse.Scope.Private,
-                pjse.Scope.SemiGlobal,
-                pjse.Scope.Global
+            pjse.Scope.Private,
+            pjse.Scope.SemiGlobal,
+            pjse.Scope.Global
         };
 
         public UI()
@@ -68,8 +68,8 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             internalchg = false;
 
             // Do these manually, as we want them after the Data Owner control handlers
-            textStrRes.TextChanged += new System.EventHandler(this.OnScriptControlChanged);
-            textStrEntry.TextChanged += new System.EventHandler(this.OnScriptControlChanged);
+            textStrRes.TextChanged += new System.EventHandler(OnScriptControlChanged);
+            textStrEntry.TextChanged += new System.EventHandler(OnScriptControlChanged);
 
             UpdateScriptName();
             UpdatePanelState();
@@ -164,6 +164,8 @@ namespace whse.PrimitiveWizards.Wiz0x007e
 
         private void OnParametersClicked(object sender, EventArgs e)
         {
+            if (internalchg) return;
+
             UpdatePanelState();
         }
     }

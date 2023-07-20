@@ -27,7 +27,7 @@ namespace whse.PrimitiveWizards.Wiz0x0079
     {
         private Instruction inst;
 
-        DataOwnerControl doTarget, doVariable;
+        DataOwnerControl doVariable, doTarget;
 
         private bool internalchg;
 
@@ -55,13 +55,13 @@ namespace whse.PrimitiveWizards.Wiz0x0079
             checkRebuild.Checked = boolset0[OperandConstants.Bit5];
             checkClear.Checked = boolset0[OperandConstants.Bit6];
 
-            doTarget = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner1, comboDataPicker1, textDataValue1, checkDecimal, checkAttrPicker, toolTip, operands[OperandConstants.Operand1], operands[OperandConstants.Operand2], operands[OperandConstants.Operand3]);
+            doVariable = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner2, comboDataPicker2, textDataValue2, checkDecimal, checkAttrPicker, toolTip, operands[OperandConstants.Operand1], operands[OperandConstants.Operand2], operands[OperandConstants.Operand3]);
 
-            WizardHelpers.SetGUID((byte[])operands, 4, textGUID, lblGuid);
+            WizardHelpers.SetGUID((byte[])operands, OperandConstants.Operand4, textGUID, lblGuid);
 
-            comboOutfitType.SelectedIndex = reserved1[OperandConstants.Operand8];
+            WizardHelpers.ComboSelectIndex(comboOutfitType, reserved1[OperandConstants.Operand8]);
 
-            doVariable = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner2, comboDataPicker2, textDataValue2, checkDecimal, checkAttrPicker, toolTip, reserved1[OperandConstants.Operand9], reserved1[OperandConstants.Operand10], reserved1[OperandConstants.Operand11]);
+            doTarget = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner1, comboDataPicker1, textDataValue1, checkDecimal, checkAttrPicker, toolTip, reserved1[OperandConstants.Operand9], reserved1[OperandConstants.Operand10], reserved1[OperandConstants.Operand11]);
 
             internalchg = false;
 

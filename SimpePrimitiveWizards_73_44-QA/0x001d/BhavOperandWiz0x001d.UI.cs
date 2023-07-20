@@ -51,7 +51,7 @@ namespace whse.PrimitiveWizards.Wiz0x001d
             doMotiveDelta = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner1, comboDataPicker1, textDataValue1, checkDecimal, checkAttrPicker, toolTip, operands[OperandConstants.Operand0], operands[OperandConstants.Operand4], operands[OperandConstants.Operand5]);
             doMotiveMax = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner2, comboDataPicker2, textDataValue2, checkDecimal, checkAttrPicker, toolTip, operands[OperandConstants.Operand1], operands[OperandConstants.Operand6], operands[OperandConstants.Operand7]);
 
-            comboMotive.SelectedIndex = operands[OperandConstants.Operand2];
+            WizardHelpers.ComboSelectIndex(comboMotive, operands[OperandConstants.Operand2]);
 
             checkClearAll.Checked = boolset3[OperandConstants.Bit1];
             checkAutoClearing.Checked = boolset3[OperandConstants.Bit2];

@@ -50,9 +50,9 @@ namespace whse.PrimitiveWizards.Wiz0x002e
 
             doSlotNumber = WizardHelpers.CreateDataControl(inst, textSlotNumber, checkDecimal, operands[OperandConstants.Operand0], operands[OperandConstants.Operand1]);
 
-            comboSnapType.SelectedIndex = pjse.BhavWiz.ToShort(operands[OperandConstants.Operand2], operands[OperandConstants.Operand3]);
+            WizardHelpers.ComboSelectIndex(comboSnapType, pjse.BhavWiz.ToShort(operands[OperandConstants.Operand2], operands[OperandConstants.Operand3]));
 
-            comboSlotNumber.SelectedIndex = (boolset4[OperandConstants.Bit4] ? 1 : ((pjse.BhavWiz.ToShort(reserved1[OperandConstants.Operand8], reserved1[OperandConstants.Operand9]) == 1) ? 2 : 0));
+            WizardHelpers.ComboSelectIndex(comboSlotNumber, (boolset4[OperandConstants.Bit4] ? 1 : ((pjse.BhavWiz.ToShort(reserved1[OperandConstants.Operand8], reserved1[OperandConstants.Operand9]) == 1) ? 2 : 0)));
 
             checkMoveSim.Checked = boolset4[OperandConstants.Bit2];
             checkTestOnly.Checked = boolset4[OperandConstants.Bit5];

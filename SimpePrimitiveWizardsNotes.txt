@@ -1,3 +1,59 @@
+Adding a new wizard
+===================
+In the SimpePrimitiveWizards_73_44-QA project
+Add a new folder of the primitives number (eg 0x0007)
+Copy the two files from the donor wizard (eg BhavOperandWiz0x0012.cs and BhavOperandWiz0x0012.UI.cs)
+And paste them into the new wizard folder
+Rename them, but do not rename all references to the code element (that is, select No to any dialogs)
+In the BhavOperandWiz0x0007.cs file, update the primitive number (4 occurances) and the primitive name in the comment
+In the BhavOperandWiz0x0007.UI.Designer.cs file, update the primitive number (1 occurance)
+In the BhavOperandWiz0x0007.UI.cs file, update the primitive number (3 occurances - one in a hyperlink, make sure it's to the correct site!) and the primitive name in the comment
+Use AgentRansack over C:\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimpePrimitiveWizards_73_44-QA\0x0007 to check there are no occurances of the old primitive number (eg 0x0012)
+Copy the 0x0007 folder and PASTE AS LINK into the other two projects
+Update the three .il files and reassemble the pjse.coder DLLs
+Change the wizard design and backing code as necessary
+Clean and Build the solution
+Test in three versions of SimPe
+
+
+Layout
+======
+  General
+    Width:			250, 400 or 440
+	Height			As needed
+    Minion:			Bottom Right, 32x32, 35 in from right edge, 35 up from bottom
+    Attr Picker:	Bottom Right, next to Minion, 20 up from bottom, 282 for 440 width
+    Decimal:		Bottom Right, next to Attr Picker, 20 up from bottom, 136 for 440 width
+  
+  Data Owner Panel
+    Width:			Same as main panel
+    Height:			21
+    comboDataOwner 	200x21	@100,0
+    comboDataPicker	120x21	@310,0
+    textDataValue	120x20	@310,0
+  
+  Labels
+    Text Align		Top Right
+	First Label		@7 down
+
+
+
+Code Checks
+===========
+For these the boolset and operand numbers should be the same
+------------------------------------------------------------
+Boolset boolset\d+ = new Boolset\((operands|reserved1)\[OperandConstants.Operand\d+\]\);
+OperandConstants.Operand\d+\] = boolset\d+;
+
+All of these should return nothing
+----------------------------------
+^using (simpe|pjse);
+(operands|reserved1)\[[0-9]
+operands\[OperandConstants.Operand(8|9|10|11|12|13|14|15)\]
+reserved1\[OperandConstants.Operand[0-7]\]
+SelectedItem =
+
+
 Editing pjse.coder.plugin.dll
 =============================
 

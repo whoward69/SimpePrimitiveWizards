@@ -50,10 +50,10 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             internalchg = true;
 
             // Operands 0 thru 3, the GUID
-            WizardHelpers.SetGUID((byte[])operands, 0, textGUID, lblGuid);
+            WizardHelpers.SetGUID((byte[])operands, OperandConstants.Operand0, textGUID, lblGuid);
 
             // Operand 4, where to create the object
-            comboCreateWhere.SelectedIndex = operands[OperandConstants.Operand4];
+            WizardHelpers.ComboSelectIndex(comboCreateWhere, operands[OperandConstants.Operand4]);
 
             // Operand 5, bit flags
             comboCreateHow.SelectedIndex = (operands[OperandConstants.Operand5] & 0x03);

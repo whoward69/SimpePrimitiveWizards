@@ -1,0 +1,23 @@
+Op0				always					comboAction			0x00 to 0x0E
+Op1, 2, 3		always					doTarget
+Op10, Bit7		only 0x4 or 0x5			comboEffect			Number, In Temp 1
+Op4				only 0x0-0x6 and 0xE	textEffect
+Op10, Bit1, 2	only 0x0-0x3,0x6 & 0xE	comboEffectScope	Private, Semi, Global
+				see comboEffectScope	btnEffect
+				see comboEffectScope	lblEffectName
+Op9				only != 0x9 or 0xE		comboSlotType		Target, Route, Container
+Op6				see comboSlotType		textSlot
+See below		always					comboIconType		None, Normal, NID, Conversation, GUID in T4/5, In Temp 6
+Op12, 13, 14	Norm, NID, Convo		doIcon
+Op15			only Conversation		textIconIndex
+Op10, Bit8		always					checkPriority
+Op11, Bit4		unless icon in T6		checkModel
+
+
+10 Boolset
+  Bit 3			icon Normal & doc
+  Bit 5			icon NID & doc
+  Bit 6			icon Conversation & doc
+11 Boolset
+  Bit 3			icon GUID T4/5
+  Bit 5			icon in T6

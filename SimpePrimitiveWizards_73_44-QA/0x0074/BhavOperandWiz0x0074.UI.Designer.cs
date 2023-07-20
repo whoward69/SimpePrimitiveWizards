@@ -42,6 +42,8 @@ namespace whse.PrimitiveWizards.Wiz0x0074
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.blHandedness = new System.Windows.Forms.Label();
+            this.lblUseSimAge = new System.Windows.Forms.Label();
             this.lblObjectAnimName = new System.Windows.Forms.Label();
             this.lblGraspAnimName = new System.Windows.Forms.Label();
             this.comboSlot = new System.Windows.Forms.ComboBox();
@@ -68,8 +70,6 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboDataPicker1 = new System.Windows.Forms.ComboBox();
             this.comboDataOwner1 = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lblUseSimAge = new System.Windows.Forms.Label();
-            this.blHandedness = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
             this.panelObject.SuspendLayout();
@@ -102,13 +102,35 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.panelMain.Controls.Add(this.panelObject);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(440, 240);
+            this.panelMain.Size = new System.Drawing.Size(440, 245);
             this.panelMain.TabIndex = 0;
+            // 
+            // blHandedness
+            // 
+            this.blHandedness.AutoSize = true;
+            this.blHandedness.Location = new System.Drawing.Point(18, 210);
+            this.blHandedness.Name = "blHandedness";
+            this.blHandedness.Size = new System.Drawing.Size(75, 13);
+            this.blHandedness.TabIndex = 59;
+            this.blHandedness.Text = "Handed in T3:";
+            this.blHandedness.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.blHandedness, "Handedness in Temp 3");
+            // 
+            // lblUseSimAge
+            // 
+            this.lblUseSimAge.AutoSize = true;
+            this.lblUseSimAge.Location = new System.Drawing.Point(22, 188);
+            this.lblUseSimAge.Name = "lblUseSimAge";
+            this.lblUseSimAge.Size = new System.Drawing.Size(71, 13);
+            this.lblUseSimAge.TabIndex = 58;
+            this.lblUseSimAge.Text = "Use Sim Age:";
+            this.lblUseSimAge.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblUseSimAge, "Use SIm\'s age to pick animation");
             // 
             // lblObjectAnimName
             // 
             this.lblObjectAnimName.AutoSize = true;
-            this.lblObjectAnimName.Location = new System.Drawing.Point(121, 162);
+            this.lblObjectAnimName.Location = new System.Drawing.Point(152, 167);
             this.lblObjectAnimName.Name = "lblObjectAnimName";
             this.lblObjectAnimName.Size = new System.Drawing.Size(61, 13);
             this.lblObjectAnimName.TabIndex = 57;
@@ -117,7 +139,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // lblGraspAnimName
             // 
             this.lblGraspAnimName.AutoSize = true;
-            this.lblGraspAnimName.Location = new System.Drawing.Point(121, 115);
+            this.lblGraspAnimName.Location = new System.Drawing.Point(152, 118);
             this.lblGraspAnimName.Name = "lblGraspAnimName";
             this.lblGraspAnimName.Size = new System.Drawing.Size(58, 13);
             this.lblGraspAnimName.TabIndex = 56;
@@ -154,7 +176,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             // textObjectAnim
             // 
-            this.textObjectAnim.Location = new System.Drawing.Point(121, 137);
+            this.textObjectAnim.Location = new System.Drawing.Point(121, 139);
             this.textObjectAnim.Name = "textObjectAnim";
             this.textObjectAnim.Size = new System.Drawing.Size(60, 20);
             this.textObjectAnim.TabIndex = 52;
@@ -162,7 +184,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // lblObjectAnim
             // 
             this.lblObjectAnim.AutoSize = true;
-            this.lblObjectAnim.Location = new System.Drawing.Point(26, 140);
+            this.lblObjectAnim.Location = new System.Drawing.Point(26, 142);
             this.lblObjectAnim.Name = "lblObjectAnim";
             this.lblObjectAnim.Size = new System.Drawing.Size(67, 13);
             this.lblObjectAnim.TabIndex = 51;
@@ -172,7 +194,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // checkObjectAnim
             // 
             this.checkObjectAnim.AutoSize = true;
-            this.checkObjectAnim.Location = new System.Drawing.Point(100, 140);
+            this.checkObjectAnim.Location = new System.Drawing.Point(100, 142);
             this.checkObjectAnim.Name = "checkObjectAnim";
             this.checkObjectAnim.Size = new System.Drawing.Size(15, 14);
             this.checkObjectAnim.TabIndex = 50;
@@ -181,7 +203,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             // btnObjectAnim
             // 
-            this.btnObjectAnim.Location = new System.Drawing.Point(185, 137);
+            this.btnObjectAnim.Location = new System.Drawing.Point(121, 163);
             this.btnObjectAnim.Margin = new System.Windows.Forms.Padding(1);
             this.btnObjectAnim.Name = "btnObjectAnim";
             this.btnObjectAnim.Size = new System.Drawing.Size(27, 21);
@@ -219,7 +241,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // checkHandedness
             // 
             this.checkHandedness.AutoSize = true;
-            this.checkHandedness.Location = new System.Drawing.Point(99, 209);
+            this.checkHandedness.Location = new System.Drawing.Point(99, 210);
             this.checkHandedness.Name = "checkHandedness";
             this.checkHandedness.Size = new System.Drawing.Size(15, 14);
             this.checkHandedness.TabIndex = 44;
@@ -237,7 +259,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             // btnGraspAnim
             // 
-            this.btnGraspAnim.Location = new System.Drawing.Point(185, 90);
+            this.btnGraspAnim.Location = new System.Drawing.Point(121, 114);
             this.btnGraspAnim.Margin = new System.Windows.Forms.Padding(1);
             this.btnGraspAnim.Name = "btnGraspAnim";
             this.btnGraspAnim.Size = new System.Drawing.Size(27, 21);
@@ -249,7 +271,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // checkUseSimAge
             // 
             this.checkUseSimAge.AutoSize = true;
-            this.checkUseSimAge.Location = new System.Drawing.Point(100, 187);
+            this.checkUseSimAge.Location = new System.Drawing.Point(100, 188);
             this.checkUseSimAge.Name = "checkUseSimAge";
             this.checkUseSimAge.Size = new System.Drawing.Size(15, 14);
             this.checkUseSimAge.TabIndex = 19;
@@ -273,7 +295,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             this.iconPnM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPnM.Image = global::whse.PrimitiveWizards.Properties.Resources.MinionWithNotebook;
-            this.iconPnM.Location = new System.Drawing.Point(405, 205);
+            this.iconPnM.Location = new System.Drawing.Point(405, 210);
             this.iconPnM.Name = "iconPnM";
             this.iconPnM.Size = new System.Drawing.Size(32, 32);
             this.iconPnM.TabIndex = 17;
@@ -284,7 +306,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             this.checkDecimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDecimal.AutoSize = true;
-            this.checkDecimal.Location = new System.Drawing.Point(136, 220);
+            this.checkDecimal.Location = new System.Drawing.Point(136, 225);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
             this.checkDecimal.TabIndex = 31;
@@ -295,7 +317,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             this.checkAttrPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkAttrPicker.AutoSize = true;
-            this.checkAttrPicker.Location = new System.Drawing.Point(282, 220);
+            this.checkAttrPicker.Location = new System.Drawing.Point(282, 225);
             this.checkAttrPicker.Name = "checkAttrPicker";
             this.checkAttrPicker.Size = new System.Drawing.Size(117, 17);
             this.checkAttrPicker.TabIndex = 30;
@@ -348,35 +370,13 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboDataOwner1.Size = new System.Drawing.Size(200, 21);
             this.comboDataOwner1.TabIndex = 37;
             // 
-            // lblUseSimAge
-            // 
-            this.lblUseSimAge.AutoSize = true;
-            this.lblUseSimAge.Location = new System.Drawing.Point(22, 187);
-            this.lblUseSimAge.Name = "lblUseSimAge";
-            this.lblUseSimAge.Size = new System.Drawing.Size(71, 13);
-            this.lblUseSimAge.TabIndex = 58;
-            this.lblUseSimAge.Text = "Use Sim Age:";
-            this.lblUseSimAge.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip.SetToolTip(this.lblUseSimAge, "Use SIm\'s age to pick animation");
-            // 
-            // blHandedness
-            // 
-            this.blHandedness.AutoSize = true;
-            this.blHandedness.Location = new System.Drawing.Point(18, 209);
-            this.blHandedness.Name = "blHandedness";
-            this.blHandedness.Size = new System.Drawing.Size(75, 13);
-            this.blHandedness.TabIndex = 59;
-            this.blHandedness.Text = "Handed in T3:";
-            this.blHandedness.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip.SetToolTip(this.blHandedness, "Handedness in Temp 3");
-            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
             this.Name = "UI";
-            this.Size = new System.Drawing.Size(440, 240);
+            this.Size = new System.Drawing.Size(440, 245);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();

@@ -40,7 +40,7 @@ namespace whse.PrimitiveWizards
             if (label != null) label.Text = pjse.BhavWiz.FormatGUID(true, guid);
         }
 
-        private static void SetDropDownWidth(ComboBox comboBox)
+        public static void SetDropDownWidth(ComboBox comboBox)
         {
             int maxWidth = 0;
 
@@ -102,6 +102,37 @@ namespace whse.PrimitiveWizards
             DataOwnerControl doc = new DataOwnerControl((pjse.BhavWiz)inst, null, null, textDataValue, checkDecimal, null, null, DataOwner.Literal, dataLo);
 
             return doc;
+        }
+
+        public static LinkLabel CreateLinkLabel(Label lblOriginal)
+        {
+            LinkLabel lblLink = new LinkLabel
+            {
+                AutoSize = lblOriginal.AutoSize,
+                Location = lblOriginal.Location,
+                Name = $"{lblOriginal.Name}Link",
+                Size = lblOriginal.Size,
+                TabIndex = lblOriginal.TabIndex,
+                Text = lblOriginal.Text,
+                TextAlign = lblOriginal.TextAlign
+            };
+
+            lblOriginal.Parent.Controls.Add(lblLink);
+            lblOriginal.Visible = false;
+
+            return lblLink;
+        }
+
+        public static void ComboSelectIndex(ComboBox combo, int value)
+        {
+            try
+            {
+                combo.SelectedIndex = value;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                combo.SelectedIndex = 0;
+            }
         }
     }
 }
