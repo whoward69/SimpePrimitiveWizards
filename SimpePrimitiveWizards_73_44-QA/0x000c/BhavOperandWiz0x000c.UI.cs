@@ -83,7 +83,7 @@ namespace whse.PrimitiveWizards.Wiz0x000c
                 operands[OperandConstants.Operand7] = (byte)(doInto.Value >> 8);
 
                 Boolset boolset8 = new Boolset(reserved1[OperandConstants.Operand8]);
-                boolset4[OperandConstants.Bit2] = checkDegrees.Checked;
+                boolset8[OperandConstants.Bit2] = checkDegrees.Checked;
                 reserved1[OperandConstants.Operand8] = boolset8;
             }
 

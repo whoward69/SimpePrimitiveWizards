@@ -24,11 +24,7 @@ namespace whse.PrimitiveWizards.Wiz0x0016
     {
         // private Instruction inst;
 
-#pragma warning disable IDE0052 // Remove unread private members
-#pragma warning disable CS0414 // The field 'UI.internalchg' is assigned but its value is never used
-        private bool internalchg;
-#pragma warning restore CS0414 // The field 'UI.internalchg' is assigned but its value is never used
-#pragma warning restore IDE0052 // Remove unread private members
+        // private bool internalchg;
 
         public UI()
         {
@@ -44,11 +40,11 @@ namespace whse.PrimitiveWizards.Wiz0x0016
             wrappedByteArray operands = inst.Operands;
             // wrappedByteArray reserved1 = inst.Reserved1;
 
-            internalchg = true;
+            // internalchg = true;
 
             WizardHelpers.ComboSelectIndex(comboDirection, operands[OperandConstants.Operand0] - 1);
 
-            internalchg = false;
+            // internalchg = false;
         }
 
         public Instruction Write(Instruction inst)

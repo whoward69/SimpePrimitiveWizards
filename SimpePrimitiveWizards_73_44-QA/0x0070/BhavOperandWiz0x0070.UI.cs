@@ -69,8 +69,8 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             WizardHelpers.ComboSelectIndex(comboSlotType, reserved1[OperandConstants.Operand9]);
             doSlot = WizardHelpers.CreateDataControl(inst, textSlot, checkDecimal, operands[OperandConstants.Operand6]);
 
-            comboIconType.SelectedIndex = (boolset11[OperandConstants.Bit5] ? 5 : 
-                                          (boolset11[OperandConstants.Bit3] ? 4 : 
+            comboIconType.SelectedIndex = (boolset11[OperandConstants.Bit5] ? 5 :
+                                          (boolset11[OperandConstants.Bit3] ? 4 :
                                           (boolset10[OperandConstants.Bit6] ? 3 :
                                           (boolset10[OperandConstants.Bit5] ? 2 :
                                           (boolset10[OperandConstants.Bit3] ? 1 : 0)))));

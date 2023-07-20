@@ -63,6 +63,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             comboTickCount.SelectedIndex = (boolset5[OperandConstants.Bit4] ? 1 : 0);
             doTickCount = WizardHelpers.CreateDataControl(inst, textTickCount, checkDecimal, operands[OperandConstants.Operand0], operands[OperandConstants.Operand1]);
 
+            // IDEA - correct SimPe for this operand?
             WizardHelpers.ComboSelectIndex(comboEventTreeScope, (operands[OperandConstants.Operand2] & 0x03)); // See comment about this in the operands table
             doEventTree = WizardHelpers.CreateDataControl(inst, textEventTree, checkDecimal, operands[OperandConstants.Operand3], operands[OperandConstants.Operand4]);
 
@@ -140,6 +141,8 @@ namespace whse.PrimitiveWizards.Wiz0x007a
         private void UpdatePanelState()
         {
             panelStartModify.Visible = (comboAction.SelectedIndex != 2);
+
+            textTickCount.Visible = (comboTickCount.SelectedIndex == 0);
 
             panelParameters.Visible = (comboParamType.SelectedIndex == 1);
         }

@@ -126,14 +126,14 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             "Temp 1"});
             this.comboTickCount.Location = new System.Drawing.Point(100, 0);
             this.comboTickCount.Name = "comboTickCount";
-            this.comboTickCount.Size = new System.Drawing.Size(70, 21);
+            this.comboTickCount.Size = new System.Drawing.Size(90, 21);
             this.comboTickCount.TabIndex = 53;
             this.comboTickCount.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblReset
             // 
             this.lblReset.AutoSize = true;
-            this.lblReset.Location = new System.Drawing.Point(59, 99);
+            this.lblReset.Location = new System.Drawing.Point(56, 99);
             this.lblReset.Name = "lblReset";
             this.lblReset.Size = new System.Drawing.Size(38, 13);
             this.lblReset.TabIndex = 51;
@@ -152,7 +152,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             // lblLooping
             // 
             this.lblLooping.AutoSize = true;
-            this.lblLooping.Location = new System.Drawing.Point(49, 79);
+            this.lblLooping.Location = new System.Drawing.Point(46, 79);
             this.lblLooping.Name = "lblLooping";
             this.lblLooping.Size = new System.Drawing.Size(48, 13);
             this.lblLooping.TabIndex = 49;
@@ -161,7 +161,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             // 
             // textTickCount
             // 
-            this.textTickCount.Location = new System.Drawing.Point(176, 0);
+            this.textTickCount.Location = new System.Drawing.Point(196, 0);
             this.textTickCount.Name = "textTickCount";
             this.textTickCount.Size = new System.Drawing.Size(60, 20);
             this.textTickCount.TabIndex = 41;
@@ -169,7 +169,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             // lblTickCount
             // 
             this.lblTickCount.AutoSize = true;
-            this.lblTickCount.Location = new System.Drawing.Point(35, 3);
+            this.lblTickCount.Location = new System.Drawing.Point(32, 3);
             this.lblTickCount.Name = "lblTickCount";
             this.lblTickCount.Size = new System.Drawing.Size(62, 13);
             this.lblTickCount.TabIndex = 48;
@@ -195,14 +195,14 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             "Global"});
             this.comboEventTreeScope.Location = new System.Drawing.Point(100, 27);
             this.comboEventTreeScope.Name = "comboEventTreeScope";
-            this.comboEventTreeScope.Size = new System.Drawing.Size(70, 21);
+            this.comboEventTreeScope.Size = new System.Drawing.Size(90, 21);
             this.comboEventTreeScope.TabIndex = 22;
             this.comboEventTreeScope.SelectedIndexChanged += new System.EventHandler(this.OnEventTreeControlChanged);
             // 
             // lblEventTree
             // 
             this.lblEventTree.AutoSize = true;
-            this.lblEventTree.Location = new System.Drawing.Point(34, 32);
+            this.lblEventTree.Location = new System.Drawing.Point(31, 31);
             this.lblEventTree.Name = "lblEventTree";
             this.lblEventTree.Size = new System.Drawing.Size(63, 13);
             this.lblEventTree.TabIndex = 46;
@@ -211,7 +211,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             // 
             // textEventTree
             // 
-            this.textEventTree.Location = new System.Drawing.Point(176, 28);
+            this.textEventTree.Location = new System.Drawing.Point(196, 28);
             this.textEventTree.Name = "textEventTree";
             this.textEventTree.Size = new System.Drawing.Size(60, 20);
             this.textEventTree.TabIndex = 4;
@@ -219,7 +219,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             // lblParameters
             // 
             this.lblParameters.AutoSize = true;
-            this.lblParameters.Location = new System.Drawing.Point(34, 122);
+            this.lblParameters.Location = new System.Drawing.Point(31, 122);
             this.lblParameters.Name = "lblParameters";
             this.lblParameters.Size = new System.Drawing.Size(63, 13);
             this.lblParameters.TabIndex = 45;
@@ -379,7 +379,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             "Variables"});
             this.comboParamType.Location = new System.Drawing.Point(100, 119);
             this.comboParamType.Name = "comboParamType";
-            this.comboParamType.Size = new System.Drawing.Size(70, 21);
+            this.comboParamType.Size = new System.Drawing.Size(90, 21);
             this.comboParamType.TabIndex = 42;
             this.comboParamType.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
@@ -393,14 +393,14 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             "Delete"});
             this.comboAction.Location = new System.Drawing.Point(100, 3);
             this.comboAction.Name = "comboAction";
-            this.comboAction.Size = new System.Drawing.Size(70, 21);
+            this.comboAction.Size = new System.Drawing.Size(90, 21);
             this.comboAction.TabIndex = 47;
             this.comboAction.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblAction
             // 
             this.lblAction.AutoSize = true;
-            this.lblAction.Location = new System.Drawing.Point(57, 7);
+            this.lblAction.Location = new System.Drawing.Point(54, 6);
             this.lblAction.Name = "lblAction";
             this.lblAction.Size = new System.Drawing.Size(40, 13);
             this.lblAction.TabIndex = 2;
