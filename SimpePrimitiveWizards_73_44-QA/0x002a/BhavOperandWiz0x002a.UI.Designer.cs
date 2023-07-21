@@ -96,10 +96,9 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             // 
             // lblMoveInSim
             // 
-            this.lblMoveInSim.AutoSize = true;
-            this.lblMoveInSim.Location = new System.Drawing.Point(25, 166);
+            this.lblMoveInSim.Location = new System.Drawing.Point(5, 166);
             this.lblMoveInSim.Name = "lblMoveInSim";
-            this.lblMoveInSim.Size = new System.Drawing.Size(69, 13);
+            this.lblMoveInSim.Size = new System.Drawing.Size(95, 13);
             this.lblMoveInSim.TabIndex = 39;
             this.lblMoveInSim.Text = "Move In Sim:";
             this.lblMoveInSim.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -107,10 +106,9 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             // 
             // lblFailIfTileNonEmpty
             // 
-            this.lblFailIfTileNonEmpty.AutoSize = true;
-            this.lblFailIfTileNonEmpty.Location = new System.Drawing.Point(4, 146);
+            this.lblFailIfTileNonEmpty.Location = new System.Drawing.Point(5, 146);
             this.lblFailIfTileNonEmpty.Name = "lblFailIfTileNonEmpty";
-            this.lblFailIfTileNonEmpty.Size = new System.Drawing.Size(90, 13);
+            this.lblFailIfTileNonEmpty.Size = new System.Drawing.Size(95, 13);
             this.lblFailIfTileNonEmpty.TabIndex = 38;
             this.lblFailIfTileNonEmpty.Text = "Fail If Non-Empty:";
             this.lblFailIfTileNonEmpty.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -118,10 +116,9 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             // 
             // lblCopyMaterial
             // 
-            this.lblCopyMaterial.AutoSize = true;
-            this.lblCopyMaterial.Location = new System.Drawing.Point(15, 126);
+            this.lblCopyMaterial.Location = new System.Drawing.Point(5, 126);
             this.lblCopyMaterial.Name = "lblCopyMaterial";
-            this.lblCopyMaterial.Size = new System.Drawing.Size(79, 13);
+            this.lblCopyMaterial.Size = new System.Drawing.Size(95, 13);
             this.lblCopyMaterial.TabIndex = 37;
             this.lblCopyMaterial.Text = "Copy Materials:";
             this.lblCopyMaterial.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -129,10 +126,9 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             // 
             // lblPassToToMain
             // 
-            this.lblPassToToMain.AutoSize = true;
-            this.lblPassToToMain.Location = new System.Drawing.Point(7, 106);
+            this.lblPassToToMain.Location = new System.Drawing.Point(5, 106);
             this.lblPassToToMain.Name = "lblPassToToMain";
-            this.lblPassToToMain.Size = new System.Drawing.Size(87, 13);
+            this.lblPassToToMain.Size = new System.Drawing.Size(95, 13);
             this.lblPassToToMain.TabIndex = 36;
             this.lblPassToToMain.Text = "Pass T0 to Main:";
             this.lblPassToToMain.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -149,7 +145,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.comboCreateWhat.Location = new System.Drawing.Point(100, 4);
             this.comboCreateWhat.Name = "comboCreateWhat";
             this.comboCreateWhat.Size = new System.Drawing.Size(200, 21);
-            this.comboCreateWhat.TabIndex = 35;
+            this.comboCreateWhat.TabIndex = 0;
             this.comboCreateWhat.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // textSlot
@@ -157,7 +153,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.textSlot.Location = new System.Drawing.Point(310, 52);
             this.textSlot.Name = "textSlot";
             this.textSlot.Size = new System.Drawing.Size(50, 20);
-            this.textSlot.TabIndex = 34;
+            this.textSlot.TabIndex = 3;
             // 
             // checkDecimal
             // 
@@ -166,7 +162,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkDecimal.Location = new System.Drawing.Point(254, 175);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
-            this.checkDecimal.TabIndex = 32;
+            this.checkDecimal.TabIndex = 9;
             this.checkDecimal.Text = "Decimal (except Consts)";
             this.checkDecimal.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +183,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkCopyMaterials.Location = new System.Drawing.Point(100, 126);
             this.checkCopyMaterials.Name = "checkCopyMaterials";
             this.checkCopyMaterials.Size = new System.Drawing.Size(15, 14);
-            this.checkCopyMaterials.TabIndex = 15;
+            this.checkCopyMaterials.TabIndex = 6;
             this.checkCopyMaterials.UseVisualStyleBackColor = true;
             // 
             // checkMoveInSim
@@ -196,7 +192,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkMoveInSim.Location = new System.Drawing.Point(100, 166);
             this.checkMoveInSim.Name = "checkMoveInSim";
             this.checkMoveInSim.Size = new System.Drawing.Size(15, 14);
-            this.checkMoveInSim.TabIndex = 14;
+            this.checkMoveInSim.TabIndex = 8;
             this.checkMoveInSim.UseVisualStyleBackColor = true;
             // 
             // textLocal
@@ -212,7 +208,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkPassT0ToMain.Location = new System.Drawing.Point(100, 106);
             this.checkPassT0ToMain.Name = "checkPassT0ToMain";
             this.checkPassT0ToMain.Size = new System.Drawing.Size(15, 14);
-            this.checkPassT0ToMain.TabIndex = 9;
+            this.checkPassT0ToMain.TabIndex = 5;
             this.checkPassT0ToMain.UseVisualStyleBackColor = true;
             // 
             // checkFailIfTileNonEmpty
@@ -221,7 +217,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkFailIfTileNonEmpty.Location = new System.Drawing.Point(100, 146);
             this.checkFailIfTileNonEmpty.Name = "checkFailIfTileNonEmpty";
             this.checkFailIfTileNonEmpty.Size = new System.Drawing.Size(15, 14);
-            this.checkFailIfTileNonEmpty.TabIndex = 8;
+            this.checkFailIfTileNonEmpty.TabIndex = 7;
             this.checkFailIfTileNonEmpty.UseVisualStyleBackColor = true;
             // 
             // comboCreateHow
@@ -235,14 +231,13 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.comboCreateHow.Location = new System.Drawing.Point(100, 79);
             this.comboCreateHow.Name = "comboCreateHow";
             this.comboCreateHow.Size = new System.Drawing.Size(200, 21);
-            this.comboCreateHow.TabIndex = 6;
+            this.comboCreateHow.TabIndex = 4;
             // 
             // lblCreateHow
             // 
-            this.lblCreateHow.AutoSize = true;
-            this.lblCreateHow.Location = new System.Drawing.Point(28, 82);
+            this.lblCreateHow.Location = new System.Drawing.Point(5, 82);
             this.lblCreateHow.Name = "lblCreateHow";
-            this.lblCreateHow.Size = new System.Drawing.Size(66, 13);
+            this.lblCreateHow.Size = new System.Drawing.Size(95, 13);
             this.lblCreateHow.TabIndex = 5;
             this.lblCreateHow.Text = "Create How:";
             this.lblCreateHow.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -266,15 +261,14 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.comboCreateWhere.Location = new System.Drawing.Point(100, 52);
             this.comboCreateWhere.Name = "comboCreateWhere";
             this.comboCreateWhere.Size = new System.Drawing.Size(200, 21);
-            this.comboCreateWhere.TabIndex = 4;
+            this.comboCreateWhere.TabIndex = 2;
             this.comboCreateWhere.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblCreateWhere
             // 
-            this.lblCreateWhere.AutoSize = true;
-            this.lblCreateWhere.Location = new System.Drawing.Point(18, 56);
+            this.lblCreateWhere.Location = new System.Drawing.Point(5, 56);
             this.lblCreateWhere.Name = "lblCreateWhere";
-            this.lblCreateWhere.Size = new System.Drawing.Size(76, 13);
+            this.lblCreateWhere.Size = new System.Drawing.Size(95, 13);
             this.lblCreateWhere.TabIndex = 3;
             this.lblCreateWhere.Text = "Create Where:";
             this.lblCreateWhere.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -300,10 +294,9 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             // 
             // lblCreateWhat
             // 
-            this.lblCreateWhat.AutoSize = true;
-            this.lblCreateWhat.Location = new System.Drawing.Point(24, 7);
+            this.lblCreateWhat.Location = new System.Drawing.Point(5, 7);
             this.lblCreateWhat.Name = "lblCreateWhat";
-            this.lblCreateWhat.Size = new System.Drawing.Size(70, 13);
+            this.lblCreateWhat.Size = new System.Drawing.Size(95, 13);
             this.lblCreateWhat.TabIndex = 0;
             this.lblCreateWhat.Text = "Create What:";
             this.lblCreateWhat.TextAlign = System.Drawing.ContentAlignment.TopRight;

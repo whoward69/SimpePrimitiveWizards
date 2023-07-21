@@ -105,14 +105,13 @@ namespace whse.PrimitiveWizards.Wiz0x0016
             this.comboDirection.Location = new System.Drawing.Point(100, 4);
             this.comboDirection.Name = "comboDirection";
             this.comboDirection.Size = new System.Drawing.Size(140, 21);
-            this.comboDirection.TabIndex = 3;
+            this.comboDirection.TabIndex = 0;
             // 
             // lblDirection
             // 
-            this.lblDirection.AutoSize = true;
-            this.lblDirection.Location = new System.Drawing.Point(42, 7);
+            this.lblDirection.Location = new System.Drawing.Point(5, 7);
             this.lblDirection.Name = "lblDirection";
-            this.lblDirection.Size = new System.Drawing.Size(52, 13);
+            this.lblDirection.Size = new System.Drawing.Size(95, 13);
             this.lblDirection.TabIndex = 2;
             this.lblDirection.Text = "Direction:";
             this.lblDirection.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -125,7 +124,6 @@ namespace whse.PrimitiveWizards.Wiz0x0016
             this.Name = "UI";
             this.Size = new System.Drawing.Size(250, 70);
             this.panelMain.ResumeLayout(false);
-            this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
             this.ResumeLayout(false);
 

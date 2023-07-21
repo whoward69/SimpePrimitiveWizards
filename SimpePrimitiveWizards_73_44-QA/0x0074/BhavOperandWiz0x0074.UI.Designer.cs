@@ -107,10 +107,9 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             // blHandedness
             // 
-            this.blHandedness.AutoSize = true;
-            this.blHandedness.Location = new System.Drawing.Point(18, 210);
+            this.blHandedness.Location = new System.Drawing.Point(5, 210);
             this.blHandedness.Name = "blHandedness";
-            this.blHandedness.Size = new System.Drawing.Size(75, 13);
+            this.blHandedness.Size = new System.Drawing.Size(95, 13);
             this.blHandedness.TabIndex = 59;
             this.blHandedness.Text = "Handed in T3:";
             this.blHandedness.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -118,10 +117,9 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             // lblUseSimAge
             // 
-            this.lblUseSimAge.AutoSize = true;
-            this.lblUseSimAge.Location = new System.Drawing.Point(22, 188);
+            this.lblUseSimAge.Location = new System.Drawing.Point(5, 188);
             this.lblUseSimAge.Name = "lblUseSimAge";
-            this.lblUseSimAge.Size = new System.Drawing.Size(71, 13);
+            this.lblUseSimAge.Size = new System.Drawing.Size(95, 13);
             this.lblUseSimAge.TabIndex = 58;
             this.lblUseSimAge.Text = "Use Sim Age:";
             this.lblUseSimAge.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -154,7 +152,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboSlot.Location = new System.Drawing.Point(100, 63);
             this.comboSlot.Name = "comboSlot";
             this.comboSlot.Size = new System.Drawing.Size(70, 21);
-            this.comboSlot.TabIndex = 55;
+            this.comboSlot.TabIndex = 2;
             this.comboSlot.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // textSlot
@@ -162,14 +160,13 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.textSlot.Location = new System.Drawing.Point(176, 63);
             this.textSlot.Name = "textSlot";
             this.textSlot.Size = new System.Drawing.Size(50, 20);
-            this.textSlot.TabIndex = 54;
+            this.textSlot.TabIndex = 3;
             // 
             // lblSlot
             // 
-            this.lblSlot.AutoSize = true;
-            this.lblSlot.Location = new System.Drawing.Point(66, 66);
+            this.lblSlot.Location = new System.Drawing.Point(5, 66);
             this.lblSlot.Name = "lblSlot";
-            this.lblSlot.Size = new System.Drawing.Size(28, 13);
+            this.lblSlot.Size = new System.Drawing.Size(95, 13);
             this.lblSlot.TabIndex = 53;
             this.lblSlot.Text = "Slot:";
             this.lblSlot.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -179,14 +176,13 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.textObjectAnim.Location = new System.Drawing.Point(121, 139);
             this.textObjectAnim.Name = "textObjectAnim";
             this.textObjectAnim.Size = new System.Drawing.Size(60, 20);
-            this.textObjectAnim.TabIndex = 52;
+            this.textObjectAnim.TabIndex = 8;
             // 
             // lblObjectAnim
             // 
-            this.lblObjectAnim.AutoSize = true;
-            this.lblObjectAnim.Location = new System.Drawing.Point(26, 142);
+            this.lblObjectAnim.Location = new System.Drawing.Point(5, 142);
             this.lblObjectAnim.Name = "lblObjectAnim";
-            this.lblObjectAnim.Size = new System.Drawing.Size(67, 13);
+            this.lblObjectAnim.Size = new System.Drawing.Size(95, 13);
             this.lblObjectAnim.TabIndex = 51;
             this.lblObjectAnim.Text = "Object Anim:";
             this.lblObjectAnim.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -197,7 +193,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkObjectAnim.Location = new System.Drawing.Point(100, 142);
             this.checkObjectAnim.Name = "checkObjectAnim";
             this.checkObjectAnim.Size = new System.Drawing.Size(15, 14);
-            this.checkObjectAnim.TabIndex = 50;
+            this.checkObjectAnim.TabIndex = 7;
             this.checkObjectAnim.UseVisualStyleBackColor = true;
             this.checkObjectAnim.CheckedChanged += new System.EventHandler(this.OnControlChanged);
             // 
@@ -207,7 +203,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.btnObjectAnim.Margin = new System.Windows.Forms.Padding(1);
             this.btnObjectAnim.Name = "btnObjectAnim";
             this.btnObjectAnim.Size = new System.Drawing.Size(27, 21);
-            this.btnObjectAnim.TabIndex = 49;
+            this.btnObjectAnim.TabIndex = 9;
             this.btnObjectAnim.Text = ">>";
             this.btnObjectAnim.UseVisualStyleBackColor = true;
             this.btnObjectAnim.Click += new System.EventHandler(this.OnObjectAnimClicked);
@@ -217,16 +213,16 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.textGraspAnim.Location = new System.Drawing.Point(121, 90);
             this.textGraspAnim.Name = "textGraspAnim";
             this.textGraspAnim.Size = new System.Drawing.Size(60, 20);
-            this.textGraspAnim.TabIndex = 47;
+            this.textGraspAnim.TabIndex = 5;
             // 
             // lblGraspAnim
             // 
-            this.lblGraspAnim.AutoSize = true;
-            this.lblGraspAnim.Location = new System.Drawing.Point(30, 93);
+            this.lblGraspAnim.Location = new System.Drawing.Point(5, 93);
             this.lblGraspAnim.Name = "lblGraspAnim";
-            this.lblGraspAnim.Size = new System.Drawing.Size(64, 13);
+            this.lblGraspAnim.Size = new System.Drawing.Size(95, 13);
             this.lblGraspAnim.TabIndex = 46;
             this.lblGraspAnim.Text = "Grasp Anim:";
+            this.lblGraspAnim.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // checkGraspAnim
             // 
@@ -234,25 +230,24 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkGraspAnim.Location = new System.Drawing.Point(100, 93);
             this.checkGraspAnim.Name = "checkGraspAnim";
             this.checkGraspAnim.Size = new System.Drawing.Size(15, 14);
-            this.checkGraspAnim.TabIndex = 45;
+            this.checkGraspAnim.TabIndex = 4;
             this.checkGraspAnim.UseVisualStyleBackColor = true;
             this.checkGraspAnim.CheckedChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // checkHandedness
             // 
             this.checkHandedness.AutoSize = true;
-            this.checkHandedness.Location = new System.Drawing.Point(99, 210);
+            this.checkHandedness.Location = new System.Drawing.Point(100, 210);
             this.checkHandedness.Name = "checkHandedness";
             this.checkHandedness.Size = new System.Drawing.Size(15, 14);
-            this.checkHandedness.TabIndex = 44;
+            this.checkHandedness.TabIndex = 11;
             this.checkHandedness.UseVisualStyleBackColor = true;
             // 
             // lblAction
             // 
-            this.lblAction.AutoSize = true;
-            this.lblAction.Location = new System.Drawing.Point(54, 7);
+            this.lblAction.Location = new System.Drawing.Point(5, 7);
             this.lblAction.Name = "lblAction";
-            this.lblAction.Size = new System.Drawing.Size(40, 13);
+            this.lblAction.Size = new System.Drawing.Size(95, 13);
             this.lblAction.TabIndex = 2;
             this.lblAction.Text = "Action:";
             this.lblAction.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -263,7 +258,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.btnGraspAnim.Margin = new System.Windows.Forms.Padding(1);
             this.btnGraspAnim.Name = "btnGraspAnim";
             this.btnGraspAnim.Size = new System.Drawing.Size(27, 21);
-            this.btnGraspAnim.TabIndex = 43;
+            this.btnGraspAnim.TabIndex = 6;
             this.btnGraspAnim.Text = ">>";
             this.btnGraspAnim.UseVisualStyleBackColor = true;
             this.btnGraspAnim.Click += new System.EventHandler(this.OnGraspAnimClicked);
@@ -274,7 +269,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkUseSimAge.Location = new System.Drawing.Point(100, 188);
             this.checkUseSimAge.Name = "checkUseSimAge";
             this.checkUseSimAge.Size = new System.Drawing.Size(15, 14);
-            this.checkUseSimAge.TabIndex = 19;
+            this.checkUseSimAge.TabIndex = 10;
             this.checkUseSimAge.UseVisualStyleBackColor = true;
             // 
             // comboAction
@@ -288,7 +283,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboAction.Location = new System.Drawing.Point(100, 4);
             this.comboAction.Name = "comboAction";
             this.comboAction.Size = new System.Drawing.Size(120, 21);
-            this.comboAction.TabIndex = 22;
+            this.comboAction.TabIndex = 0;
             this.comboAction.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // iconPnM
@@ -309,7 +304,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkDecimal.Location = new System.Drawing.Point(136, 225);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
-            this.checkDecimal.TabIndex = 31;
+            this.checkDecimal.TabIndex = 12;
             this.checkDecimal.Text = "Decimal (except Consts)";
             this.checkDecimal.UseVisualStyleBackColor = true;
             // 
@@ -320,7 +315,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkAttrPicker.Location = new System.Drawing.Point(282, 225);
             this.checkAttrPicker.Name = "checkAttrPicker";
             this.checkAttrPicker.Size = new System.Drawing.Size(117, 17);
-            this.checkAttrPicker.TabIndex = 30;
+            this.checkAttrPicker.TabIndex = 13;
             this.checkAttrPicker.Text = "use Attribute picker";
             this.checkAttrPicker.UseVisualStyleBackColor = true;
             // 
@@ -333,14 +328,13 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.panelObject.Location = new System.Drawing.Point(0, 36);
             this.panelObject.Name = "panelObject";
             this.panelObject.Size = new System.Drawing.Size(440, 21);
-            this.panelObject.TabIndex = 41;
+            this.panelObject.TabIndex = 1;
             // 
             // lblObject
             // 
-            this.lblObject.AutoSize = true;
-            this.lblObject.Location = new System.Drawing.Point(53, 3);
+            this.lblObject.Location = new System.Drawing.Point(5, 3);
             this.lblObject.Name = "lblObject";
-            this.lblObject.Size = new System.Drawing.Size(41, 13);
+            this.lblObject.Size = new System.Drawing.Size(95, 13);
             this.lblObject.TabIndex = 5;
             this.lblObject.Text = "Object:";
             this.lblObject.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -350,7 +344,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.textDataValue1.Location = new System.Drawing.Point(310, 0);
             this.textDataValue1.Name = "textDataValue1";
             this.textDataValue1.Size = new System.Drawing.Size(120, 20);
-            this.textDataValue1.TabIndex = 39;
+            this.textDataValue1.TabIndex = 1;
             // 
             // comboDataPicker1
             // 
@@ -359,7 +353,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboDataPicker1.Location = new System.Drawing.Point(310, 0);
             this.comboDataPicker1.Name = "comboDataPicker1";
             this.comboDataPicker1.Size = new System.Drawing.Size(120, 21);
-            this.comboDataPicker1.TabIndex = 28;
+            this.comboDataPicker1.TabIndex = 2;
             // 
             // comboDataOwner1
             // 
@@ -368,7 +362,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboDataOwner1.Location = new System.Drawing.Point(100, 0);
             this.comboDataOwner1.Name = "comboDataOwner1";
             this.comboDataOwner1.Size = new System.Drawing.Size(200, 21);
-            this.comboDataOwner1.TabIndex = 37;
+            this.comboDataOwner1.TabIndex = 0;
             // 
             // UI
             // 

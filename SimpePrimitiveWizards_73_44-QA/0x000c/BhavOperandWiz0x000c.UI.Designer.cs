@@ -87,10 +87,9 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             // 
             // lblInto
             // 
-            this.lblInto.AutoSize = true;
-            this.lblInto.Location = new System.Drawing.Point(66, 61);
+            this.lblInto.Location = new System.Drawing.Point(5, 61);
             this.lblInto.Name = "lblInto";
-            this.lblInto.Size = new System.Drawing.Size(28, 13);
+            this.lblInto.Size = new System.Drawing.Size(95, 13);
             this.lblInto.TabIndex = 25;
             this.lblInto.Text = "Into:";
             this.lblInto.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -112,7 +111,7 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.comboDataPicker2.Location = new System.Drawing.Point(310, 58);
             this.comboDataPicker2.Name = "comboDataPicker2";
             this.comboDataPicker2.Size = new System.Drawing.Size(120, 21);
-            this.comboDataPicker2.TabIndex = 34;
+            this.comboDataPicker2.TabIndex = 3;
             // 
             // textDataValue2
             // 
@@ -123,10 +122,9 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             // 
             // lblFrom
             // 
-            this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(61, 7);
+            this.lblFrom.Location = new System.Drawing.Point(5, 7);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(33, 13);
+            this.lblFrom.Size = new System.Drawing.Size(95, 13);
             this.lblFrom.TabIndex = 15;
             this.lblFrom.Text = "From:";
             this.lblFrom.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -141,7 +139,7 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.comboFrom.Location = new System.Drawing.Point(100, 4);
             this.comboFrom.Name = "comboFrom";
             this.comboFrom.Size = new System.Drawing.Size(120, 21);
-            this.comboFrom.TabIndex = 3;
+            this.comboFrom.TabIndex = 0;
             this.comboFrom.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // iconPnM
@@ -164,14 +162,13 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.panelVariable.Location = new System.Drawing.Point(0, 31);
             this.panelVariable.Name = "panelVariable";
             this.panelVariable.Size = new System.Drawing.Size(440, 21);
-            this.panelVariable.TabIndex = 37;
+            this.panelVariable.TabIndex = 1;
             // 
             // lblVariable
             // 
-            this.lblVariable.AutoSize = true;
-            this.lblVariable.Location = new System.Drawing.Point(46, 3);
+            this.lblVariable.Location = new System.Drawing.Point(5, 3);
             this.lblVariable.Name = "lblVariable";
-            this.lblVariable.Size = new System.Drawing.Size(48, 13);
+            this.lblVariable.Size = new System.Drawing.Size(95, 13);
             this.lblVariable.TabIndex = 23;
             this.lblVariable.Text = "Variable:";
             this.lblVariable.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -183,14 +180,14 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.comboDataPicker1.Location = new System.Drawing.Point(310, 0);
             this.comboDataPicker1.Name = "comboDataPicker1";
             this.comboDataPicker1.Size = new System.Drawing.Size(120, 21);
-            this.comboDataPicker1.TabIndex = 28;
+            this.comboDataPicker1.TabIndex = 1;
             // 
             // textDataValue1
             // 
             this.textDataValue1.Location = new System.Drawing.Point(310, 0);
             this.textDataValue1.Name = "textDataValue1";
             this.textDataValue1.Size = new System.Drawing.Size(120, 20);
-            this.textDataValue1.TabIndex = 29;
+            this.textDataValue1.TabIndex = 2;
             // 
             // comboDataOwner1
             // 
@@ -199,7 +196,7 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.comboDataOwner1.Location = new System.Drawing.Point(100, 0);
             this.comboDataOwner1.Name = "comboDataOwner1";
             this.comboDataOwner1.Size = new System.Drawing.Size(200, 21);
-            this.comboDataOwner1.TabIndex = 27;
+            this.comboDataOwner1.TabIndex = 0;
             // 
             // comboDataOwner2
             // 
@@ -208,7 +205,7 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.comboDataOwner2.Location = new System.Drawing.Point(100, 58);
             this.comboDataOwner2.Name = "comboDataOwner2";
             this.comboDataOwner2.Size = new System.Drawing.Size(200, 21);
-            this.comboDataOwner2.TabIndex = 33;
+            this.comboDataOwner2.TabIndex = 2;
             // 
             // checkAttrPicker
             // 
@@ -217,7 +214,7 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.checkAttrPicker.Location = new System.Drawing.Point(282, 105);
             this.checkAttrPicker.Name = "checkAttrPicker";
             this.checkAttrPicker.Size = new System.Drawing.Size(117, 17);
-            this.checkAttrPicker.TabIndex = 30;
+            this.checkAttrPicker.TabIndex = 6;
             this.checkAttrPicker.Text = "use Attribute picker";
             this.checkAttrPicker.UseVisualStyleBackColor = true;
             // 
@@ -228,7 +225,7 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.checkDecimal.Location = new System.Drawing.Point(136, 105);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
-            this.checkDecimal.TabIndex = 31;
+            this.checkDecimal.TabIndex = 5;
             this.checkDecimal.Text = "Decimal (except Consts)";
             this.checkDecimal.UseVisualStyleBackColor = true;
             // 
@@ -238,15 +235,14 @@ namespace whse.PrimitiveWizards.Wiz0x000c
             this.checkDegrees.Location = new System.Drawing.Point(100, 87);
             this.checkDegrees.Name = "checkDegrees";
             this.checkDegrees.Size = new System.Drawing.Size(15, 14);
-            this.checkDegrees.TabIndex = 20;
+            this.checkDegrees.TabIndex = 4;
             this.checkDegrees.UseVisualStyleBackColor = true;
             // 
             // lblDegrees
             // 
-            this.lblDegrees.AutoSize = true;
-            this.lblDegrees.Location = new System.Drawing.Point(44, 87);
+            this.lblDegrees.Location = new System.Drawing.Point(5, 87);
             this.lblDegrees.Name = "lblDegrees";
-            this.lblDegrees.Size = new System.Drawing.Size(50, 13);
+            this.lblDegrees.Size = new System.Drawing.Size(95, 13);
             this.lblDegrees.TabIndex = 16;
             this.lblDegrees.Text = "Degrees:";
             this.lblDegrees.TextAlign = System.Drawing.ContentAlignment.TopRight;

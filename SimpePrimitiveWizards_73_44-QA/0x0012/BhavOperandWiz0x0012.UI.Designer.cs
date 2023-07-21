@@ -70,10 +70,9 @@ namespace whse.PrimitiveWizards.Wiz0x0012
             // 
             // lblImmediate
             // 
-            this.lblImmediate.AutoSize = true;
-            this.lblImmediate.Location = new System.Drawing.Point(36, 33);
+            this.lblImmediate.Location = new System.Drawing.Point(5, 33);
             this.lblImmediate.Name = "lblImmediate";
-            this.lblImmediate.Size = new System.Drawing.Size(58, 13);
+            this.lblImmediate.Size = new System.Drawing.Size(95, 13);
             this.lblImmediate.TabIndex = 20;
             this.lblImmediate.Text = "Immediate:";
             this.lblImmediate.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -84,7 +83,7 @@ namespace whse.PrimitiveWizards.Wiz0x0012
             this.checkImmediate.Location = new System.Drawing.Point(100, 33);
             this.checkImmediate.Name = "checkImmediate";
             this.checkImmediate.Size = new System.Drawing.Size(15, 14);
-            this.checkImmediate.TabIndex = 21;
+            this.checkImmediate.TabIndex = 1;
             this.checkImmediate.UseVisualStyleBackColor = true;
             // 
             // iconPnM
@@ -108,24 +107,22 @@ namespace whse.PrimitiveWizards.Wiz0x0012
             this.comboRemove.Location = new System.Drawing.Point(100, 4);
             this.comboRemove.Name = "comboRemove";
             this.comboRemove.Size = new System.Drawing.Size(87, 21);
-            this.comboRemove.TabIndex = 3;
+            this.comboRemove.TabIndex = 0;
             // 
             // lblRemove
             // 
-            this.lblRemove.AutoSize = true;
-            this.lblRemove.Location = new System.Drawing.Point(44, 7);
+            this.lblRemove.Location = new System.Drawing.Point(5, 7);
             this.lblRemove.Name = "lblRemove";
-            this.lblRemove.Size = new System.Drawing.Size(50, 13);
+            this.lblRemove.Size = new System.Drawing.Size(95, 13);
             this.lblRemove.TabIndex = 2;
             this.lblRemove.Text = "Remove:";
             this.lblRemove.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblCleanUpAll
             // 
-            this.lblCleanUpAll.AutoSize = true;
-            this.lblCleanUpAll.Location = new System.Drawing.Point(26, 55);
+            this.lblCleanUpAll.Location = new System.Drawing.Point(5, 55);
             this.lblCleanUpAll.Name = "lblCleanUpAll";
-            this.lblCleanUpAll.Size = new System.Drawing.Size(68, 13);
+            this.lblCleanUpAll.Size = new System.Drawing.Size(95, 13);
             this.lblCleanUpAll.TabIndex = 15;
             this.lblCleanUpAll.Text = "Clean Up All:";
             this.lblCleanUpAll.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -136,7 +133,7 @@ namespace whse.PrimitiveWizards.Wiz0x0012
             this.checkCleanUpAll.Location = new System.Drawing.Point(100, 55);
             this.checkCleanUpAll.Name = "checkCleanUpAll";
             this.checkCleanUpAll.Size = new System.Drawing.Size(15, 14);
-            this.checkCleanUpAll.TabIndex = 19;
+            this.checkCleanUpAll.TabIndex = 2;
             this.checkCleanUpAll.UseVisualStyleBackColor = true;
             // 
             // UI

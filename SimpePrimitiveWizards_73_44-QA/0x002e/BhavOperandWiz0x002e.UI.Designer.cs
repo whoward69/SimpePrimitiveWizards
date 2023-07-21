@@ -42,6 +42,8 @@ namespace whse.PrimitiveWizards.Wiz0x002e
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.lblMoveSim = new System.Windows.Forms.Label();
+            this.lblTestOnly = new System.Windows.Forms.Label();
             this.comboSnapType = new System.Windows.Forms.ComboBox();
             this.textSlotNumber = new System.Windows.Forms.TextBox();
             this.checkDecimal = new System.Windows.Forms.CheckBox();
@@ -52,8 +54,6 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.lblSlotNumber = new System.Windows.Forms.Label();
             this.lblSnapType = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lblTestOnly = new System.Windows.Forms.Label();
-            this.lblMoveSim = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,25 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.panelMain.Size = new System.Drawing.Size(350, 120);
             this.panelMain.TabIndex = 0;
             // 
+            // lblMoveSim
+            // 
+            this.lblMoveSim.Location = new System.Drawing.Point(5, 80);
+            this.lblMoveSim.Name = "lblMoveSim";
+            this.lblMoveSim.Size = new System.Drawing.Size(95, 13);
+            this.lblMoveSim.TabIndex = 37;
+            this.lblMoveSim.Text = "Move Sim:";
+            this.lblMoveSim.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblMoveSim, "Ask Sim to move");
+            // 
+            // lblTestOnly
+            // 
+            this.lblTestOnly.Location = new System.Drawing.Point(5, 60);
+            this.lblTestOnly.Name = "lblTestOnly";
+            this.lblTestOnly.Size = new System.Drawing.Size(95, 13);
+            this.lblTestOnly.TabIndex = 36;
+            this.lblTestOnly.Text = "Test Only:";
+            this.lblTestOnly.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // comboSnapType
             // 
             this.comboSnapType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -89,7 +108,7 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.comboSnapType.Location = new System.Drawing.Point(100, 4);
             this.comboSnapType.Name = "comboSnapType";
             this.comboSnapType.Size = new System.Drawing.Size(170, 21);
-            this.comboSnapType.TabIndex = 35;
+            this.comboSnapType.TabIndex = 0;
             this.comboSnapType.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // textSlotNumber
@@ -97,7 +116,7 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.textSlotNumber.Location = new System.Drawing.Point(280, 30);
             this.textSlotNumber.Name = "textSlotNumber";
             this.textSlotNumber.Size = new System.Drawing.Size(50, 20);
-            this.textSlotNumber.TabIndex = 34;
+            this.textSlotNumber.TabIndex = 2;
             // 
             // checkDecimal
             // 
@@ -106,7 +125,7 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.checkDecimal.Location = new System.Drawing.Point(169, 100);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
-            this.checkDecimal.TabIndex = 32;
+            this.checkDecimal.TabIndex = 5;
             this.checkDecimal.Text = "Decimal (except Consts)";
             this.checkDecimal.UseVisualStyleBackColor = true;
             // 
@@ -127,7 +146,7 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.checkMoveSim.Location = new System.Drawing.Point(100, 80);
             this.checkMoveSim.Name = "checkMoveSim";
             this.checkMoveSim.Size = new System.Drawing.Size(15, 14);
-            this.checkMoveSim.TabIndex = 15;
+            this.checkMoveSim.TabIndex = 4;
             this.checkMoveSim.UseVisualStyleBackColor = true;
             // 
             // checkTestOnly
@@ -136,7 +155,7 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.checkTestOnly.Location = new System.Drawing.Point(100, 60);
             this.checkTestOnly.Name = "checkTestOnly";
             this.checkTestOnly.Size = new System.Drawing.Size(15, 14);
-            this.checkTestOnly.TabIndex = 9;
+            this.checkTestOnly.TabIndex = 3;
             this.checkTestOnly.UseVisualStyleBackColor = true;
             // 
             // comboSlotNumber
@@ -150,49 +169,26 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.comboSlotNumber.Location = new System.Drawing.Point(100, 31);
             this.comboSlotNumber.Name = "comboSlotNumber";
             this.comboSlotNumber.Size = new System.Drawing.Size(170, 21);
-            this.comboSlotNumber.TabIndex = 4;
+            this.comboSlotNumber.TabIndex = 1;
             this.comboSlotNumber.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblSlotNumber
             // 
-            this.lblSlotNumber.AutoSize = true;
-            this.lblSlotNumber.Location = new System.Drawing.Point(26, 37);
+            this.lblSlotNumber.Location = new System.Drawing.Point(5, 37);
             this.lblSlotNumber.Name = "lblSlotNumber";
-            this.lblSlotNumber.Size = new System.Drawing.Size(68, 13);
+            this.lblSlotNumber.Size = new System.Drawing.Size(95, 13);
             this.lblSlotNumber.TabIndex = 3;
             this.lblSlotNumber.Text = "Slot Number:";
             this.lblSlotNumber.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblSnapType
             // 
-            this.lblSnapType.AutoSize = true;
-            this.lblSnapType.Location = new System.Drawing.Point(60, 7);
+            this.lblSnapType.Location = new System.Drawing.Point(5, 7);
             this.lblSnapType.Name = "lblSnapType";
-            this.lblSnapType.Size = new System.Drawing.Size(34, 13);
+            this.lblSnapType.Size = new System.Drawing.Size(95, 13);
             this.lblSnapType.TabIndex = 0;
             this.lblSnapType.Text = "Type:";
             this.lblSnapType.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblTestOnly
-            // 
-            this.lblTestOnly.AutoSize = true;
-            this.lblTestOnly.Location = new System.Drawing.Point(39, 60);
-            this.lblTestOnly.Name = "lblTestOnly";
-            this.lblTestOnly.Size = new System.Drawing.Size(55, 13);
-            this.lblTestOnly.TabIndex = 36;
-            this.lblTestOnly.Text = "Test Only:";
-            this.lblTestOnly.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblMoveSim
-            // 
-            this.lblMoveSim.AutoSize = true;
-            this.lblMoveSim.Location = new System.Drawing.Point(37, 80);
-            this.lblMoveSim.Name = "lblMoveSim";
-            this.lblMoveSim.Size = new System.Drawing.Size(57, 13);
-            this.lblMoveSim.TabIndex = 37;
-            this.lblMoveSim.Text = "Move Sim:";
-            this.lblMoveSim.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip.SetToolTip(this.lblMoveSim, "Ask Sim to move");
             // 
             // UI
             // 

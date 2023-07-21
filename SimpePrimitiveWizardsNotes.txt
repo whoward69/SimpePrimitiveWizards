@@ -52,6 +52,7 @@ All of these should return nothing
 operands\[OperandConstants.Operand(8|9|10|11|12|13|14|15)\]
 reserved1\[OperandConstants.Operand[0-7]\]
 SelectedItem =
+Point\(99,
 
 
 Editing pjse.coder.plugin.dll

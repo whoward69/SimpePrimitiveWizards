@@ -42,9 +42,11 @@ namespace whse.PrimitiveWizards.Wiz0x0007
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.comboWhat = new System.Windows.Forms.ComboBox();
+            this.lblWhat = new System.Windows.Forms.Label();
             this.iconPnM = new System.Windows.Forms.PictureBox();
-            this.comboRefresh = new System.Windows.Forms.ComboBox();
-            this.lblRefresh = new System.Windows.Forms.Label();
+            this.comboWho = new System.Windows.Forms.ComboBox();
+            this.lblWho = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
@@ -52,46 +54,69 @@ namespace whse.PrimitiveWizards.Wiz0x0007
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.comboWhat);
+            this.panelMain.Controls.Add(this.lblWhat);
             this.panelMain.Controls.Add(this.iconPnM);
-            this.panelMain.Controls.Add(this.comboRefresh);
-            this.panelMain.Controls.Add(this.lblRefresh);
+            this.panelMain.Controls.Add(this.comboWho);
+            this.panelMain.Controls.Add(this.lblWho);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(250, 70);
+            this.panelMain.Size = new System.Drawing.Size(300, 70);
             this.panelMain.TabIndex = 0;
+            // 
+            // comboWhat
+            // 
+            this.comboWhat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboWhat.FormattingEnabled = true;
+            this.comboWhat.Items.AddRange(new object[] {
+            "Graphic",
+            "Lighting Contribution",
+            "Room Score Contribution"});
+            this.comboWhat.Location = new System.Drawing.Point(100, 31);
+            this.comboWhat.Name = "comboWhat";
+            this.comboWhat.Size = new System.Drawing.Size(150, 21);
+            this.comboWhat.TabIndex = 1;
+            // 
+            // lblWhat
+            // 
+            this.lblWhat.Location = new System.Drawing.Point(5, 34);
+            this.lblWhat.Name = "lblWhat";
+            this.lblWhat.Size = new System.Drawing.Size(95, 13);
+            this.lblWhat.TabIndex = 18;
+            this.lblWhat.Text = "What:";
+            this.lblWhat.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // iconPnM
             // 
             this.iconPnM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPnM.Image = global::whse.PrimitiveWizards.Properties.Resources.MinionWithNotebook;
-            this.iconPnM.Location = new System.Drawing.Point(215, 35);
+            this.iconPnM.Location = new System.Drawing.Point(265, 35);
             this.iconPnM.Name = "iconPnM";
             this.iconPnM.Size = new System.Drawing.Size(32, 32);
             this.iconPnM.TabIndex = 17;
             this.iconPnM.TabStop = false;
             this.toolTip.SetToolTip(this.iconPnM, "Primitive wizard by Pick\'n\'Mix (whoward69)\r\nhttps://www.picknmixmods.com/Sims2/");
             // 
-            // comboRefresh
+            // comboWho
             // 
-            this.comboRefresh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboRefresh.FormattingEnabled = true;
-            this.comboRefresh.Items.AddRange(new object[] {
-            "My Graphic",
-            "SO\'s Graphic"});
-            this.comboRefresh.Location = new System.Drawing.Point(100, 4);
-            this.comboRefresh.Name = "comboRefresh";
-            this.comboRefresh.Size = new System.Drawing.Size(87, 21);
-            this.comboRefresh.TabIndex = 3;
+            this.comboWho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboWho.FormattingEnabled = true;
+            this.comboWho.Items.AddRange(new object[] {
+            "My",
+            "Stack Object\'s"});
+            this.comboWho.Location = new System.Drawing.Point(100, 4);
+            this.comboWho.Name = "comboWho";
+            this.comboWho.Size = new System.Drawing.Size(150, 21);
+            this.comboWho.TabIndex = 0;
             // 
-            // lblRefresh
+            // lblWho
             // 
-            this.lblRefresh.AutoSize = true;
-            this.lblRefresh.Location = new System.Drawing.Point(47, 7);
-            this.lblRefresh.Name = "lblRefresh";
-            this.lblRefresh.Size = new System.Drawing.Size(47, 13);
-            this.lblRefresh.TabIndex = 2;
-            this.lblRefresh.Text = "Refresh:";
-            this.lblRefresh.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblWho.Location = new System.Drawing.Point(5, 7);
+            this.lblWho.Name = "lblWho";
+            this.lblWho.Size = new System.Drawing.Size(95, 13);
+            this.lblWho.TabIndex = 2;
+            this.lblWho.Text = "Refresh:";
+            this.lblWho.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // UI
             // 
@@ -99,9 +124,8 @@ namespace whse.PrimitiveWizards.Wiz0x0007
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
             this.Name = "UI";
-            this.Size = new System.Drawing.Size(250, 70);
+            this.Size = new System.Drawing.Size(300, 70);
             this.panelMain.ResumeLayout(false);
-            this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
             this.ResumeLayout(false);
 
@@ -110,9 +134,11 @@ namespace whse.PrimitiveWizards.Wiz0x0007
         #endregion
 
         private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Label lblRefresh;
-        private System.Windows.Forms.ComboBox comboRefresh;
+        private System.Windows.Forms.Label lblWho;
+        private System.Windows.Forms.ComboBox comboWho;
         private System.Windows.Forms.PictureBox iconPnM;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ComboBox comboWhat;
+        private System.Windows.Forms.Label lblWhat;
     }
 }

@@ -95,10 +95,9 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             // 
             // lblParameters
             // 
-            this.lblParameters.AutoSize = true;
             this.lblParameters.Location = new System.Drawing.Point(5, 53);
             this.lblParameters.Name = "lblParameters";
-            this.lblParameters.Size = new System.Drawing.Size(89, 13);
+            this.lblParameters.Size = new System.Drawing.Size(95, 13);
             this.lblParameters.TabIndex = 45;
             this.lblParameters.Text = "Pass Parameters:";
             this.lblParameters.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -114,11 +113,10 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             // 
             // lblScript
             // 
-            this.lblScript.AutoSize = true;
-            this.lblScript.Location = new System.Drawing.Point(57, 7);
+            this.lblScript.Location = new System.Drawing.Point(5, 7);
             this.lblScript.Name = "lblScript";
-            this.lblScript.Size = new System.Drawing.Size(37, 13);
-            this.lblScript.TabIndex = 2;
+            this.lblScript.Size = new System.Drawing.Size(95, 13);
+            this.lblScript.TabIndex = 9;
             this.lblScript.Text = "Script:";
             this.lblScript.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -128,7 +126,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.btnScriptPicker.Margin = new System.Windows.Forms.Padding(1);
             this.btnScriptPicker.Name = "btnScriptPicker";
             this.btnScriptPicker.Size = new System.Drawing.Size(27, 21);
-            this.btnScriptPicker.TabIndex = 43;
+            this.btnScriptPicker.TabIndex = 4;
             this.btnScriptPicker.Text = ">>";
             this.btnScriptPicker.UseVisualStyleBackColor = true;
             this.btnScriptPicker.Click += new System.EventHandler(this.OnScriptPickerClicked);
@@ -143,14 +141,14 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboScriptType.Location = new System.Drawing.Point(330, 4);
             this.comboScriptType.Name = "comboScriptType";
             this.comboScriptType.Size = new System.Drawing.Size(100, 21);
-            this.comboScriptType.TabIndex = 42;
+            this.comboScriptType.TabIndex = 3;
             // 
             // textStrRes
             // 
             this.textStrRes.Location = new System.Drawing.Point(100, 4);
             this.textStrRes.Name = "textStrRes";
             this.textStrRes.Size = new System.Drawing.Size(60, 20);
-            this.textStrRes.TabIndex = 41;
+            this.textStrRes.TabIndex = 0;
             // 
             // checkParameters
             // 
@@ -158,7 +156,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.checkParameters.Location = new System.Drawing.Point(100, 53);
             this.checkParameters.Name = "checkParameters";
             this.checkParameters.Size = new System.Drawing.Size(15, 14);
-            this.checkParameters.TabIndex = 19;
+            this.checkParameters.TabIndex = 5;
             this.checkParameters.UseVisualStyleBackColor = true;
             this.checkParameters.CheckedChanged += new System.EventHandler(this.OnParametersClicked);
             // 
@@ -173,7 +171,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboStrScope.Location = new System.Drawing.Point(166, 3);
             this.comboStrScope.Name = "comboStrScope";
             this.comboStrScope.Size = new System.Drawing.Size(90, 21);
-            this.comboStrScope.TabIndex = 22;
+            this.comboStrScope.TabIndex = 1;
             this.comboStrScope.SelectedIndexChanged += new System.EventHandler(this.OnScriptControlChanged);
             // 
             // textStrEntry
@@ -181,7 +179,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.textStrEntry.Location = new System.Drawing.Point(262, 4);
             this.textStrEntry.Name = "textStrEntry";
             this.textStrEntry.Size = new System.Drawing.Size(60, 20);
-            this.textStrEntry.TabIndex = 4;
+            this.textStrEntry.TabIndex = 2;
             // 
             // panelParameters
             // 
@@ -200,34 +198,31 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.panelParameters.Location = new System.Drawing.Point(0, 73);
             this.panelParameters.Name = "panelParameters";
             this.panelParameters.Size = new System.Drawing.Size(440, 76);
-            this.panelParameters.TabIndex = 41;
+            this.panelParameters.TabIndex = 6;
             // 
             // lblParam1
             // 
-            this.lblParam1.AutoSize = true;
-            this.lblParam1.Location = new System.Drawing.Point(45, 3);
+            this.lblParam1.Location = new System.Drawing.Point(5, 3);
             this.lblParam1.Name = "lblParam1";
-            this.lblParam1.Size = new System.Drawing.Size(49, 13);
+            this.lblParam1.Size = new System.Drawing.Size(95, 13);
             this.lblParam1.TabIndex = 5;
             this.lblParam1.Text = "Param 0:";
             this.lblParam1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblParam2
             // 
-            this.lblParam2.AutoSize = true;
-            this.lblParam2.Location = new System.Drawing.Point(45, 30);
+            this.lblParam2.Location = new System.Drawing.Point(5, 30);
             this.lblParam2.Name = "lblParam2";
-            this.lblParam2.Size = new System.Drawing.Size(49, 13);
+            this.lblParam2.Size = new System.Drawing.Size(95, 13);
             this.lblParam2.TabIndex = 23;
             this.lblParam2.Text = "Param 1:";
             this.lblParam2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblParam3
             // 
-            this.lblParam3.AutoSize = true;
-            this.lblParam3.Location = new System.Drawing.Point(45, 57);
+            this.lblParam3.Location = new System.Drawing.Point(5, 57);
             this.lblParam3.Name = "lblParam3";
-            this.lblParam3.Size = new System.Drawing.Size(49, 13);
+            this.lblParam3.Size = new System.Drawing.Size(95, 13);
             this.lblParam3.TabIndex = 25;
             this.lblParam3.Text = "Param 2:";
             this.lblParam3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -237,21 +232,21 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.textDataValue1.Location = new System.Drawing.Point(310, 0);
             this.textDataValue1.Name = "textDataValue1";
             this.textDataValue1.Size = new System.Drawing.Size(120, 20);
-            this.textDataValue1.TabIndex = 39;
+            this.textDataValue1.TabIndex = 2;
             // 
             // textDataValue2
             // 
             this.textDataValue2.Location = new System.Drawing.Point(310, 27);
             this.textDataValue2.Name = "textDataValue2";
             this.textDataValue2.Size = new System.Drawing.Size(120, 20);
-            this.textDataValue2.TabIndex = 29;
+            this.textDataValue2.TabIndex = 5;
             // 
             // textDataValue3
             // 
             this.textDataValue3.Location = new System.Drawing.Point(310, 54);
             this.textDataValue3.Name = "textDataValue3";
             this.textDataValue3.Size = new System.Drawing.Size(120, 20);
-            this.textDataValue3.TabIndex = 35;
+            this.textDataValue3.TabIndex = 8;
             // 
             // comboDataPicker1
             // 
@@ -260,7 +255,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboDataPicker1.Location = new System.Drawing.Point(310, 0);
             this.comboDataPicker1.Name = "comboDataPicker1";
             this.comboDataPicker1.Size = new System.Drawing.Size(120, 21);
-            this.comboDataPicker1.TabIndex = 28;
+            this.comboDataPicker1.TabIndex = 2;
             // 
             // comboDataPicker2
             // 
@@ -269,7 +264,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboDataPicker2.Location = new System.Drawing.Point(310, 27);
             this.comboDataPicker2.Name = "comboDataPicker2";
             this.comboDataPicker2.Size = new System.Drawing.Size(120, 21);
-            this.comboDataPicker2.TabIndex = 28;
+            this.comboDataPicker2.TabIndex = 5;
             // 
             // comboDataPicker3
             // 
@@ -278,7 +273,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboDataPicker3.Location = new System.Drawing.Point(310, 54);
             this.comboDataPicker3.Name = "comboDataPicker3";
             this.comboDataPicker3.Size = new System.Drawing.Size(120, 21);
-            this.comboDataPicker3.TabIndex = 34;
+            this.comboDataPicker3.TabIndex = 8;
             // 
             // comboDataOwner1
             // 
@@ -287,7 +282,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboDataOwner1.Location = new System.Drawing.Point(100, 0);
             this.comboDataOwner1.Name = "comboDataOwner1";
             this.comboDataOwner1.Size = new System.Drawing.Size(200, 21);
-            this.comboDataOwner1.TabIndex = 37;
+            this.comboDataOwner1.TabIndex = 0;
             // 
             // comboDataOwner2
             // 
@@ -296,7 +291,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboDataOwner2.Location = new System.Drawing.Point(100, 27);
             this.comboDataOwner2.Name = "comboDataOwner2";
             this.comboDataOwner2.Size = new System.Drawing.Size(200, 21);
-            this.comboDataOwner2.TabIndex = 27;
+            this.comboDataOwner2.TabIndex = 3;
             // 
             // comboDataOwner3
             // 
@@ -305,7 +300,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.comboDataOwner3.Location = new System.Drawing.Point(100, 54);
             this.comboDataOwner3.Name = "comboDataOwner3";
             this.comboDataOwner3.Size = new System.Drawing.Size(200, 21);
-            this.comboDataOwner3.TabIndex = 33;
+            this.comboDataOwner3.TabIndex = 6;
             // 
             // iconPnM
             // 
@@ -325,7 +320,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.checkDecimal.Location = new System.Drawing.Point(136, 170);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
-            this.checkDecimal.TabIndex = 31;
+            this.checkDecimal.TabIndex = 7;
             this.checkDecimal.Text = "Decimal (except Consts)";
             this.checkDecimal.UseVisualStyleBackColor = true;
             // 
@@ -336,7 +331,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
             this.checkAttrPicker.Location = new System.Drawing.Point(282, 170);
             this.checkAttrPicker.Name = "checkAttrPicker";
             this.checkAttrPicker.Size = new System.Drawing.Size(117, 17);
-            this.checkAttrPicker.TabIndex = 30;
+            this.checkAttrPicker.TabIndex = 8;
             this.checkAttrPicker.Text = "use Attribute picker";
             this.checkAttrPicker.UseVisualStyleBackColor = true;
             // 

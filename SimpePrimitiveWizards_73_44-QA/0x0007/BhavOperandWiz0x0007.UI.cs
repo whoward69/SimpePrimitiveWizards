@@ -11,7 +11,6 @@
  */
 
 using SimPe.PackedFiles.Wrapper;
-using System;
 using System.Windows.Forms;
 
 /*
@@ -41,11 +40,11 @@ namespace whse.PrimitiveWizards.Wiz0x0007
             wrappedByteArray operands = inst.Operands;
             // wrappedByteArray reserved1 = inst.Reserved1;
 
-            Boolset boolset0 = new Boolset(operands[OperandConstants.Operand0]);
-
             // internalchg = true;
 
-            comboRefresh.SelectedIndex = (boolset0[OperandConstants.Bit1] ? 0 : 1);
+            // WARNING - The data table at https://modthesims.info/wiki.php?title=0x0007 is wrong!
+            WizardHelpers.ComboSelectIndex(comboWho, operands[OperandConstants.Operand0]);
+            WizardHelpers.ComboSelectIndex(comboWhat, operands[OperandConstants.Operand2]);
 
             // internalchg = false;
         }
@@ -57,10 +56,11 @@ namespace whse.PrimitiveWizards.Wiz0x0007
                 wrappedByteArray operands = inst.Operands;
                 // wrappedByteArray reserved1 = inst.Reserved1;
 
-                Boolset boolset0 = new Boolset(operands[OperandConstants.Operand0]);
-                boolset0[OperandConstants.Bit1] = (comboRefresh.SelectedIndex == 0);
-                boolset0[OperandConstants.Bit2] = (comboRefresh.SelectedIndex == 1);
-                operands[OperandConstants.Operand0] = boolset0;
+                // WARNING - The data table at https://modthesims.info/wiki.php?title=0x0007 is wrong!
+                operands[OperandConstants.Operand0] = (byte)comboWho.SelectedIndex;
+                operands[OperandConstants.Operand1] = 0;
+                operands[OperandConstants.Operand2] = (byte)comboWhat.SelectedIndex;
+                operands[OperandConstants.Operand3] = 0;
             }
 
             return inst;
