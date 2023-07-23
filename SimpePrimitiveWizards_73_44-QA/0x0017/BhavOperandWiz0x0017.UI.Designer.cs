@@ -52,7 +52,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
             this.lblSampleRate = new System.Windows.Forms.Label();
             this.lblAutoVary = new System.Windows.Forms.Label();
             this.lblSoundName = new System.Windows.Forms.Label();
-            this.lblScript = new System.Windows.Forms.Label();
+            this.lblSound = new System.Windows.Forms.Label();
             this.btnSoundPicker = new System.Windows.Forms.Button();
             this.checkAutoVary = new System.Windows.Forms.CheckBox();
             this.comboSoundScope = new System.Windows.Forms.ComboBox();
@@ -76,7 +76,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
             this.panelMain.Controls.Add(this.lblSampleRate);
             this.panelMain.Controls.Add(this.lblAutoVary);
             this.panelMain.Controls.Add(this.lblSoundName);
-            this.panelMain.Controls.Add(this.lblScript);
+            this.panelMain.Controls.Add(this.lblSound);
             this.panelMain.Controls.Add(this.btnSoundPicker);
             this.panelMain.Controls.Add(this.checkAutoVary);
             this.panelMain.Controls.Add(this.comboSoundScope);
@@ -180,14 +180,14 @@ namespace whse.PrimitiveWizards.Wiz0x0017
             this.lblSoundName.TabIndex = 44;
             this.lblSoundName.Text = "label1";
             // 
-            // lblScript
+            // lblSound
             // 
-            this.lblScript.Location = new System.Drawing.Point(5, 62);
-            this.lblScript.Name = "lblScript";
-            this.lblScript.Size = new System.Drawing.Size(95, 13);
-            this.lblScript.TabIndex = 9;
-            this.lblScript.Text = "Script:";
-            this.lblScript.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblSound.Location = new System.Drawing.Point(5, 62);
+            this.lblSound.Name = "lblSound";
+            this.lblSound.Size = new System.Drawing.Size(95, 13);
+            this.lblSound.TabIndex = 9;
+            this.lblSound.Text = "Sound:";
+            this.lblSound.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnSoundPicker
             // 
@@ -273,7 +273,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
         private System.Windows.Forms.ComboBox comboSoundScope;
         private System.Windows.Forms.TextBox textSoundEntry;
         private System.Windows.Forms.Button btnSoundPicker;
-        private System.Windows.Forms.Label lblScript;
+        private System.Windows.Forms.Label lblSound;
         private System.Windows.Forms.CheckBox checkAutoVary;
         private System.Windows.Forms.CheckBox checkDecimal;
         private System.Windows.Forms.PictureBox iconPnM;

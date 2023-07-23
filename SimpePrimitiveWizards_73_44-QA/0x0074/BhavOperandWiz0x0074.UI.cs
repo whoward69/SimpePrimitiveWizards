@@ -155,7 +155,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    textAnim.Text = "0x" + SimPe.Helper.HexString(strIndex);
+                    WizardHelpers.SetValue(textAnim, strIndex, checkDecimal);
                     UpdateScriptNames();
 
                     this.internalchg = internalchg;
@@ -165,8 +165,14 @@ namespace whse.PrimitiveWizards.Wiz0x0074
 
         private void UpdateScriptNames()
         {
-            lblGraspAnimName.Text = checkGraspAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.AdultAnims, (ushort)(doGraspAnim.Value), -1, pjse.Detail.ErrorNames) : "";
-            lblObjectAnimName.Text = checkObjectAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.ObjectAnims, (ushort)(doObjectAnim.Value), -1, pjse.Detail.ErrorNames) : "";
+            try
+            {
+                lblGraspAnimName.Text = checkGraspAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.AdultAnims, (ushort)(doGraspAnim.Value), -1, pjse.Detail.ErrorNames) : "";
+                lblObjectAnimName.Text = checkObjectAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.ObjectAnims, (ushort)(doObjectAnim.Value), -1, pjse.Detail.ErrorNames) : "";
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void UpdatePanelState()

@@ -120,7 +120,7 @@ namespace whse.PrimitiveWizards.Wiz0x006f
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    textLight.Text = "0x" + SimPe.Helper.HexString(strIndex);
+                    WizardHelpers.SetValue(textLight, (byte)strIndex, checkDecimal);
                     UpdateLightName();
 
                     this.internalchg = internalchg;
@@ -130,7 +130,13 @@ namespace whse.PrimitiveWizards.Wiz0x006f
 
         private void UpdateLightName()
         {
-            lblLightName.Text = ((pjse.BhavWiz)inst).readStr(pjse.Scope.Private, pjse.GS.GlobalStr.LightSource, doLight.Value, -1, pjse.Detail.ErrorNames);
+            try
+            {
+                lblLightName.Text = ((pjse.BhavWiz)inst).readStr(pjse.Scope.Private, pjse.GS.GlobalStr.LightSource, doLight.Value, -1, pjse.Detail.ErrorNames);
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void UpdatePanelState()

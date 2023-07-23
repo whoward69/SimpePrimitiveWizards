@@ -68,7 +68,6 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             }
         }
 
-
         public void Execute(Instruction inst)
         {
             this.inst = inst;
@@ -162,7 +161,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    textAnimationEntry.Text = "0x" + SimPe.Helper.HexString((ushort)strIndex);
+                    WizardHelpers.SetValue(textAnimationEntry, strIndex, checkDecimal);
                     UpdateAnimationNames();
 
                     this.internalchg = internalchg;
@@ -179,7 +178,13 @@ namespace whse.PrimitiveWizards.Wiz0x006c
         {
             lblAnimationResName.Text = comboAnimationRes.SelectedIndex >= 0 ? comboAnimationRes.SelectedItem.ToString() : "---";
 
-            lblAnimationEntryName.Text = ((pjse.BhavWiz)inst).readStr(AnimScope(), AnimInstance(), doAnimEntry.Value, -1, pjse.Detail.ErrorNames);
+            try
+            {
+                lblAnimationEntryName.Text = ((pjse.BhavWiz)inst).readStr(AnimScope(), AnimInstance(), doAnimEntry.Value, -1, pjse.Detail.ErrorNames);
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void UpdatePanelState()

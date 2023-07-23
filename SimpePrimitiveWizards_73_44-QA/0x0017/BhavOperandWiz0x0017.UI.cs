@@ -86,7 +86,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
             internalchg = false;
 
             // Do these manually, as we want them after the Data Owner control handlers
-            textSoundEntry.TextChanged += new System.EventHandler(OnSoundControlChanged);
+            textSoundEntry.TextChanged += new EventHandler(OnSoundControlChanged);
 
             UpdateSoundName();
             UpdatePanelState();
@@ -149,7 +149,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    textSoundEntry.Text = "0x" + SimPe.Helper.HexString(strIndex);
+                    WizardHelpers.SetValue(textSoundEntry, strIndex, checkDecimal);
                     UpdateSoundName();
 
                     this.internalchg = internalchg;
@@ -159,7 +159,13 @@ namespace whse.PrimitiveWizards.Wiz0x0017
 
         private void UpdateSoundName()
         {
-            lblSoundName.Text = comboSoundScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboSoundScope.SelectedIndex], pjse.GS.GlobalStr.Sound, doSound.Value, -1, pjse.Detail.ErrorNames);
+            try
+            {
+                lblSoundName.Text = comboSoundScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboSoundScope.SelectedIndex], pjse.GS.GlobalStr.Sound, doSound.Value, -1, pjse.Detail.ErrorNames);
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void UpdatePanelState()

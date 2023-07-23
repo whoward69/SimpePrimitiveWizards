@@ -141,5 +141,29 @@ namespace whse.PrimitiveWizards
                 combo.SelectedIndex = 0;
             }
         }
+
+        public static void SetValue(TextBox textBox, ushort value, CheckBox checkDecimal)
+        {
+            if (checkDecimal.Checked)
+            {
+                textBox.Text = value.ToString();
+            }
+            else
+            {
+                textBox.Text = "0x" + SimPe.Helper.HexString(value);
+            }
+        }
+
+        public static void SetValue(TextBox textBox, byte value, CheckBox checkDecimal)
+        {
+            if (checkDecimal.Checked)
+            {
+                textBox.Text = value.ToString();
+            }
+            else
+            {
+                textBox.Text = "0x" + SimPe.Helper.HexString(value);
+            }
+        }
     }
 }

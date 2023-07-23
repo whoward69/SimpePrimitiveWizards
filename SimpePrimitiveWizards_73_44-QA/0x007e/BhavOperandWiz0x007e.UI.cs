@@ -132,7 +132,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    textStrEntry.Text = "0x" + SimPe.Helper.HexString((ushort)(strIndex + 1));
+                    WizardHelpers.SetValue(textStrEntry, (ushort)(strIndex + 1), checkDecimal);
                     UpdateScriptName();
 
                     this.internalchg = internalchg;
@@ -142,7 +142,13 @@ namespace whse.PrimitiveWizards.Wiz0x007e
 
         private void UpdateScriptName()
         {
-            lblScriptName.Text = comboStrScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboStrScope.SelectedIndex], (pjse.GS.GlobalStr)doStrRes.Value, (ushort)(doStrEntry.Value - 1), -1, pjse.Detail.ErrorNames);
+            try
+            {
+                lblScriptName.Text = comboStrScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboStrScope.SelectedIndex], (pjse.GS.GlobalStr)doStrRes.Value, (ushort)(doStrEntry.Value - 1), -1, pjse.Detail.ErrorNames);
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void UpdatePanelState()

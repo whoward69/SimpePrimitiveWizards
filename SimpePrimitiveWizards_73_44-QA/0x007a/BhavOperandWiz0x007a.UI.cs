@@ -129,13 +129,19 @@ namespace whse.PrimitiveWizards.Wiz0x007a
 
         private void UpdateEventTreeName()
         {
-            bool found = false;
+            try
+            {
+                bool found = false;
 
-            lblEventTreeName.Text = pjse.BhavWiz.bhavName(inst.Parent, doEventTree.Value, ref found);
+                lblEventTreeName.Text = pjse.BhavWiz.bhavName(inst.Parent, doEventTree.Value, ref found);
 
-            if (!found) lblEventTreeName.Text = "---";
+                if (!found) lblEventTreeName.Text = "---";
 
-            lblEventTreeLink.Enabled = found;
+                lblEventTreeLink.Enabled = found;
+            }
+            catch
+            {
+            }
         }
 
         private void UpdatePanelState()

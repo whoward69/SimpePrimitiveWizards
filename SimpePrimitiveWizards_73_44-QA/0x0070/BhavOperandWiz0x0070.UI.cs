@@ -140,9 +140,9 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             return inst;
         }
 
-        private void ShowEffectChooser()
+        private void ShowStrChooser()
         {
-            pjse.FileTable.Entry[] entryArray = comboEffectScope.SelectedIndex < 0 ? (pjse.FileTable.Entry[])null : pjse.FileTable.GFT[MetaData.STRING_FILE, inst.Parent.GroupForScope(scopeArray[comboEffectScope.SelectedIndex]), doEffect.Value];
+            pjse.FileTable.Entry[] entryArray = comboEffectScope.SelectedIndex < 0 ? (pjse.FileTable.Entry[])null : pjse.FileTable.GFT[MetaData.STRING_FILE, inst.Parent.GroupForScope(scopeArray[comboEffectScope.SelectedIndex]), (ushort)pjse.GS.GlobalStr.Effect];
 
             if (entryArray == null || entryArray.Length == 0)
             {
@@ -161,7 +161,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    textEffect.Text = "0x" + SimPe.Helper.HexString((ushort)(strIndex + 1));
+                    WizardHelpers.SetValue(textEffect, (ushort)(strIndex + 1), checkDecimal);
                     UpdateEffectName();
 
                     this.internalchg = internalchg;
@@ -171,9 +171,15 @@ namespace whse.PrimitiveWizards.Wiz0x0070
 
         private void UpdateEffectName()
         {
-            string effectName = comboEffectScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboEffectScope.SelectedIndex], pjse.GS.GlobalStr.Effect, doEffect.Value, -1, pjse.Detail.ErrorNames);
-            lblEffectName.Text = effectName;
-            toolTip.SetToolTip(lblEffectName, effectName);
+            try
+            {
+                string effectName = comboEffectScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboEffectScope.SelectedIndex], pjse.GS.GlobalStr.Effect, doEffect.Value, -1, pjse.Detail.ErrorNames);
+                lblEffectName.Text = effectName;
+                toolTip.SetToolTip(lblEffectName, effectName);
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void UpdatePanelState()
@@ -182,7 +188,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
 
             lblEffect.Visible = textEffect.Visible = ((comboAction.SelectedIndex >= 0x00 && comboAction.SelectedIndex <= 0x06) || comboAction.SelectedIndex == 0x0E);
 
-            panelEffect.Visible = ((comboAction.SelectedIndex >= 0x00 && comboAction.SelectedIndex <= 0x06) || comboAction.SelectedIndex == 0x0E);
+            panelEffect.Visible = ((comboAction.SelectedIndex >= 0x00 && comboAction.SelectedIndex <= 0x03) || comboAction.SelectedIndex == 0x06 || comboAction.SelectedIndex == 0x0E);
 
             lblSlot.Visible = comboSlotType.Visible = textSlot.Visible = !(comboAction.SelectedIndex == 0x09 || comboAction.SelectedIndex == 0x0E);
 
@@ -195,7 +201,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
 
         private void OnEffectPickerClicked(object sender, EventArgs e)
         {
-            ShowEffectChooser();
+            ShowStrChooser();
         }
 
         private void OnEffectControlChanged(object sender, EventArgs e)
