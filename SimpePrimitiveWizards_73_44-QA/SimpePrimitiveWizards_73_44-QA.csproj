@@ -76,6 +76,10 @@
       <HintPath>..\SimPe_0_73_44-QA\simpe.interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="simpe.ngbh.plugin">
+      <HintPath>..\SimPe_0_73_44-QA\simpe.ngbh.plugin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web" />
@@ -128,6 +132,13 @@
     <Compile Include="0x0016\BhavOperandWiz0x0016.UI.Designer.cs">
       <DependentUpon>BhavOperandWiz0x0016.UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="0x0017\BhavOperandWiz0x0017.cs" />
+    <Compile Include="0x0017\BhavOperandWiz0x0017.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0017\BhavOperandWiz0x0017.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0017.UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="0x001d\BhavOperandWiz0x001d.cs" />
     <Compile Include="0x001d\BhavOperandWiz0x001d.UI.cs">
       <SubType>UserControl</SubType>
@@ -149,12 +160,26 @@
     <Compile Include="0x002e\BhavOperandWiz0x002e.UI.Designer.cs">
       <DependentUpon>BhavOperandWiz0x002e.UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="0x0030\BhavOperandWiz0x0030.cs" />
+    <Compile Include="0x0030\BhavOperandWiz0x0030.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0030\BhavOperandWiz0x0030.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0030.UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="0x006c\BhavOperandWiz0x006c.cs" />
     <Compile Include="0x006c\BhavOperandWiz0x006c.UI.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="0x006c\BhavOperandWiz0x006c.UI.Designer.cs">
       <DependentUpon>BhavOperandWiz0x006c.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x006f\BhavOperandWiz0x006f.cs" />
+    <Compile Include="0x006f\BhavOperandWiz0x006f.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x006f\BhavOperandWiz0x006f.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x006f.UI.cs</DependentUpon>
     </Compile>
     <Compile Include="0x0070\BhavOperandWiz0x0070.cs" />
     <Compile Include="0x0070\BhavOperandWiz0x0070.UI.cs">
@@ -198,6 +223,13 @@
     <Compile Include="0x007a\BhavOperandWiz0x007a.UI.Designer.cs">
       <DependentUpon>BhavOperandWiz0x007a.UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="0x007c\BhavOperandWiz0x007c.cs" />
+    <Compile Include="0x007c\BhavOperandWiz0x007c.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x007c\BhavOperandWiz0x007c.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x007c.UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="0x007e\BhavOperandWiz0x007e.cs" />
     <Compile Include="0x007e\BhavOperandWiz0x007e.UI.cs">
       <SubType>UserControl</SubType>
@@ -229,6 +261,9 @@
     <EmbeddedResource Include="0x0016\BhavOperandWiz0x0016.UI.resx">
       <DependentUpon>BhavOperandWiz0x0016.UI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="0x0017\BhavOperandWiz0x0017.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0017.UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0x001d\BhavOperandWiz0x001d.UI.resx">
       <DependentUpon>BhavOperandWiz0x001d.UI.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,8 +273,14 @@
     <EmbeddedResource Include="0x002e\BhavOperandWiz0x002e.UI.resx">
       <DependentUpon>BhavOperandWiz0x002e.UI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="0x0030\BhavOperandWiz0x0030.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0030.UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0x006c\BhavOperandWiz0x006c.UI.resx">
       <DependentUpon>BhavOperandWiz0x006c.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x006f\BhavOperandWiz0x006f.UI.resx">
+      <DependentUpon>BhavOperandWiz0x006f.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="0x0070\BhavOperandWiz0x0070.UI.resx">
       <DependentUpon>BhavOperandWiz0x0070.UI.cs</DependentUpon>
@@ -258,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="0x007a\BhavOperandWiz0x007a.UI.resx">
       <DependentUpon>BhavOperandWiz0x007a.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x007c\BhavOperandWiz0x007c.UI.resx">
+      <DependentUpon>BhavOperandWiz0x007c.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="0x007e\BhavOperandWiz0x007e.UI.resx">
       <DependentUpon>BhavOperandWiz0x007e.UI.cs</DependentUpon>

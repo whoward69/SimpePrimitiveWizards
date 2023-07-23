@@ -1,51 +1,55 @@
+V1.1
+====
+
+Fixed bug in 0x002A when "Create How" is invalid
+Added 0x0017 Play / Stop Sound Event
+Added 0x0030 Stop ALL Sounds
+Added 0x006F Change Light
+Added 0x007C Want Satisfy
+
+
 Total Primitives:	60
 PJSE Wizards:		16 (27%)
-WHSE Wizards:		17 (28%)
-Total Wizards:		33 (55%)
+WHSE Wizards:		21 (35%)
+Total Wizards:		37 (62%)
 
-Primitives WITHOUT Wizards WITH Operand Table (33)
+Primitives by frequency in UC objects.package
+---------------------------------------------
+0x1A	Relationship				2402	OpTable
+0x10	Find Location For			1572	OpTable
+0x22	UI Effect					812	
+0x6E	Look At						655		OpTable
+0x31	Notify SO Out Of Idle		511		OpTable
+0x14	Run Functional Tree			227		OpTable
+0x0E	Find Best Object For Fn		201		OpTable
+0x11	Idle For Input				186		OpTable
+0x23	Camera Control				169		OpTable
+0x19	Alter Budget				133		OpTable
+0x72	Assign Loco Animations		82		OpTable
+0x13	Make New Character			51	
+0x78	Ray Trace					47		OpTable
+0x7B	Cinematic					30	
+0x75	Age							26		OpTable
+0x03	Find Best Interaction		25	
+0x25	Test Sim Interacting With	15	
+0x1E	Gosub Found Action			5	
+0x21	Find 5 Worst Motives		1	
+0x7D	Follow Sim					1	
+
+Primitives WITHOUT Wizards WITH Operand Table (12)
 =============================================
-  Group 1 - Should Have & Done (17)
-  ----------------------------
-	0x0007	Refresh
-	0x000B	Distance
-	0x000C	Direction
-	0x000D	Push Interaction
-	0x0012	Remove Object Instance
-	0x0016	Turn Body Towards
-	0x001D	Set Motive Change
-	0x002A	Create New Object Instance
-	0x002E	Snap
-	0x006C	Animate Stop
-	0x0070	Effect Stop/Start
-	0x0071	Snap Into
-	0x0074	Reach/Put
-	0x0077	Message
-	0x0079	Change Outfit
-	0x007A	On Timer
-	0x007E	LUA
-
-  Group 2 - Nice To Have (6)
-  ----------------------
-	0x0011	Idle for Input					(int, check, combo)
-	0x0023	Camera Control					(int, combo, 4 check)
-	0x006E	Look At							(combo, check, check, combo, combo, check, check, combo, doc, int, int, bhav, scope, int)
-	0x006F	Change Light					(combo, combo, doc, int, int, str#)
-	0x0072	Assign Locomotion Animations	(combo, scope, str#)
-	0x0078	RayTrace						(doc, combo, int, doc, combo, int, check)
-
-  Group 3 - Unlikely To Have (10)
-  --------------------------
 	0x000E	Find Best Object for Function
 	0x0010	Find Location For
+	0x0011	Idle for Input					(int, check, combo)
 	0x0014	Run Functional Tree
-	0x0017	Play / Stop Sound Event
 	0x0019	Alter Budget
 	0x001A	Relationship
-	0x0030	Stop ALL Sounds
+	0x0023	Camera Control					(int, combo, 4 check)
 	0x0031	Notify the Stack Object out of Idle
+	0x006E	Look At							(combo, check, check, combo, combo, check, check, combo, doc, int, int, bhav, scope, int)
+	0x0072	Assign Locomotion Animations	(combo, scope, str#)
 	0x0075	Age
-	0x007C	Want Satisfy
+	0x0078	RayTrace						(doc, combo, int, doc, combo, int, check)
 
 
 Primitives WITHOUT Wizards WITHOUT Operand Table (11)
@@ -63,21 +67,43 @@ Primitives WITHOUT Wizards WITHOUT Operand Table (11)
 	0x007D	Follow Sim
 
 
-Primitives WITH Wizards (16)
+Primitives WITH Wizards (37)
 =======================
 	0x0001	Generic Sims Call
 	0x0002	Expression
+	0x0007	Refresh
 	0x0008	Random Number
+	0x000B	Distance
+	0x000C	Direction
+	0x000D	Push Interaction
+	0x0012	Remove Object Instance
+	0x0016	Turn Body Towards
+	0x0017	Play / Stop Sound Event
 	0x001B	Go To Relative Position
 	0x001C	Run Tree by Name
+	0x001D	Set Motive Change
 	0x001F	Set to Next
 	0x0020	Test Object Type
 	0x0024	Dialog
+	0x002A	Create New Object Instance
 	0x002D	Go To Routing Slot
+	0x002E	Snap
+	0x0030	Stop ALL Sounds
 	0x0032	Add/Change the Action String
 	0x0033	Manage Inventory
 	0x0069	Animate Object
 	0x006A	Animate Sim
 	0x006B	Animate Overlay
+	0x006C	Animate Stop
 	0x006D	Change Material
+	0x006F	Change Light
+	0x0070	Effect Stop/Start
+	0x0071	Snap Into
+	0x0074	Reach/Put
 	0x0076	Array Operation
+	0x0077	Message
+	0x0079	Change Outfit
+	0x007A	On Timer
+	0x007C	Want Satisfy
+	0x007E	LUA
+

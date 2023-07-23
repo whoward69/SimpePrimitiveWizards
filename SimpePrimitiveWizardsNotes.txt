@@ -51,6 +51,7 @@ All of these should return nothing
 (operands|reserved1)\[[0-9]
 operands\[OperandConstants.Operand(8|9|10|11|12|13|14|15)\]
 reserved1\[OperandConstants.Operand[0-7]\]
+\.SelectedIndex = \(?operands
 SelectedItem =
 Point\(99,
 

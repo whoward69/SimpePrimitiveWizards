@@ -90,6 +90,13 @@ namespace whse.PrimitiveWizards
             return doc;
         }
 
+        public static DataOwnerControl CreateDataControl(Instruction inst, TextBox textDataValue, CheckBox checkDecimal, ushort data)
+        {
+            DataOwnerControl doc = new DataOwnerControl((pjse.BhavWiz)inst, null, null, textDataValue, checkDecimal, null, null, DataOwner.Literal, data);
+
+            return doc;
+        }
+
         public static DataOwnerControl CreateDataControl(Instruction inst, TextBox textDataValue, CheckBox checkDecimal, byte dataLo, byte dataHi)
         {
             DataOwnerControl doc = new DataOwnerControl((pjse.BhavWiz)inst, null, null, textDataValue, checkDecimal, null, null, DataOwner.Literal, pjse.BhavWiz.ToShort(dataLo, dataHi));

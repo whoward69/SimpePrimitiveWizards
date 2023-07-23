@@ -56,7 +56,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             WizardHelpers.ComboSelectIndex(comboCreateWhere, operands[OperandConstants.Operand4]);
 
             // Operand 5, bit flags
-            comboCreateHow.SelectedIndex = (operands[OperandConstants.Operand5] & 0x03);
+            WizardHelpers.ComboSelectIndex(comboCreateHow, (operands[OperandConstants.Operand5] & 0x03));
             checkFailIfTileNonEmpty.Checked = boolset5[OperandConstants.Bit4];
             checkPassT0ToMain.Checked = boolset5[OperandConstants.Bit5];
             comboCreateWhat.SelectedIndex = (boolset5[OperandConstants.Bit8] ? 1 : (boolset5[OperandConstants.Bit7] ? 2 : (boolset5[OperandConstants.Bit3] ? 3 : 0)));
