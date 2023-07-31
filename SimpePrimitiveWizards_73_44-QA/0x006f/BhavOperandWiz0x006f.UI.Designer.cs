@@ -138,7 +138,7 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             this.comboIntensity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboIntensity.FormattingEnabled = true;
             this.comboIntensity.Items.AddRange(new object[] {
-            "Number",
+            "Literal",
             "In Temp 0"});
             this.comboIntensity.Location = new System.Drawing.Point(100, 58);
             this.comboIntensity.Name = "comboIntensity";
@@ -207,7 +207,7 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             this.comboTickCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTickCount.FormattingEnabled = true;
             this.comboTickCount.Items.AddRange(new object[] {
-            "Number",
+            "Literal",
             "In Temp 1"});
             this.comboTickCount.Location = new System.Drawing.Point(100, 31);
             this.comboTickCount.Name = "comboTickCount";

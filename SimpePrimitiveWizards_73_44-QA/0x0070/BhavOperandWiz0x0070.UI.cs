@@ -171,6 +171,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
 
         private void UpdateEffectName()
         {
+            // TODO - if (panelMain.Visible)
             try
             {
                 string effectName = comboEffectScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboEffectScope.SelectedIndex], pjse.GS.GlobalStr.Effect, doEffect.Value, -1, pjse.Detail.ErrorNames);

@@ -67,10 +67,22 @@ namespace whse.PrimitiveWizards
             SetDropDownWidth((ComboBox)sender);
         }
 
+        public static DataOwnerControl CreateDataOwnerControl(Instruction inst, ComboBox comboDataOwner, ComboBox comboDataPicker, TextBox textDataValue, CheckBox checkDecimal, CheckBox checkAttrPicker, ToolTip toolTip, byte dataOwner, byte dataLo)
+        {
+            DataOwnerControl doc = new DataOwnerControl((pjse.BhavWiz)inst, comboDataOwner, comboDataPicker, textDataValue, checkDecimal, checkAttrPicker, null, dataOwner, dataLo);
+
+            return InitDOC(doc, comboDataOwner, comboDataPicker, toolTip);
+        }
+
         public static DataOwnerControl CreateDataOwnerControl(Instruction inst, ComboBox comboDataOwner, ComboBox comboDataPicker, TextBox textDataValue, CheckBox checkDecimal, CheckBox checkAttrPicker, ToolTip toolTip, byte dataOwner, byte dataLo, byte dataHi)
         {
             DataOwnerControl doc = new DataOwnerControl((pjse.BhavWiz)inst, comboDataOwner, comboDataPicker, textDataValue, checkDecimal, checkAttrPicker, null, dataOwner, pjse.BhavWiz.ToShort(dataLo, dataHi));
 
+            return InitDOC(doc, comboDataOwner, comboDataPicker, toolTip);
+        }
+
+        private static DataOwnerControl InitDOC(DataOwnerControl doc, ComboBox comboDataOwner, ComboBox comboDataPicker, ToolTip toolTip)
+        {
             SetDropDownWidth(comboDataOwner);
             comboDataPicker.DropDown += new EventHandler(OnDataPickerOpening);
 

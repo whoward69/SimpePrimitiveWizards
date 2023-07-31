@@ -79,7 +79,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
 
             internalchg = true;
 
-            doAnimEntry = WizardHelpers.CreateDataControl(inst, textAnimationEntry, checkDecimal, operands[OperandConstants.Operand0], operands[OperandConstants.Operand1]);
+            doAnimEntry = WizardHelpers.CreateDataControl(inst, textAnimationEntry, checkDecimal, operands[OperandConstants.Operand0], operands[OperandConstants.Operand1]); // TODO - this should have an attribute picker
             doAnimEntry.DataOwnerControlChanged += new EventHandler(OnAnimEntryChanged);
 
             comboFlipFlag.SelectedIndex = (boolset2[OperandConstants.Bit4] ? 2 : (boolset2[OperandConstants.Bit1] ? 1 : 0));
@@ -178,6 +178,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
         {
             lblAnimationResName.Text = comboAnimationRes.SelectedIndex >= 0 ? comboAnimationRes.SelectedItem.ToString() : "---";
 
+            // TODO - if (panelMain.Visible)
             try
             {
                 lblAnimationEntryName.Text = ((pjse.BhavWiz)inst).readStr(AnimScope(), AnimInstance(), doAnimEntry.Value, -1, pjse.Detail.ErrorNames);

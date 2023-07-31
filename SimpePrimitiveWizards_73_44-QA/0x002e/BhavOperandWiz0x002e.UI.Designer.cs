@@ -163,7 +163,7 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.comboSlotNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSlotNumber.FormattingEnabled = true;
             this.comboSlotNumber.Items.AddRange(new object[] {
-            "Number",
+            "Literal",
             "Temp 0",
             "Temp 1"});
             this.comboSlotNumber.Location = new System.Drawing.Point(100, 31);

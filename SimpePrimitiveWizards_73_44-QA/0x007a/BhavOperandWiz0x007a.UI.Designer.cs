@@ -122,7 +122,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.comboTickCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTickCount.FormattingEnabled = true;
             this.comboTickCount.Items.AddRange(new object[] {
-            "Number",
+            "Literal",
             "Temp 1"});
             this.comboTickCount.Location = new System.Drawing.Point(100, 0);
             this.comboTickCount.Name = "comboTickCount";

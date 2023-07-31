@@ -130,6 +130,7 @@ namespace whse.PrimitiveWizards.Wiz0x006f
 
         private void UpdateLightName()
         {
+            // TODO - if (panelMain.Visible)
             try
             {
                 lblLightName.Text = ((pjse.BhavWiz)inst).readStr(pjse.Scope.Private, pjse.GS.GlobalStr.LightSource, doLight.Value, -1, pjse.Detail.ErrorNames);

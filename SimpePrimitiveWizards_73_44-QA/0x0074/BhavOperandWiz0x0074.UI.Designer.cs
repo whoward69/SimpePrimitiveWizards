@@ -147,7 +147,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             this.comboSlot.FormattingEnabled = true;
             this.comboSlot.Items.AddRange(new object[] {
-            "Number",
+            "Literal",
             "Temp 0"});
             this.comboSlot.Location = new System.Drawing.Point(100, 63);
             this.comboSlot.Name = "comboSlot";

@@ -165,6 +165,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
 
         private void UpdateScriptNames()
         {
+            // TODO - if (panelMain.Visible)
             try
             {
                 lblGraspAnimName.Text = checkGraspAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.AdultAnims, (ushort)(doGraspAnim.Value), -1, pjse.Detail.ErrorNames) : "";

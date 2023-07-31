@@ -166,7 +166,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.comboEffect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEffect.FormattingEnabled = true;
             this.comboEffect.Items.AddRange(new object[] {
-            "Number",
+            "Literal",
             "In Temp 1"});
             this.comboEffect.Location = new System.Drawing.Point(100, 57);
             this.comboEffect.Name = "comboEffect";
