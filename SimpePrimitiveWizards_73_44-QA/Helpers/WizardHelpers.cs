@@ -83,20 +83,28 @@ namespace whse.PrimitiveWizards
 
         private static DataOwnerControl InitDOC(DataOwnerControl doc, ComboBox comboDataOwner, ComboBox comboDataPicker, ToolTip toolTip)
         {
-            SetDropDownWidth(comboDataOwner);
-            comboDataPicker.DropDown += new EventHandler(OnDataPickerOpening);
-
-            comboDataOwner.SelectedIndexChanged += new EventHandler(delegate (object sender, EventArgs e)
+            if (comboDataOwner != null)
             {
-                toolTip.SetToolTip((ComboBox)sender, ((ComboBox)sender).Text);
-            });
+                SetDropDownWidth(comboDataOwner);
+                comboDataPicker.DropDown += new EventHandler(OnDataPickerOpening);
+
+                comboDataOwner.SelectedIndexChanged += new EventHandler(delegate (object sender, EventArgs e)
+                {
+                    toolTip.SetToolTip((ComboBox)sender, ((ComboBox)sender).Text);
+                });
+
+                toolTip.SetToolTip(comboDataOwner, comboDataOwner.Text);
+            }
+            else
+            {
+                SetDropDownWidth(comboDataPicker);
+            }
 
             comboDataPicker.SelectedIndexChanged += new EventHandler(delegate (object sender, EventArgs e)
             {
                 toolTip.SetToolTip((ComboBox)sender, ((ComboBox)sender).Text);
             });
 
-            toolTip.SetToolTip(comboDataOwner, comboDataOwner.Text);
             toolTip.SetToolTip(comboDataPicker, comboDataPicker.Text);
 
             return doc;
@@ -144,13 +152,16 @@ namespace whse.PrimitiveWizards
 
         public static void ComboSelectIndex(ComboBox combo, int value)
         {
-            try
+            if (combo.Items.Count > 0)
             {
-                combo.SelectedIndex = value;
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                combo.SelectedIndex = 0;
+                if (value < combo.Items.Count)
+                {
+                    combo.SelectedIndex = value;
+                }
+                else
+                {
+                    combo.SelectedIndex = 0;
+                }
             }
         }
 

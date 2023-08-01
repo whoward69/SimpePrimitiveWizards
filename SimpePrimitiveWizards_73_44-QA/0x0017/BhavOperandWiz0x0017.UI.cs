@@ -159,7 +159,6 @@ namespace whse.PrimitiveWizards.Wiz0x0017
 
         private void UpdateSoundName()
         {
-            // TODO - if (panelMain.Visible)
             try
             {
                 lblSoundName.Text = comboSoundScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboSoundScope.SelectedIndex], pjse.GS.GlobalStr.Sound, doSound.Value, -1, pjse.Detail.ErrorNames);

@@ -45,6 +45,11 @@ For these the boolset and operand numbers should be the same
 Boolset boolset\d+ = new Boolset\((operands|reserved1)\[OperandConstants.Operand\d+\]\);
 OperandConstants.Operand\d+\] = boolset\d+;
 
+Only permitted IFF there is no attribute picker check box (or the control is for a GUID)
+---------------------------------------------------------
+text[a-zA-Z0-9]+\.Visible
+
+
 All of these should return nothing
 ----------------------------------
 ^using (simpe|pjse);
@@ -52,7 +57,8 @@ All of these should return nothing
 operands\[OperandConstants.Operand(8|9|10|11|12|13|14|15)\]
 reserved1\[OperandConstants.Operand[0-7]\]
 \.SelectedIndex = \(?operands
-SelectedItem =
+\.SelectedIndex = 
+\.SelectedItem =
 Point\(99,
 
 
