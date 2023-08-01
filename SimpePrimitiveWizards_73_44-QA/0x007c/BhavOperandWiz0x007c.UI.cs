@@ -138,7 +138,6 @@ namespace whse.PrimitiveWizards.Wiz0x007c
 
         private void UpdateWantName()
         {
-            // TODO - if (panelMain.Visible)
             try
             {
 #if SIMPE_77_69

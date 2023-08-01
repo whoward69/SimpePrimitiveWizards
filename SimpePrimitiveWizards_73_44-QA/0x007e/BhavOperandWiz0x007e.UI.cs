@@ -142,7 +142,6 @@ namespace whse.PrimitiveWizards.Wiz0x007e
 
         private void UpdateScriptName()
         {
-            // TODO - if (panelMain.Visible)
             try
             {
                 lblScriptName.Text = comboStrScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboStrScope.SelectedIndex], (pjse.GS.GlobalStr)doStrRes.Value, (ushort)(doStrEntry.Value - 1), -1, pjse.Detail.ErrorNames);
