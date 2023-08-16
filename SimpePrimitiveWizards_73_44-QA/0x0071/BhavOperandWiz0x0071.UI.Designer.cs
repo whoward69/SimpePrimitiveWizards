@@ -61,12 +61,15 @@ namespace whse.PrimitiveWizards.Wiz0x0071
             this.lblRootBones = new System.Windows.Forms.Label();
             this.checkRootBones = new System.Windows.Forms.CheckBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.panelSlot = new System.Windows.Forms.Panel();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
+            this.panelSlot.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.panelSlot);
             this.panelMain.Controls.Add(this.comboDataPicker1);
             this.panelMain.Controls.Add(this.comboDataPicker2);
             this.panelMain.Controls.Add(this.textDataValue1);
@@ -79,7 +82,6 @@ namespace whse.PrimitiveWizards.Wiz0x0071
             this.panelMain.Controls.Add(this.lblTarget);
             this.panelMain.Controls.Add(this.lblObject);
             this.panelMain.Controls.Add(this.lblSlot);
-            this.panelMain.Controls.Add(this.textSlot);
             this.panelMain.Controls.Add(this.comboSlot);
             this.panelMain.Controls.Add(this.lblTestOnly);
             this.panelMain.Controls.Add(this.checkTestOnly);
@@ -202,7 +204,7 @@ namespace whse.PrimitiveWizards.Wiz0x0071
             // 
             // textSlot
             // 
-            this.textSlot.Location = new System.Drawing.Point(200, 58);
+            this.textSlot.Location = new System.Drawing.Point(0, 1);
             this.textSlot.Name = "textSlot";
             this.textSlot.Size = new System.Drawing.Size(60, 20);
             this.textSlot.TabIndex = 7;
@@ -256,6 +258,14 @@ namespace whse.PrimitiveWizards.Wiz0x0071
             this.checkRootBones.TabIndex = 9;
             this.checkRootBones.UseVisualStyleBackColor = true;
             // 
+            // panelSlot
+            // 
+            this.panelSlot.Controls.Add(this.textSlot);
+            this.panelSlot.Location = new System.Drawing.Point(200, 58);
+            this.panelSlot.Name = "panelSlot";
+            this.panelSlot.Size = new System.Drawing.Size(240, 21);
+            this.panelSlot.TabIndex = 50;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,6 +276,8 @@ namespace whse.PrimitiveWizards.Wiz0x0071
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
+            this.panelSlot.ResumeLayout(false);
+            this.panelSlot.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -292,5 +304,6 @@ namespace whse.PrimitiveWizards.Wiz0x0071
         private System.Windows.Forms.CheckBox checkAttrPicker;
         private System.Windows.Forms.PictureBox iconPnM;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Panel panelSlot;
     }
 }

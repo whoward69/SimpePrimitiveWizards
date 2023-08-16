@@ -147,6 +147,7 @@ namespace whse.PrimitiveWizards.Wiz0x002e
             this.checkMoveSim.Name = "checkMoveSim";
             this.checkMoveSim.Size = new System.Drawing.Size(15, 14);
             this.checkMoveSim.TabIndex = 4;
+            this.toolTip.SetToolTip(this.checkMoveSim, "Ask Sim to move");
             this.checkMoveSim.UseVisualStyleBackColor = true;
             // 
             // checkTestOnly

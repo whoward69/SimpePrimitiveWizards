@@ -43,13 +43,17 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelAnimation = new System.Windows.Forms.Panel();
+            this.panelAnimEntryLiteral = new System.Windows.Forms.Panel();
+            this.textAnimEntryLiteral = new System.Windows.Forms.TextBox();
             this.lblAnimationResName = new System.Windows.Forms.Label();
+            this.panelAnimEntryParam = new System.Windows.Forms.Panel();
+            this.textAnimEntryParam = new System.Windows.Forms.TextBox();
+            this.comboAnimEntryParam = new System.Windows.Forms.ComboBox();
             this.textAnimationRes = new System.Windows.Forms.TextBox();
             this.lblAnimationEntry = new System.Windows.Forms.Label();
-            this.textAnimationEntry = new System.Windows.Forms.TextBox();
             this.comboAnimationRes = new System.Windows.Forms.ComboBox();
             this.lblAnimationRes = new System.Windows.Forms.Label();
-            this.comboLiteralOrParam = new System.Windows.Forms.ComboBox();
+            this.comboAnimLiteralOrParam = new System.Windows.Forms.ComboBox();
             this.btnAnimationPicker = new System.Windows.Forms.Button();
             this.lblAnimationEntryName = new System.Windows.Forms.Label();
             this.comboFlipFlag = new System.Windows.Forms.ComboBox();
@@ -74,6 +78,8 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMain.SuspendLayout();
             this.panelAnimation.SuspendLayout();
+            this.panelAnimEntryLiteral.SuspendLayout();
+            this.panelAnimEntryParam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,33 +107,74 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             this.panelMain.Controls.Add(this.checkBlendOut);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(440, 250);
+            this.panelMain.Size = new System.Drawing.Size(440, 265);
             this.panelMain.TabIndex = 0;
             // 
             // panelAnimation
             // 
+            this.panelAnimation.Controls.Add(this.panelAnimEntryLiteral);
             this.panelAnimation.Controls.Add(this.lblAnimationResName);
+            this.panelAnimation.Controls.Add(this.panelAnimEntryParam);
             this.panelAnimation.Controls.Add(this.textAnimationRes);
             this.panelAnimation.Controls.Add(this.lblAnimationEntry);
-            this.panelAnimation.Controls.Add(this.textAnimationEntry);
             this.panelAnimation.Controls.Add(this.comboAnimationRes);
             this.panelAnimation.Controls.Add(this.lblAnimationRes);
-            this.panelAnimation.Controls.Add(this.comboLiteralOrParam);
+            this.panelAnimation.Controls.Add(this.comboAnimLiteralOrParam);
             this.panelAnimation.Controls.Add(this.btnAnimationPicker);
             this.panelAnimation.Controls.Add(this.lblAnimationEntryName);
             this.panelAnimation.Location = new System.Drawing.Point(0, 59);
             this.panelAnimation.Name = "panelAnimation";
-            this.panelAnimation.Size = new System.Drawing.Size(440, 47);
+            this.panelAnimation.Size = new System.Drawing.Size(440, 73);
             this.panelAnimation.TabIndex = 4;
+            // 
+            // panelAnimEntryLiteral
+            // 
+            this.panelAnimEntryLiteral.Controls.Add(this.textAnimEntryLiteral);
+            this.panelAnimEntryLiteral.Location = new System.Drawing.Point(176, 26);
+            this.panelAnimEntryLiteral.Name = "panelAnimEntryLiteral";
+            this.panelAnimEntryLiteral.Size = new System.Drawing.Size(264, 21);
+            this.panelAnimEntryLiteral.TabIndex = 50;
+            // 
+            // textAnimEntryLiteral
+            // 
+            this.textAnimEntryLiteral.Location = new System.Drawing.Point(0, 0);
+            this.textAnimEntryLiteral.Name = "textAnimEntryLiteral";
+            this.textAnimEntryLiteral.Size = new System.Drawing.Size(60, 20);
+            this.textAnimEntryLiteral.TabIndex = 3;
             // 
             // lblAnimationResName
             // 
             this.lblAnimationResName.AutoSize = true;
             this.lblAnimationResName.Location = new System.Drawing.Point(201, 3);
             this.lblAnimationResName.Name = "lblAnimationResName";
-            this.lblAnimationResName.Size = new System.Drawing.Size(29, 13);
+            this.lblAnimationResName.Size = new System.Drawing.Size(100, 13);
             this.lblAnimationResName.TabIndex = 48;
-            this.lblAnimationResName.Text = "label";
+            this.lblAnimationResName.Text = "AnimationResName";
+            // 
+            // panelAnimEntryParam
+            // 
+            this.panelAnimEntryParam.Controls.Add(this.textAnimEntryParam);
+            this.panelAnimEntryParam.Controls.Add(this.comboAnimEntryParam);
+            this.panelAnimEntryParam.Location = new System.Drawing.Point(176, 26);
+            this.panelAnimEntryParam.Name = "panelAnimEntryParam";
+            this.panelAnimEntryParam.Size = new System.Drawing.Size(264, 21);
+            this.panelAnimEntryParam.TabIndex = 49;
+            // 
+            // textAnimEntryParam
+            // 
+            this.textAnimEntryParam.Location = new System.Drawing.Point(0, 0);
+            this.textAnimEntryParam.Name = "textAnimEntryParam";
+            this.textAnimEntryParam.Size = new System.Drawing.Size(60, 20);
+            this.textAnimEntryParam.TabIndex = 1;
+            // 
+            // comboAnimEntryParam
+            // 
+            this.comboAnimEntryParam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboAnimEntryParam.FormattingEnabled = true;
+            this.comboAnimEntryParam.Location = new System.Drawing.Point(0, 0);
+            this.comboAnimEntryParam.Name = "comboAnimEntryParam";
+            this.comboAnimEntryParam.Size = new System.Drawing.Size(104, 21);
+            this.comboAnimEntryParam.TabIndex = 27;
             // 
             // textAnimationRes
             // 
@@ -144,13 +191,6 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             this.lblAnimationEntry.TabIndex = 47;
             this.lblAnimationEntry.Text = "Animation String:";
             this.lblAnimationEntry.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textAnimationEntry
-            // 
-            this.textAnimationEntry.Location = new System.Drawing.Point(176, 27);
-            this.textAnimationEntry.Name = "textAnimationEntry";
-            this.textAnimationEntry.Size = new System.Drawing.Size(60, 20);
-            this.textAnimationEntry.TabIndex = 3;
             // 
             // comboAnimationRes
             // 
@@ -190,22 +230,22 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             this.lblAnimationRes.Text = "Animation Type:";
             this.lblAnimationRes.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // comboLiteralOrParam
+            // comboAnimLiteralOrParam
             // 
-            this.comboLiteralOrParam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboLiteralOrParam.FormattingEnabled = true;
-            this.comboLiteralOrParam.Items.AddRange(new object[] {
+            this.comboAnimLiteralOrParam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboAnimLiteralOrParam.FormattingEnabled = true;
+            this.comboAnimLiteralOrParam.Items.AddRange(new object[] {
             "Literal",
             "Param"});
-            this.comboLiteralOrParam.Location = new System.Drawing.Point(105, 26);
-            this.comboLiteralOrParam.Name = "comboLiteralOrParam";
-            this.comboLiteralOrParam.Size = new System.Drawing.Size(65, 21);
-            this.comboLiteralOrParam.TabIndex = 2;
-            this.comboLiteralOrParam.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
+            this.comboAnimLiteralOrParam.Location = new System.Drawing.Point(105, 26);
+            this.comboAnimLiteralOrParam.Name = "comboAnimLiteralOrParam";
+            this.comboAnimLiteralOrParam.Size = new System.Drawing.Size(65, 21);
+            this.comboAnimLiteralOrParam.TabIndex = 2;
+            this.comboAnimLiteralOrParam.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // btnAnimationPicker
             // 
-            this.btnAnimationPicker.Location = new System.Drawing.Point(240, 27);
+            this.btnAnimationPicker.Location = new System.Drawing.Point(176, 51);
             this.btnAnimationPicker.Margin = new System.Windows.Forms.Padding(1);
             this.btnAnimationPicker.Name = "btnAnimationPicker";
             this.btnAnimationPicker.Size = new System.Drawing.Size(27, 21);
@@ -217,11 +257,11 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // lblAnimationEntryName
             // 
             this.lblAnimationEntryName.AutoSize = true;
-            this.lblAnimationEntryName.Location = new System.Drawing.Point(271, 31);
+            this.lblAnimationEntryName.Location = new System.Drawing.Point(207, 55);
             this.lblAnimationEntryName.Name = "lblAnimationEntryName";
-            this.lblAnimationEntryName.Size = new System.Drawing.Size(29, 13);
+            this.lblAnimationEntryName.Size = new System.Drawing.Size(105, 13);
             this.lblAnimationEntryName.TabIndex = 40;
-            this.lblAnimationEntryName.Text = "label";
+            this.lblAnimationEntryName.Text = "AnimationEntryName";
             // 
             // comboFlipFlag
             // 
@@ -231,14 +271,14 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             "Off",
             "On",
             "In Temp 3"});
-            this.comboFlipFlag.Location = new System.Drawing.Point(105, 141);
+            this.comboFlipFlag.Location = new System.Drawing.Point(105, 162);
             this.comboFlipFlag.Name = "comboFlipFlag";
             this.comboFlipFlag.Size = new System.Drawing.Size(90, 21);
             this.comboFlipFlag.TabIndex = 6;
             // 
             // lblFlipFlag
             // 
-            this.lblFlipFlag.Location = new System.Drawing.Point(5, 144);
+            this.lblFlipFlag.Location = new System.Drawing.Point(5, 165);
             this.lblFlipFlag.Name = "lblFlipFlag";
             this.lblFlipFlag.Size = new System.Drawing.Size(95, 13);
             this.lblFlipFlag.TabIndex = 38;
@@ -253,14 +293,14 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             "Low",
             "Medium",
             "High"});
-            this.comboPriority.Location = new System.Drawing.Point(105, 114);
+            this.comboPriority.Location = new System.Drawing.Point(105, 135);
             this.comboPriority.Name = "comboPriority";
             this.comboPriority.Size = new System.Drawing.Size(90, 21);
             this.comboPriority.TabIndex = 5;
             // 
             // lblPriority
             // 
-            this.lblPriority.Location = new System.Drawing.Point(5, 117);
+            this.lblPriority.Location = new System.Drawing.Point(5, 138);
             this.lblPriority.Name = "lblPriority";
             this.lblPriority.Size = new System.Drawing.Size(95, 13);
             this.lblPriority.TabIndex = 34;
@@ -269,7 +309,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // 
             // lblShortBlendOut
             // 
-            this.lblShortBlendOut.Location = new System.Drawing.Point(5, 214);
+            this.lblShortBlendOut.Location = new System.Drawing.Point(5, 235);
             this.lblShortBlendOut.Name = "lblShortBlendOut";
             this.lblShortBlendOut.Size = new System.Drawing.Size(95, 13);
             this.lblShortBlendOut.TabIndex = 32;
@@ -279,7 +319,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // checkShortBlendOut
             // 
             this.checkShortBlendOut.AutoSize = true;
-            this.checkShortBlendOut.Location = new System.Drawing.Point(105, 214);
+            this.checkShortBlendOut.Location = new System.Drawing.Point(105, 235);
             this.checkShortBlendOut.Name = "checkShortBlendOut";
             this.checkShortBlendOut.Size = new System.Drawing.Size(15, 14);
             this.checkShortBlendOut.TabIndex = 9;
@@ -314,7 +354,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // 
             this.iconPnM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPnM.Image = global::whse.PrimitiveWizards.Properties.Resources.MinionWithNotebook;
-            this.iconPnM.Location = new System.Drawing.Point(405, 216);
+            this.iconPnM.Location = new System.Drawing.Point(405, 231);
             this.iconPnM.Name = "iconPnM";
             this.iconPnM.Size = new System.Drawing.Size(32, 32);
             this.iconPnM.TabIndex = 17;
@@ -325,7 +365,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // 
             this.checkDecimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDecimal.AutoSize = true;
-            this.checkDecimal.Location = new System.Drawing.Point(136, 230);
+            this.checkDecimal.Location = new System.Drawing.Point(136, 245);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
             this.checkDecimal.TabIndex = 10;
@@ -336,7 +376,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // 
             this.checkAttrPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkAttrPicker.AutoSize = true;
-            this.checkAttrPicker.Location = new System.Drawing.Point(282, 230);
+            this.checkAttrPicker.Location = new System.Drawing.Point(282, 245);
             this.checkAttrPicker.Name = "checkAttrPicker";
             this.checkAttrPicker.Size = new System.Drawing.Size(117, 17);
             this.checkAttrPicker.TabIndex = 11;
@@ -386,7 +426,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // 
             // lblNormalAndFlipped
             // 
-            this.lblNormalAndFlipped.Location = new System.Drawing.Point(5, 170);
+            this.lblNormalAndFlipped.Location = new System.Drawing.Point(5, 191);
             this.lblNormalAndFlipped.Name = "lblNormalAndFlipped";
             this.lblNormalAndFlipped.Size = new System.Drawing.Size(95, 13);
             this.lblNormalAndFlipped.TabIndex = 15;
@@ -396,7 +436,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // checkNormalAndFlipped
             // 
             this.checkNormalAndFlipped.AutoSize = true;
-            this.checkNormalAndFlipped.Location = new System.Drawing.Point(105, 170);
+            this.checkNormalAndFlipped.Location = new System.Drawing.Point(105, 191);
             this.checkNormalAndFlipped.Name = "checkNormalAndFlipped";
             this.checkNormalAndFlipped.Size = new System.Drawing.Size(15, 14);
             this.checkNormalAndFlipped.TabIndex = 7;
@@ -404,7 +444,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // 
             // lblBlendOut
             // 
-            this.lblBlendOut.Location = new System.Drawing.Point(5, 192);
+            this.lblBlendOut.Location = new System.Drawing.Point(5, 213);
             this.lblBlendOut.Name = "lblBlendOut";
             this.lblBlendOut.Size = new System.Drawing.Size(95, 13);
             this.lblBlendOut.TabIndex = 16;
@@ -414,7 +454,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             // checkBlendOut
             // 
             this.checkBlendOut.AutoSize = true;
-            this.checkBlendOut.Location = new System.Drawing.Point(105, 192);
+            this.checkBlendOut.Location = new System.Drawing.Point(105, 213);
             this.checkBlendOut.Name = "checkBlendOut";
             this.checkBlendOut.Size = new System.Drawing.Size(15, 14);
             this.checkBlendOut.TabIndex = 8;
@@ -426,11 +466,15 @@ namespace whse.PrimitiveWizards.Wiz0x006c
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
             this.Name = "UI";
-            this.Size = new System.Drawing.Size(440, 250);
+            this.Size = new System.Drawing.Size(440, 265);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelAnimation.ResumeLayout(false);
             this.panelAnimation.PerformLayout();
+            this.panelAnimEntryLiteral.ResumeLayout(false);
+            this.panelAnimEntryLiteral.PerformLayout();
+            this.panelAnimEntryParam.ResumeLayout(false);
+            this.panelAnimEntryParam.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
             this.ResumeLayout(false);
 
@@ -440,7 +484,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
 
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lblAnimationType;
-        private System.Windows.Forms.TextBox textAnimationEntry;
+        private System.Windows.Forms.TextBox textAnimEntryLiteral;
         private System.Windows.Forms.ComboBox comboAnimationType;
         private System.Windows.Forms.Label lblBlendOut;
         private System.Windows.Forms.Label lblNormalAndFlipped;
@@ -461,7 +505,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
         private System.Windows.Forms.ComboBox comboAnimationRes;
         private System.Windows.Forms.ComboBox comboFlipFlag;
         private System.Windows.Forms.Label lblFlipFlag;
-        private System.Windows.Forms.ComboBox comboLiteralOrParam;
+        private System.Windows.Forms.ComboBox comboAnimLiteralOrParam;
         private System.Windows.Forms.Label lblAnimationEntryName;
         private System.Windows.Forms.Button btnAnimationPicker;
         private System.Windows.Forms.Label lblAnimationEntry;
@@ -469,5 +513,9 @@ namespace whse.PrimitiveWizards.Wiz0x006c
         private System.Windows.Forms.Label lblAnimationRes;
         private System.Windows.Forms.Panel panelAnimation;
         private System.Windows.Forms.Label lblAnimationResName;
+        private System.Windows.Forms.Panel panelAnimEntryParam;
+        private System.Windows.Forms.TextBox textAnimEntryParam;
+        private System.Windows.Forms.ComboBox comboAnimEntryParam;
+        private System.Windows.Forms.Panel panelAnimEntryLiteral;
     }
 }

@@ -1,45 +1,43 @@
 Total Primitives:	60
 PJSE Wizards:		16 (27%)
-WHSE Wizards:		21 (35%)
-Total Wizards:		37 (62%)
+WHSE Wizards:		24 (40%)
+Total Wizards:		40 (67%)
 
 Primitives by frequency in UC objects.package
 ---------------------------------------------
-0x1A	Relationship				2402	OpTable
-0x10	Find Location For			1572	OpTable
-0x22	UI Effect					812	
-0x6E	Look At						655		OpTable
-0x31	Notify SO Out Of Idle		511		OpTable
-0x14	Run Functional Tree			227		OpTable
-0x0E	Find Best Object For Fn		201		OpTable
-0x11	Idle For Input				186		OpTable
-0x23	Camera Control				169		OpTable
-0x19	Alter Budget				133		OpTable
-0x72	Assign Loco Animations		82		OpTable
-0x13	Make New Character			51	
-0x78	Ray Trace					47		OpTable
-0x7B	Cinematic					30	
-0x75	Age							26		OpTable
-0x03	Find Best Interaction		25	
-0x25	Test Sim Interacting With	15	
-0x1E	Gosub Found Action			5	
-0x21	Find 5 Worst Motives		1	
-0x7D	Follow Sim					1	
+0x1A	Relationship					2402	https://modthesims.info/wiki.php?title=0x001A
+0x10	Find Location For				1572	https://modthesims.info/wiki.php?title=0x0010
+0x22	UI Effect						812	
+0x6E	Look At							655		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x006E.html
+0x31	Notify SO Out Of Idle			511		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x0031.html
+0x14	Run Functional Tree				227		https://modthesims.info/wiki.php?title=0x0014
+0x0E	Find Best Object For Function	201		https://modthesims.info/wiki.php?title=0x000E
+0x11	Idle For Input					186		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x0011.html
+0x19	Alter Budget					133		https://modthesims.info/wiki.php?title=0x0019
+0x13	Make New Character				51	
+0x7B	Cinematic						30	
+0x75	Age								26		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x0075.html
+0x03	Find Best Interaction			25	
+0x25	Test Sim Interacting With		15	
+0x1E	Gosub Found Action				5	
+0x21	Find 5 Worst Motives			1	
+0x7D	Follow Sim						1
+0x00	Sleep							N/A
+0x0F	Break Point						N/A
+0x73	Debug							N/A
 
-Primitives WITHOUT Wizards WITH Operand Table (12)
+
+Primitives WITHOUT Wizards WITH Operand Table (9)
 =============================================
-	0x000E	Find Best Object for Function
-	0x0010	Find Location For
-	0x0011	Idle for Input					(int, check, combo)
-	0x0014	Run Functional Tree
-	0x0019	Alter Budget
-	0x001A	Relationship
-	0x0023	Camera Control					(int, combo, 4 check)
-	0x0031	Notify the Stack Object out of Idle
-	0x006E	Look At							(combo, check, check, combo, combo, check, check, combo, doc, int, int, bhav, scope, int)
-	0x0072	Assign Locomotion Animations	(combo, scope, str#)
-	0x0075	Age
-	0x0078	RayTrace						(doc, combo, int, doc, combo, int, check)
+	0x000E	Find Best Object for Function	[combo, doc, check x6]
+	0x0010	Find Location For					(complex)
+	0x0011	Idle for Input					[int, check, combo]
+	0x0014	Run Functional Tree				[combo, check x3]
+	0x0019	Alter Budget						(better to use globals / WH_MoneyGlobals)
+	0x001A	Relationship						(complex, two node versions)
+	0x0031	Notify SO out of Idle				(trivial)
+	0x006E	Look At								(complex, two node versions)
+	0x0075	Age									(rare & trivial)
 
 
 Primitives WITHOUT Wizards WITHOUT Operand Table (11)
@@ -57,7 +55,7 @@ Primitives WITHOUT Wizards WITHOUT Operand Table (11)
 	0x007D	Follow Sim
 
 
-Primitives WITH Wizards (37)
+Primitives WITH Wizards (40)
 =======================
 	0x0001	Generic Sims Call
 	0x0002	Expression
@@ -74,6 +72,7 @@ Primitives WITH Wizards (37)
 	0x001D	Set Motive Change
 	0x001F	Set to Next
 	0x0020	Test Object Type
+	0x0023	Camera Control
 	0x0024	Dialog
 	0x002A	Create New Object Instance
 	0x002D	Go To Routing Slot
@@ -89,9 +88,11 @@ Primitives WITH Wizards (37)
 	0x006F	Change Light
 	0x0070	Effect Stop/Start
 	0x0071	Snap Into
+	0x0072	Assign Locomotion Animations
 	0x0074	Reach/Put
 	0x0076	Array Operation
 	0x0077	Message
+	0x0078	RayTrace
 	0x0079	Change Outfit
 	0x007A	On Timer
 	0x007C	Want Satisfy

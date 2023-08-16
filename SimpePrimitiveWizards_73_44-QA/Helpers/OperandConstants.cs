@@ -44,9 +44,9 @@ namespace whse.PrimitiveWizards
     // See https://modthesims.info/wiki.php?title=Sims_2_Variables
     public static class DataOwner
     {
-        public const byte Literal   = 0x07;
-        public const byte Temp      = 0x08;
+        public const byte Literal = 0x07;
+        public const byte Temp = 0x08;
         public const byte Parameter = 0x09;
-        public const byte Local     = 0x19;
+        public const byte Local = 0x19;
     }
 }

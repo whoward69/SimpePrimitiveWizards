@@ -26,7 +26,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
     {
         // private Instruction inst;
 
-        private DataOwnerControl doIntObject, doIntNumber, doIntVariable, doIconObject, doIconIndex, doLinking, doReturning;
+        private DataOwnerControl doObjectParam, doObjectLocal, doIntNumber, doIntVariable, doIconLocal, doIconIndex, doLinking, doReturning;
 
         private bool internalchg;
 
@@ -49,19 +49,20 @@ namespace whse.PrimitiveWizards.Wiz0x000d
 
             internalchg = true;
 
-            comboIntObject.SelectedIndex = (boolset3[OperandConstants.Bit2] ? 1 : 0);
-            doIntObject = WizardHelpers.CreateDataControl(inst, textIntObject, checkDecimal, operands[OperandConstants.Operand1]);
+            comboObjectType.SelectedIndex = (boolset3[OperandConstants.Bit2] ? 1 : 0);
+            doObjectParam = WizardHelpers.CreateDataOwnerControl(inst, null, comboObjectParam, textObjectParam, checkDecimal, checkAttrPicker, toolTip, DataOwner.Parameter, operands[OperandConstants.Operand1]);
+            doObjectLocal = WizardHelpers.CreateDataOwnerControl(inst, null, comboObjectLocal, textObjectLocal, checkDecimal, checkAttrPicker, toolTip, DataOwner.Local, operands[OperandConstants.Operand1]);
 
-            comboIntNumber.SelectedIndex = (boolset14[OperandConstants.Bit2] ? 2 : (boolset3[OperandConstants.Bit5] ? 1 : 0));
-            doIntNumber = WizardHelpers.CreateDataControl(inst, textIntNumber, checkDecimal, operands[OperandConstants.Operand0]);
+            comboInteractNumber.SelectedIndex = (boolset14[OperandConstants.Bit2] ? 2 : (boolset3[OperandConstants.Bit5] ? 1 : 0));
+            doIntNumber = WizardHelpers.CreateDataControl(inst, textInteractNumber, checkDecimal, operands[OperandConstants.Operand0]);
             doIntVariable = WizardHelpers.CreateDataOwnerControl(inst, comboDataOwner1, comboDataPicker1, textDataValue1, checkDecimal, checkAttrPicker, toolTip, operands[OperandConstants.Operand5], operands[OperandConstants.Operand6], operands[OperandConstants.Operand7]);
 
             WizardHelpers.ComboSelectIndex(comboPriority, (operands[OperandConstants.Operand2] & 0x03));
 
-            comboIconObject.SelectedIndex = (boolset3[OperandConstants.Bit1] ? 1 : (boolset14[OperandConstants.Bit3] ? 2 : 0));
-            doIconObject = WizardHelpers.CreateDataControl(inst, textIconObject, checkDecimal, operands[OperandConstants.Operand4]);
+            comboIconType.SelectedIndex = (boolset3[OperandConstants.Bit1] ? 1 : (boolset14[OperandConstants.Bit3] ? 2 : 0));
+            doIconLocal = WizardHelpers.CreateDataOwnerControl(inst, null, comboIconObject, textIconObject, checkDecimal, checkAttrPicker, toolTip, DataOwner.Local, operands[OperandConstants.Operand4]);
 
-            comboIconIndex.SelectedIndex = (boolset14[OperandConstants.Bit4] ? 1 : 0);
+            comboIconIndexType.SelectedIndex = (boolset14[OperandConstants.Bit4] ? 1 : 0);
             doIconIndex = WizardHelpers.CreateDataControl(inst, textIconIndex, checkDecimal, reserved1[OperandConstants.Operand15]);
 
             checkCallerParams.Checked = boolset14[OperandConstants.Bit1];
@@ -88,22 +89,22 @@ namespace whse.PrimitiveWizards.Wiz0x000d
 
                 operands[OperandConstants.Operand0] = (byte)doIntNumber.Value;
 
-                operands[OperandConstants.Operand1] = (byte)doIntObject.Value;
+                operands[OperandConstants.Operand1] = (byte)(comboObjectType.SelectedIndex == 0 ? doObjectParam.Value : doObjectLocal.Value);
 
                 operands[OperandConstants.Operand2] = (byte)comboPriority.SelectedIndex;
 
                 Boolset boolset3 = new Boolset(operands[OperandConstants.Operand3]);
-                boolset3[OperandConstants.Bit1] = (comboIconObject.SelectedIndex == 1);
-                boolset3[OperandConstants.Bit2] = (comboIntObject.SelectedIndex == 1);
+                boolset3[OperandConstants.Bit1] = (comboIconType.SelectedIndex == 1);
+                boolset3[OperandConstants.Bit2] = (comboObjectType.SelectedIndex == 1);
                 // Bit 3 is unused
                 boolset3[OperandConstants.Bit4] = checkUseName.Checked;
-                boolset3[OperandConstants.Bit5] = (comboIntNumber.SelectedIndex == 1);
+                boolset3[OperandConstants.Bit5] = (comboInteractNumber.SelectedIndex == 1);
                 boolset3[OperandConstants.Bit6] = checkRunCheckTree.Checked;
                 boolset3[OperandConstants.Bit7] = checkLinking.Checked;
                 boolset3[OperandConstants.Bit8] = checkReturning.Checked;
                 operands[OperandConstants.Operand3] = boolset3;
 
-                operands[OperandConstants.Operand4] = (byte)doIconObject.Value;
+                operands[OperandConstants.Operand4] = (byte)doIconLocal.Value;
 
                 operands[OperandConstants.Operand5] = doIntVariable.DataOwner;
                 operands[OperandConstants.Operand6] = (byte)doIntVariable.Value;
@@ -119,9 +120,9 @@ namespace whse.PrimitiveWizards.Wiz0x000d
 
                 Boolset boolset14 = new Boolset(reserved1[OperandConstants.Operand14]);
                 boolset14[OperandConstants.Bit1] = checkCallerParams.Checked;
-                boolset14[OperandConstants.Bit2] = (comboIntNumber.SelectedIndex == 2);
-                boolset14[OperandConstants.Bit3] = (comboIconObject.SelectedIndex == 2);
-                boolset14[OperandConstants.Bit4] = (comboIconIndex.SelectedIndex == 1);
+                boolset14[OperandConstants.Bit2] = (comboInteractNumber.SelectedIndex == 2);
+                boolset14[OperandConstants.Bit3] = (comboIconType.SelectedIndex == 2);
+                boolset14[OperandConstants.Bit4] = (comboIconIndexType.SelectedIndex == 1);
                 reserved1[OperandConstants.Operand14] = boolset14;
 
                 reserved1[OperandConstants.Operand15] = (byte)doIconIndex.Value;
@@ -132,13 +133,16 @@ namespace whse.PrimitiveWizards.Wiz0x000d
 
         private void UpdatePanelState()
         {
-            textIntNumber.Visible = (comboIntNumber.SelectedIndex == 0);
+            panelObjectParam.Visible = (comboObjectType.SelectedIndex == 0);
+            panelObjectLocal.Visible = (comboObjectType.SelectedIndex == 1);
 
-            panelDataOwner1.Visible = (comboIntNumber.SelectedIndex == 1);
+            panelInteractNumber.Visible = (comboInteractNumber.SelectedIndex == 0);
 
-            textIconObject.Visible = (comboIconObject.SelectedIndex == 1);
+            panelDataOwner1.Visible = (comboInteractNumber.SelectedIndex == 1);
 
-            textIconIndex.Visible = (comboIconIndex.SelectedIndex == 0);
+            panelIconObject.Visible = (comboIconType.SelectedIndex == 1);
+
+            panelIconIndex.Visible = (comboIconIndexType.SelectedIndex == 0);
 
             panelDataOwner2.Visible = checkLinking.Checked;
 
@@ -148,6 +152,28 @@ namespace whse.PrimitiveWizards.Wiz0x000d
         private void OnControlChanged(object sender, EventArgs e)
         {
             if (internalchg) return;
+
+            UpdatePanelState();
+        }
+
+        private void OnObjectTypeControlChanged(object sender, EventArgs e)
+        {
+            if (internalchg) return;
+
+            internalchg = true;
+
+            if (comboObjectType.SelectedIndex == 0)
+            {
+                WizardHelpers.SetValue(textObjectParam, (byte)doObjectLocal.Value, checkDecimal);
+                WizardHelpers.ComboSelectIndex(comboObjectParam, doObjectLocal.Value);
+            }
+            else
+            {
+                WizardHelpers.SetValue(textObjectLocal, (byte)doObjectParam.Value, checkDecimal);
+                WizardHelpers.ComboSelectIndex(comboObjectLocal, doObjectParam.Value);
+            }
+
+            internalchg = false;
 
             UpdatePanelState();
         }

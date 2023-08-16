@@ -161,7 +161,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    WizardHelpers.SetValue(textEffect, (ushort)(strIndex + 1), checkDecimal);
+                    WizardHelpers.SetValue(textEffect, (byte)strIndex, checkDecimal);
                     UpdateEffectName();
 
                     this.internalchg = internalchg;
@@ -171,12 +171,20 @@ namespace whse.PrimitiveWizards.Wiz0x0070
 
         private void UpdateEffectName()
         {
-            // TODO - if (panelMain.Visible)
             try
             {
-                string effectName = comboEffectScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboEffectScope.SelectedIndex], pjse.GS.GlobalStr.Effect, doEffect.Value, -1, pjse.Detail.ErrorNames);
-                lblEffectName.Text = effectName;
-                toolTip.SetToolTip(lblEffectName, effectName);
+                string effectName;
+
+                if (doEffect.Value == 0xFF)
+                {
+                    effectName = "default effect";
+                }
+                else
+                {
+                    effectName = comboEffectScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboEffectScope.SelectedIndex], pjse.GS.GlobalStr.Effect, doEffect.Value, -1, pjse.Detail.ErrorNames);
+                }
+
+                WizardHelpers.SetName(lblEffectName, toolTip, effectName);
             }
             catch (Exception)
             {
@@ -187,15 +195,15 @@ namespace whse.PrimitiveWizards.Wiz0x0070
         {
             comboEffect.Visible = (comboAction.SelectedIndex == 0x04 || comboAction.SelectedIndex == 0x05);
 
-            lblEffect.Visible = textEffect.Visible = ((comboAction.SelectedIndex >= 0x00 && comboAction.SelectedIndex <= 0x06) || comboAction.SelectedIndex == 0x0E);
+            panelEffect.Visible = ((comboAction.SelectedIndex >= 0x00 && comboAction.SelectedIndex <= 0x06) || comboAction.SelectedIndex == 0x0E);
 
-            panelEffect.Visible = ((comboAction.SelectedIndex >= 0x00 && comboAction.SelectedIndex <= 0x03) || comboAction.SelectedIndex == 0x06 || comboAction.SelectedIndex == 0x0E);
+            panelEffectVariable.Visible = ((comboAction.SelectedIndex >= 0x00 && comboAction.SelectedIndex <= 0x03) || comboAction.SelectedIndex == 0x06 || comboAction.SelectedIndex == 0x0E);
 
-            lblSlot.Visible = comboSlotType.Visible = textSlot.Visible = !(comboAction.SelectedIndex == 0x09 || comboAction.SelectedIndex == 0x0E);
+            panelSlot.Visible = !(comboAction.SelectedIndex == 0x09 || comboAction.SelectedIndex == 0x0E);
 
-            panelIcon.Visible = (comboIconType.SelectedIndex == 1 || comboIconType.SelectedIndex == 2 || comboIconType.SelectedIndex == 3);
+            panelIconVariable.Visible = (comboIconType.SelectedIndex == 1 || comboIconType.SelectedIndex == 2 || comboIconType.SelectedIndex == 3);
 
-            textIconIndex.Visible = (comboIconType.SelectedIndex == 3);
+            panelIconIndex.Visible = (comboIconType.SelectedIndex == 3);
 
             lblModel.Visible = checkModel.Visible = (comboIconType.SelectedIndex != 5);
         }

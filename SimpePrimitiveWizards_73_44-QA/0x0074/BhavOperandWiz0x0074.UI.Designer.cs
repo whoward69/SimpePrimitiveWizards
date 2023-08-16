@@ -42,23 +42,26 @@ namespace whse.PrimitiveWizards.Wiz0x0074
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panelObjectAnim = new System.Windows.Forms.Panel();
+            this.textObjectAnim = new System.Windows.Forms.TextBox();
+            this.btnObjectAnim = new System.Windows.Forms.Button();
+            this.lblObjectAnimName = new System.Windows.Forms.Label();
+            this.panelGraspAnim = new System.Windows.Forms.Panel();
+            this.textGraspAnim = new System.Windows.Forms.TextBox();
+            this.btnGraspAnim = new System.Windows.Forms.Button();
+            this.lblGraspAnimName = new System.Windows.Forms.Label();
+            this.panelSlot = new System.Windows.Forms.Panel();
+            this.textSlot = new System.Windows.Forms.TextBox();
             this.blHandedness = new System.Windows.Forms.Label();
             this.lblUseSimAge = new System.Windows.Forms.Label();
-            this.lblObjectAnimName = new System.Windows.Forms.Label();
-            this.lblGraspAnimName = new System.Windows.Forms.Label();
             this.comboSlot = new System.Windows.Forms.ComboBox();
-            this.textSlot = new System.Windows.Forms.TextBox();
             this.lblSlot = new System.Windows.Forms.Label();
-            this.textObjectAnim = new System.Windows.Forms.TextBox();
             this.lblObjectAnim = new System.Windows.Forms.Label();
             this.checkObjectAnim = new System.Windows.Forms.CheckBox();
-            this.btnObjectAnim = new System.Windows.Forms.Button();
-            this.textGraspAnim = new System.Windows.Forms.TextBox();
             this.lblGraspAnim = new System.Windows.Forms.Label();
             this.checkGraspAnim = new System.Windows.Forms.CheckBox();
             this.checkHandedness = new System.Windows.Forms.CheckBox();
             this.lblAction = new System.Windows.Forms.Label();
-            this.btnGraspAnim = new System.Windows.Forms.Button();
             this.checkUseSimAge = new System.Windows.Forms.CheckBox();
             this.comboAction = new System.Windows.Forms.ComboBox();
             this.iconPnM = new System.Windows.Forms.PictureBox();
@@ -71,29 +74,28 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboDataOwner1 = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMain.SuspendLayout();
+            this.panelObjectAnim.SuspendLayout();
+            this.panelGraspAnim.SuspendLayout();
+            this.panelSlot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
             this.panelObject.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.panelObjectAnim);
+            this.panelMain.Controls.Add(this.panelGraspAnim);
+            this.panelMain.Controls.Add(this.panelSlot);
             this.panelMain.Controls.Add(this.blHandedness);
             this.panelMain.Controls.Add(this.lblUseSimAge);
-            this.panelMain.Controls.Add(this.lblObjectAnimName);
-            this.panelMain.Controls.Add(this.lblGraspAnimName);
             this.panelMain.Controls.Add(this.comboSlot);
-            this.panelMain.Controls.Add(this.textSlot);
             this.panelMain.Controls.Add(this.lblSlot);
-            this.panelMain.Controls.Add(this.textObjectAnim);
             this.panelMain.Controls.Add(this.lblObjectAnim);
             this.panelMain.Controls.Add(this.checkObjectAnim);
-            this.panelMain.Controls.Add(this.btnObjectAnim);
-            this.panelMain.Controls.Add(this.textGraspAnim);
             this.panelMain.Controls.Add(this.lblGraspAnim);
             this.panelMain.Controls.Add(this.checkGraspAnim);
             this.panelMain.Controls.Add(this.checkHandedness);
             this.panelMain.Controls.Add(this.lblAction);
-            this.panelMain.Controls.Add(this.btnGraspAnim);
             this.panelMain.Controls.Add(this.checkUseSimAge);
             this.panelMain.Controls.Add(this.comboAction);
             this.panelMain.Controls.Add(this.iconPnM);
@@ -104,6 +106,95 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(440, 245);
             this.panelMain.TabIndex = 0;
+            // 
+            // panelObjectAnim
+            // 
+            this.panelObjectAnim.Controls.Add(this.textObjectAnim);
+            this.panelObjectAnim.Controls.Add(this.btnObjectAnim);
+            this.panelObjectAnim.Controls.Add(this.lblObjectAnimName);
+            this.panelObjectAnim.Location = new System.Drawing.Point(121, 139);
+            this.panelObjectAnim.Name = "panelObjectAnim";
+            this.panelObjectAnim.Size = new System.Drawing.Size(264, 46);
+            this.panelObjectAnim.TabIndex = 62;
+            // 
+            // textObjectAnim
+            // 
+            this.textObjectAnim.Location = new System.Drawing.Point(0, 0);
+            this.textObjectAnim.Name = "textObjectAnim";
+            this.textObjectAnim.Size = new System.Drawing.Size(60, 20);
+            this.textObjectAnim.TabIndex = 8;
+            // 
+            // btnObjectAnim
+            // 
+            this.btnObjectAnim.Location = new System.Drawing.Point(0, 24);
+            this.btnObjectAnim.Margin = new System.Windows.Forms.Padding(1);
+            this.btnObjectAnim.Name = "btnObjectAnim";
+            this.btnObjectAnim.Size = new System.Drawing.Size(27, 21);
+            this.btnObjectAnim.TabIndex = 9;
+            this.btnObjectAnim.Text = ">>";
+            this.btnObjectAnim.UseVisualStyleBackColor = true;
+            this.btnObjectAnim.Click += new System.EventHandler(this.OnObjectAnimClicked);
+            // 
+            // lblObjectAnimName
+            // 
+            this.lblObjectAnimName.AutoSize = true;
+            this.lblObjectAnimName.Location = new System.Drawing.Point(31, 28);
+            this.lblObjectAnimName.Name = "lblObjectAnimName";
+            this.lblObjectAnimName.Size = new System.Drawing.Size(61, 13);
+            this.lblObjectAnimName.TabIndex = 57;
+            this.lblObjectAnimName.Text = "object anim";
+            // 
+            // panelGraspAnim
+            // 
+            this.panelGraspAnim.Controls.Add(this.textGraspAnim);
+            this.panelGraspAnim.Controls.Add(this.btnGraspAnim);
+            this.panelGraspAnim.Controls.Add(this.lblGraspAnimName);
+            this.panelGraspAnim.Location = new System.Drawing.Point(121, 90);
+            this.panelGraspAnim.Name = "panelGraspAnim";
+            this.panelGraspAnim.Size = new System.Drawing.Size(264, 46);
+            this.panelGraspAnim.TabIndex = 61;
+            // 
+            // textGraspAnim
+            // 
+            this.textGraspAnim.Location = new System.Drawing.Point(0, 0);
+            this.textGraspAnim.Name = "textGraspAnim";
+            this.textGraspAnim.Size = new System.Drawing.Size(60, 20);
+            this.textGraspAnim.TabIndex = 5;
+            // 
+            // btnGraspAnim
+            // 
+            this.btnGraspAnim.Location = new System.Drawing.Point(0, 24);
+            this.btnGraspAnim.Margin = new System.Windows.Forms.Padding(1);
+            this.btnGraspAnim.Name = "btnGraspAnim";
+            this.btnGraspAnim.Size = new System.Drawing.Size(27, 21);
+            this.btnGraspAnim.TabIndex = 6;
+            this.btnGraspAnim.Text = ">>";
+            this.btnGraspAnim.UseVisualStyleBackColor = true;
+            this.btnGraspAnim.Click += new System.EventHandler(this.OnGraspAnimClicked);
+            // 
+            // lblGraspAnimName
+            // 
+            this.lblGraspAnimName.AutoSize = true;
+            this.lblGraspAnimName.Location = new System.Drawing.Point(31, 28);
+            this.lblGraspAnimName.Name = "lblGraspAnimName";
+            this.lblGraspAnimName.Size = new System.Drawing.Size(58, 13);
+            this.lblGraspAnimName.TabIndex = 56;
+            this.lblGraspAnimName.Text = "grasp anim";
+            // 
+            // panelSlot
+            // 
+            this.panelSlot.Controls.Add(this.textSlot);
+            this.panelSlot.Location = new System.Drawing.Point(176, 63);
+            this.panelSlot.Name = "panelSlot";
+            this.panelSlot.Size = new System.Drawing.Size(264, 21);
+            this.panelSlot.TabIndex = 60;
+            // 
+            // textSlot
+            // 
+            this.textSlot.Location = new System.Drawing.Point(0, 0);
+            this.textSlot.Name = "textSlot";
+            this.textSlot.Size = new System.Drawing.Size(50, 20);
+            this.textSlot.TabIndex = 3;
             // 
             // blHandedness
             // 
@@ -123,25 +214,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.lblUseSimAge.TabIndex = 58;
             this.lblUseSimAge.Text = "Use Sim Age:";
             this.lblUseSimAge.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip.SetToolTip(this.lblUseSimAge, "Use SIm\'s age to pick animation");
-            // 
-            // lblObjectAnimName
-            // 
-            this.lblObjectAnimName.AutoSize = true;
-            this.lblObjectAnimName.Location = new System.Drawing.Point(152, 167);
-            this.lblObjectAnimName.Name = "lblObjectAnimName";
-            this.lblObjectAnimName.Size = new System.Drawing.Size(61, 13);
-            this.lblObjectAnimName.TabIndex = 57;
-            this.lblObjectAnimName.Text = "object anim";
-            // 
-            // lblGraspAnimName
-            // 
-            this.lblGraspAnimName.AutoSize = true;
-            this.lblGraspAnimName.Location = new System.Drawing.Point(152, 118);
-            this.lblGraspAnimName.Name = "lblGraspAnimName";
-            this.lblGraspAnimName.Size = new System.Drawing.Size(58, 13);
-            this.lblGraspAnimName.TabIndex = 56;
-            this.lblGraspAnimName.Text = "grasp anim";
+            this.toolTip.SetToolTip(this.lblUseSimAge, "Use Sim\'s age to pick animation");
             // 
             // comboSlot
             // 
@@ -155,13 +228,6 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.comboSlot.TabIndex = 2;
             this.comboSlot.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
-            // textSlot
-            // 
-            this.textSlot.Location = new System.Drawing.Point(176, 63);
-            this.textSlot.Name = "textSlot";
-            this.textSlot.Size = new System.Drawing.Size(50, 20);
-            this.textSlot.TabIndex = 3;
-            // 
             // lblSlot
             // 
             this.lblSlot.Location = new System.Drawing.Point(5, 66);
@@ -170,13 +236,6 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.lblSlot.TabIndex = 53;
             this.lblSlot.Text = "Slot:";
             this.lblSlot.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textObjectAnim
-            // 
-            this.textObjectAnim.Location = new System.Drawing.Point(121, 139);
-            this.textObjectAnim.Name = "textObjectAnim";
-            this.textObjectAnim.Size = new System.Drawing.Size(60, 20);
-            this.textObjectAnim.TabIndex = 8;
             // 
             // lblObjectAnim
             // 
@@ -196,24 +255,6 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkObjectAnim.TabIndex = 7;
             this.checkObjectAnim.UseVisualStyleBackColor = true;
             this.checkObjectAnim.CheckedChanged += new System.EventHandler(this.OnControlChanged);
-            // 
-            // btnObjectAnim
-            // 
-            this.btnObjectAnim.Location = new System.Drawing.Point(121, 163);
-            this.btnObjectAnim.Margin = new System.Windows.Forms.Padding(1);
-            this.btnObjectAnim.Name = "btnObjectAnim";
-            this.btnObjectAnim.Size = new System.Drawing.Size(27, 21);
-            this.btnObjectAnim.TabIndex = 9;
-            this.btnObjectAnim.Text = ">>";
-            this.btnObjectAnim.UseVisualStyleBackColor = true;
-            this.btnObjectAnim.Click += new System.EventHandler(this.OnObjectAnimClicked);
-            // 
-            // textGraspAnim
-            // 
-            this.textGraspAnim.Location = new System.Drawing.Point(121, 90);
-            this.textGraspAnim.Name = "textGraspAnim";
-            this.textGraspAnim.Size = new System.Drawing.Size(60, 20);
-            this.textGraspAnim.TabIndex = 5;
             // 
             // lblGraspAnim
             // 
@@ -241,6 +282,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkHandedness.Name = "checkHandedness";
             this.checkHandedness.Size = new System.Drawing.Size(15, 14);
             this.checkHandedness.TabIndex = 11;
+            this.toolTip.SetToolTip(this.checkHandedness, "Handedness in Temp 3");
             this.checkHandedness.UseVisualStyleBackColor = true;
             // 
             // lblAction
@@ -252,17 +294,6 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.lblAction.Text = "Action:";
             this.lblAction.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // btnGraspAnim
-            // 
-            this.btnGraspAnim.Location = new System.Drawing.Point(121, 114);
-            this.btnGraspAnim.Margin = new System.Windows.Forms.Padding(1);
-            this.btnGraspAnim.Name = "btnGraspAnim";
-            this.btnGraspAnim.Size = new System.Drawing.Size(27, 21);
-            this.btnGraspAnim.TabIndex = 6;
-            this.btnGraspAnim.Text = ">>";
-            this.btnGraspAnim.UseVisualStyleBackColor = true;
-            this.btnGraspAnim.Click += new System.EventHandler(this.OnGraspAnimClicked);
-            // 
             // checkUseSimAge
             // 
             this.checkUseSimAge.AutoSize = true;
@@ -270,6 +301,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkUseSimAge.Name = "checkUseSimAge";
             this.checkUseSimAge.Size = new System.Drawing.Size(15, 14);
             this.checkUseSimAge.TabIndex = 10;
+            this.toolTip.SetToolTip(this.checkUseSimAge, "Use Sim\'s age to pick animation");
             this.checkUseSimAge.UseVisualStyleBackColor = true;
             // 
             // comboAction
@@ -373,6 +405,12 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.Size = new System.Drawing.Size(440, 245);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
+            this.panelObjectAnim.ResumeLayout(false);
+            this.panelObjectAnim.PerformLayout();
+            this.panelGraspAnim.ResumeLayout(false);
+            this.panelGraspAnim.PerformLayout();
+            this.panelSlot.ResumeLayout(false);
+            this.panelSlot.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
             this.panelObject.ResumeLayout(false);
             this.panelObject.PerformLayout();
@@ -411,5 +449,8 @@ namespace whse.PrimitiveWizards.Wiz0x0074
         private System.Windows.Forms.Label lblGraspAnimName;
         private System.Windows.Forms.Label blHandedness;
         private System.Windows.Forms.Label lblUseSimAge;
+        private System.Windows.Forms.Panel panelSlot;
+        private System.Windows.Forms.Panel panelObjectAnim;
+        private System.Windows.Forms.Panel panelGraspAnim;
     }
 }

@@ -61,19 +61,23 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             this.checkDecimal = new System.Windows.Forms.CheckBox();
             this.comboDataOwner1 = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.panelTickCount = new System.Windows.Forms.Panel();
+            this.panelIntensity = new System.Windows.Forms.Panel();
+            this.panelLight = new System.Windows.Forms.Panel();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
+            this.panelTickCount.SuspendLayout();
+            this.panelIntensity.SuspendLayout();
+            this.panelLight.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.lblLightName);
-            this.panelMain.Controls.Add(this.btnLightPicker);
-            this.panelMain.Controls.Add(this.textLight);
-            this.panelMain.Controls.Add(this.textIntensity);
+            this.panelMain.Controls.Add(this.panelLight);
+            this.panelMain.Controls.Add(this.panelIntensity);
+            this.panelMain.Controls.Add(this.panelTickCount);
             this.panelMain.Controls.Add(this.lblIntensity);
             this.panelMain.Controls.Add(this.comboIntensity);
-            this.panelMain.Controls.Add(this.textTickCount);
             this.panelMain.Controls.Add(this.lblLight);
             this.panelMain.Controls.Add(this.lblTarget);
             this.panelMain.Controls.Add(this.checkAllLights);
@@ -93,7 +97,7 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             // lblLightName
             // 
             this.lblLightName.AutoSize = true;
-            this.lblLightName.Location = new System.Drawing.Point(179, 110);
+            this.lblLightName.Location = new System.Drawing.Point(79, 4);
             this.lblLightName.Name = "lblLightName";
             this.lblLightName.Size = new System.Drawing.Size(35, 13);
             this.lblLightName.TabIndex = 47;
@@ -101,7 +105,7 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             // 
             // btnLightPicker
             // 
-            this.btnLightPicker.Location = new System.Drawing.Point(148, 106);
+            this.btnLightPicker.Location = new System.Drawing.Point(48, 0);
             this.btnLightPicker.Margin = new System.Windows.Forms.Padding(1);
             this.btnLightPicker.Name = "btnLightPicker";
             this.btnLightPicker.Size = new System.Drawing.Size(27, 21);
@@ -112,14 +116,14 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             // 
             // textLight
             // 
-            this.textLight.Location = new System.Drawing.Point(100, 107);
+            this.textLight.Location = new System.Drawing.Point(0, 0);
             this.textLight.Name = "textLight";
             this.textLight.Size = new System.Drawing.Size(44, 20);
             this.textLight.TabIndex = 45;
             // 
             // textIntensity
             // 
-            this.textIntensity.Location = new System.Drawing.Point(200, 58);
+            this.textIntensity.Location = new System.Drawing.Point(0, 0);
             this.textIntensity.Name = "textIntensity";
             this.textIntensity.Size = new System.Drawing.Size(100, 20);
             this.textIntensity.TabIndex = 29;
@@ -148,7 +152,7 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             // 
             // textTickCount
             // 
-            this.textTickCount.Location = new System.Drawing.Point(200, 31);
+            this.textTickCount.Location = new System.Drawing.Point(0, 0);
             this.textTickCount.Name = "textTickCount";
             this.textTickCount.Size = new System.Drawing.Size(100, 20);
             this.textTickCount.TabIndex = 26;
@@ -262,6 +266,32 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             this.comboDataOwner1.Size = new System.Drawing.Size(200, 21);
             this.comboDataOwner1.TabIndex = 1;
             // 
+            // panelTickCount
+            // 
+            this.panelTickCount.Controls.Add(this.textTickCount);
+            this.panelTickCount.Location = new System.Drawing.Point(200, 31);
+            this.panelTickCount.Name = "panelTickCount";
+            this.panelTickCount.Size = new System.Drawing.Size(240, 21);
+            this.panelTickCount.TabIndex = 48;
+            // 
+            // panelIntensity
+            // 
+            this.panelIntensity.Controls.Add(this.textIntensity);
+            this.panelIntensity.Location = new System.Drawing.Point(200, 58);
+            this.panelIntensity.Name = "panelIntensity";
+            this.panelIntensity.Size = new System.Drawing.Size(240, 21);
+            this.panelIntensity.TabIndex = 49;
+            // 
+            // panelLight
+            // 
+            this.panelLight.Controls.Add(this.textLight);
+            this.panelLight.Controls.Add(this.btnLightPicker);
+            this.panelLight.Controls.Add(this.lblLightName);
+            this.panelLight.Location = new System.Drawing.Point(100, 108);
+            this.panelLight.Name = "panelLight";
+            this.panelLight.Size = new System.Drawing.Size(240, 21);
+            this.panelLight.TabIndex = 50;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,6 +302,12 @@ namespace whse.PrimitiveWizards.Wiz0x006f
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
+            this.panelTickCount.ResumeLayout(false);
+            this.panelTickCount.PerformLayout();
+            this.panelIntensity.ResumeLayout(false);
+            this.panelIntensity.PerformLayout();
+            this.panelLight.ResumeLayout(false);
+            this.panelLight.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -298,5 +334,8 @@ namespace whse.PrimitiveWizards.Wiz0x006f
         private System.Windows.Forms.Label lblLightName;
         private System.Windows.Forms.Button btnLightPicker;
         private System.Windows.Forms.TextBox textLight;
+        private System.Windows.Forms.Panel panelTickCount;
+        private System.Windows.Forms.Panel panelIntensity;
+        private System.Windows.Forms.Panel panelLight;
     }
 }

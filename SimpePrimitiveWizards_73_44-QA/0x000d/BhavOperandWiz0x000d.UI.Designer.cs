@@ -42,6 +42,15 @@ namespace whse.PrimitiveWizards.Wiz0x000d
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panelInteractNumber = new System.Windows.Forms.Panel();
+            this.textInteractNumber = new System.Windows.Forms.TextBox();
+            this.panelObjectLocal = new System.Windows.Forms.Panel();
+            this.textObjectLocal = new System.Windows.Forms.TextBox();
+            this.comboObjectLocal = new System.Windows.Forms.ComboBox();
+            this.panelObjectParam = new System.Windows.Forms.Panel();
+            this.textObjectParam = new System.Windows.Forms.TextBox();
+            this.comboObjectParam = new System.Windows.Forms.ComboBox();
+            this.comboObjectType = new System.Windows.Forms.ComboBox();
             this.iconPnM = new System.Windows.Forms.PictureBox();
             this.checkDecimal = new System.Windows.Forms.CheckBox();
             this.checkAttrPicker = new System.Windows.Forms.CheckBox();
@@ -51,17 +60,12 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.lblLinking = new System.Windows.Forms.Label();
             this.comboPriority = new System.Windows.Forms.ComboBox();
             this.lblPriority = new System.Windows.Forms.Label();
-            this.textIconIndex = new System.Windows.Forms.TextBox();
-            this.comboIconIndex = new System.Windows.Forms.ComboBox();
-            this.textIconObject = new System.Windows.Forms.TextBox();
-            this.comboIconObject = new System.Windows.Forms.ComboBox();
+            this.comboIconIndexType = new System.Windows.Forms.ComboBox();
+            this.comboIconType = new System.Windows.Forms.ComboBox();
             this.lblIconObject = new System.Windows.Forms.Label();
             this.labelIconIndex = new System.Windows.Forms.Label();
-            this.textIntNumber = new System.Windows.Forms.TextBox();
-            this.comboIntNumber = new System.Windows.Forms.ComboBox();
+            this.comboInteractNumber = new System.Windows.Forms.ComboBox();
             this.lblIntNumber = new System.Windows.Forms.Label();
-            this.textIntObject = new System.Windows.Forms.TextBox();
-            this.comboIntObject = new System.Windows.Forms.ComboBox();
             this.lblIntObject = new System.Windows.Forms.Label();
             this.textIntSim = new System.Windows.Forms.Label();
             this.lblIntSim = new System.Windows.Forms.Label();
@@ -83,16 +87,29 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.textDataValue3 = new System.Windows.Forms.TextBox();
             this.comboDataPicker3 = new System.Windows.Forms.ComboBox();
             this.comboDataOwner3 = new System.Windows.Forms.ComboBox();
+            this.panelIconIndex = new System.Windows.Forms.Panel();
+            this.textIconIndex = new System.Windows.Forms.TextBox();
+            this.panelIconObject = new System.Windows.Forms.Panel();
+            this.comboIconObject = new System.Windows.Forms.ComboBox();
+            this.textIconObject = new System.Windows.Forms.TextBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMain.SuspendLayout();
+            this.panelInteractNumber.SuspendLayout();
+            this.panelObjectLocal.SuspendLayout();
+            this.panelObjectParam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
             this.panelDataOwner1.SuspendLayout();
             this.panelDataOwner2.SuspendLayout();
             this.panelDataOwner3.SuspendLayout();
+            this.panelIconIndex.SuspendLayout();
+            this.panelIconObject.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.panelInteractNumber);
+            this.panelMain.Controls.Add(this.panelObjectParam);
+            this.panelMain.Controls.Add(this.comboObjectType);
             this.panelMain.Controls.Add(this.iconPnM);
             this.panelMain.Controls.Add(this.checkDecimal);
             this.panelMain.Controls.Add(this.checkAttrPicker);
@@ -102,17 +119,12 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelMain.Controls.Add(this.lblLinking);
             this.panelMain.Controls.Add(this.comboPriority);
             this.panelMain.Controls.Add(this.lblPriority);
-            this.panelMain.Controls.Add(this.textIconIndex);
-            this.panelMain.Controls.Add(this.comboIconIndex);
-            this.panelMain.Controls.Add(this.textIconObject);
-            this.panelMain.Controls.Add(this.comboIconObject);
+            this.panelMain.Controls.Add(this.comboIconIndexType);
+            this.panelMain.Controls.Add(this.comboIconType);
             this.panelMain.Controls.Add(this.lblIconObject);
             this.panelMain.Controls.Add(this.labelIconIndex);
-            this.panelMain.Controls.Add(this.textIntNumber);
-            this.panelMain.Controls.Add(this.comboIntNumber);
+            this.panelMain.Controls.Add(this.comboInteractNumber);
             this.panelMain.Controls.Add(this.lblIntNumber);
-            this.panelMain.Controls.Add(this.textIntObject);
-            this.panelMain.Controls.Add(this.comboIntObject);
             this.panelMain.Controls.Add(this.lblIntObject);
             this.panelMain.Controls.Add(this.textIntSim);
             this.panelMain.Controls.Add(this.lblIntSim);
@@ -125,10 +137,91 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelMain.Controls.Add(this.panelDataOwner1);
             this.panelMain.Controls.Add(this.panelDataOwner2);
             this.panelMain.Controls.Add(this.panelDataOwner3);
+            this.panelMain.Controls.Add(this.panelIconIndex);
+            this.panelMain.Controls.Add(this.panelIconObject);
+            this.panelMain.Controls.Add(this.panelObjectLocal);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(440, 315);
             this.panelMain.TabIndex = 0;
+            // 
+            // panelInteractNumber
+            // 
+            this.panelInteractNumber.Controls.Add(this.textInteractNumber);
+            this.panelInteractNumber.Location = new System.Drawing.Point(196, 50);
+            this.panelInteractNumber.Name = "panelInteractNumber";
+            this.panelInteractNumber.Size = new System.Drawing.Size(244, 21);
+            this.panelInteractNumber.TabIndex = 29;
+            // 
+            // textInteractNumber
+            // 
+            this.textInteractNumber.Location = new System.Drawing.Point(0, 0);
+            this.textInteractNumber.Name = "textInteractNumber";
+            this.textInteractNumber.Size = new System.Drawing.Size(60, 20);
+            this.textInteractNumber.TabIndex = 3;
+            // 
+            // panelObjectLocal
+            // 
+            this.panelObjectLocal.Controls.Add(this.textObjectLocal);
+            this.panelObjectLocal.Controls.Add(this.comboObjectLocal);
+            this.panelObjectLocal.Location = new System.Drawing.Point(196, 23);
+            this.panelObjectLocal.Name = "panelObjectLocal";
+            this.panelObjectLocal.Size = new System.Drawing.Size(244, 21);
+            this.panelObjectLocal.TabIndex = 5;
+            // 
+            // textObjectLocal
+            // 
+            this.textObjectLocal.Location = new System.Drawing.Point(0, 0);
+            this.textObjectLocal.Name = "textObjectLocal";
+            this.textObjectLocal.Size = new System.Drawing.Size(60, 20);
+            this.textObjectLocal.TabIndex = 26;
+            // 
+            // comboObjectLocal
+            // 
+            this.comboObjectLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboObjectLocal.FormattingEnabled = true;
+            this.comboObjectLocal.Location = new System.Drawing.Point(0, 0);
+            this.comboObjectLocal.Name = "comboObjectLocal";
+            this.comboObjectLocal.Size = new System.Drawing.Size(104, 21);
+            this.comboObjectLocal.TabIndex = 28;
+            // 
+            // panelObjectParam
+            // 
+            this.panelObjectParam.Controls.Add(this.textObjectParam);
+            this.panelObjectParam.Controls.Add(this.comboObjectParam);
+            this.panelObjectParam.Location = new System.Drawing.Point(196, 23);
+            this.panelObjectParam.Name = "panelObjectParam";
+            this.panelObjectParam.Size = new System.Drawing.Size(244, 21);
+            this.panelObjectParam.TabIndex = 5;
+            // 
+            // textObjectParam
+            // 
+            this.textObjectParam.Location = new System.Drawing.Point(0, 0);
+            this.textObjectParam.Name = "textObjectParam";
+            this.textObjectParam.Size = new System.Drawing.Size(60, 20);
+            this.textObjectParam.TabIndex = 1;
+            // 
+            // comboObjectParam
+            // 
+            this.comboObjectParam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboObjectParam.FormattingEnabled = true;
+            this.comboObjectParam.Location = new System.Drawing.Point(0, 0);
+            this.comboObjectParam.Name = "comboObjectParam";
+            this.comboObjectParam.Size = new System.Drawing.Size(104, 21);
+            this.comboObjectParam.TabIndex = 27;
+            // 
+            // comboObjectType
+            // 
+            this.comboObjectType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboObjectType.FormattingEnabled = true;
+            this.comboObjectType.Items.AddRange(new object[] {
+            "Param",
+            "Local"});
+            this.comboObjectType.Location = new System.Drawing.Point(100, 23);
+            this.comboObjectType.Name = "comboObjectType";
+            this.comboObjectType.Size = new System.Drawing.Size(90, 21);
+            this.comboObjectType.TabIndex = 0;
+            this.comboObjectType.SelectedIndexChanged += new System.EventHandler(this.OnObjectTypeControlChanged);
             // 
             // iconPnM
             // 
@@ -222,46 +315,32 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.lblPriority.Text = "Priority:";
             this.lblPriority.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // textIconIndex
+            // comboIconIndexType
             // 
-            this.textIconIndex.Location = new System.Drawing.Point(196, 158);
-            this.textIconIndex.Name = "textIconIndex";
-            this.textIconIndex.Size = new System.Drawing.Size(60, 20);
-            this.textIconIndex.TabIndex = 11;
-            // 
-            // comboIconIndex
-            // 
-            this.comboIconIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboIconIndex.FormattingEnabled = true;
-            this.comboIconIndex.Items.AddRange(new object[] {
+            this.comboIconIndexType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboIconIndexType.FormattingEnabled = true;
+            this.comboIconIndexType.Items.AddRange(new object[] {
             "Literal",
             "In T6"});
-            this.comboIconIndex.Location = new System.Drawing.Point(100, 158);
-            this.comboIconIndex.Name = "comboIconIndex";
-            this.comboIconIndex.Size = new System.Drawing.Size(90, 21);
-            this.comboIconIndex.TabIndex = 10;
-            this.comboIconIndex.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
+            this.comboIconIndexType.Location = new System.Drawing.Point(100, 158);
+            this.comboIconIndexType.Name = "comboIconIndexType";
+            this.comboIconIndexType.Size = new System.Drawing.Size(90, 21);
+            this.comboIconIndexType.TabIndex = 10;
+            this.comboIconIndexType.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
-            // textIconObject
+            // comboIconType
             // 
-            this.textIconObject.Location = new System.Drawing.Point(196, 131);
-            this.textIconObject.Name = "textIconObject";
-            this.textIconObject.Size = new System.Drawing.Size(60, 20);
-            this.textIconObject.TabIndex = 8;
-            // 
-            // comboIconObject
-            // 
-            this.comboIconObject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboIconObject.FormattingEnabled = true;
-            this.comboIconObject.Items.AddRange(new object[] {
+            this.comboIconType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboIconType.FormattingEnabled = true;
+            this.comboIconType.Items.AddRange(new object[] {
             "Target",
             "Local",
             "In T4/5"});
-            this.comboIconObject.Location = new System.Drawing.Point(100, 131);
-            this.comboIconObject.Name = "comboIconObject";
-            this.comboIconObject.Size = new System.Drawing.Size(90, 21);
-            this.comboIconObject.TabIndex = 7;
-            this.comboIconObject.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
+            this.comboIconType.Location = new System.Drawing.Point(100, 131);
+            this.comboIconType.Name = "comboIconType";
+            this.comboIconType.Size = new System.Drawing.Size(90, 21);
+            this.comboIconType.TabIndex = 7;
+            this.comboIconType.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblIconObject
             // 
@@ -281,26 +360,19 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.labelIconIndex.Text = "Icon Index:";
             this.labelIconIndex.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // textIntNumber
+            // comboInteractNumber
             // 
-            this.textIntNumber.Location = new System.Drawing.Point(196, 50);
-            this.textIntNumber.Name = "textIntNumber";
-            this.textIntNumber.Size = new System.Drawing.Size(60, 20);
-            this.textIntNumber.TabIndex = 3;
-            // 
-            // comboIntNumber
-            // 
-            this.comboIntNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboIntNumber.FormattingEnabled = true;
-            this.comboIntNumber.Items.AddRange(new object[] {
+            this.comboInteractNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboInteractNumber.FormattingEnabled = true;
+            this.comboInteractNumber.Items.AddRange(new object[] {
             "Literal",
             "Variable",
             "Last FBA"});
-            this.comboIntNumber.Location = new System.Drawing.Point(100, 50);
-            this.comboIntNumber.Name = "comboIntNumber";
-            this.comboIntNumber.Size = new System.Drawing.Size(90, 21);
-            this.comboIntNumber.TabIndex = 2;
-            this.comboIntNumber.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
+            this.comboInteractNumber.Location = new System.Drawing.Point(100, 50);
+            this.comboInteractNumber.Name = "comboInteractNumber";
+            this.comboInteractNumber.Size = new System.Drawing.Size(90, 21);
+            this.comboInteractNumber.TabIndex = 2;
+            this.comboInteractNumber.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblIntNumber
             // 
@@ -310,26 +382,6 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.lblIntNumber.TabIndex = 5;
             this.lblIntNumber.Text = "Interaction:";
             this.lblIntNumber.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textIntObject
-            // 
-            this.textIntObject.Location = new System.Drawing.Point(196, 23);
-            this.textIntObject.Name = "textIntObject";
-            this.textIntObject.Size = new System.Drawing.Size(60, 20);
-            this.textIntObject.TabIndex = 1;
-            // 
-            // comboIntObject
-            // 
-            this.comboIntObject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboIntObject.FormattingEnabled = true;
-            this.comboIntObject.Items.AddRange(new object[] {
-            "Param",
-            "Local"});
-            this.comboIntObject.Location = new System.Drawing.Point(100, 23);
-            this.comboIntObject.Name = "comboIntObject";
-            this.comboIntObject.Size = new System.Drawing.Size(90, 21);
-            this.comboIntObject.TabIndex = 0;
-            this.comboIntObject.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
             // lblIntObject
             // 
@@ -379,9 +431,9 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             // 
             // lblUseName
             // 
-            this.lblUseName.Location = new System.Drawing.Point(285, 134);
+            this.lblUseName.Location = new System.Drawing.Point(315, 134);
             this.lblUseName.Name = "lblUseName";
-            this.lblUseName.Size = new System.Drawing.Size(130, 13);
+            this.lblUseName.Size = new System.Drawing.Size(100, 13);
             this.lblUseName.TabIndex = 16;
             this.lblUseName.Text = "Use Name:";
             this.lblUseName.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -518,6 +570,46 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.comboDataOwner3.Size = new System.Drawing.Size(200, 21);
             this.comboDataOwner3.TabIndex = 0;
             // 
+            // panelIconIndex
+            // 
+            this.panelIconIndex.Controls.Add(this.textIconIndex);
+            this.panelIconIndex.Location = new System.Drawing.Point(196, 158);
+            this.panelIconIndex.Name = "panelIconIndex";
+            this.panelIconIndex.Size = new System.Drawing.Size(244, 21);
+            this.panelIconIndex.TabIndex = 30;
+            // 
+            // textIconIndex
+            // 
+            this.textIconIndex.Location = new System.Drawing.Point(0, 0);
+            this.textIconIndex.Name = "textIconIndex";
+            this.textIconIndex.Size = new System.Drawing.Size(60, 20);
+            this.textIconIndex.TabIndex = 11;
+            // 
+            // panelIconObject
+            // 
+            this.panelIconObject.Controls.Add(this.comboIconObject);
+            this.panelIconObject.Controls.Add(this.textIconObject);
+            this.panelIconObject.Location = new System.Drawing.Point(196, 131);
+            this.panelIconObject.Name = "panelIconObject";
+            this.panelIconObject.Size = new System.Drawing.Size(244, 21);
+            this.panelIconObject.TabIndex = 29;
+            // 
+            // comboIconObject
+            // 
+            this.comboIconObject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboIconObject.FormattingEnabled = true;
+            this.comboIconObject.Location = new System.Drawing.Point(0, 0);
+            this.comboIconObject.Name = "comboIconObject";
+            this.comboIconObject.Size = new System.Drawing.Size(104, 21);
+            this.comboIconObject.TabIndex = 29;
+            // 
+            // textIconObject
+            // 
+            this.textIconObject.Location = new System.Drawing.Point(0, 0);
+            this.textIconObject.Name = "textIconObject";
+            this.textIconObject.Size = new System.Drawing.Size(60, 20);
+            this.textIconObject.TabIndex = 8;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +619,12 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.Size = new System.Drawing.Size(440, 315);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
+            this.panelInteractNumber.ResumeLayout(false);
+            this.panelInteractNumber.PerformLayout();
+            this.panelObjectLocal.ResumeLayout(false);
+            this.panelObjectLocal.PerformLayout();
+            this.panelObjectParam.ResumeLayout(false);
+            this.panelObjectParam.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
             this.panelDataOwner1.ResumeLayout(false);
             this.panelDataOwner1.PerformLayout();
@@ -534,6 +632,10 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelDataOwner2.PerformLayout();
             this.panelDataOwner3.ResumeLayout(false);
             this.panelDataOwner3.PerformLayout();
+            this.panelIconIndex.ResumeLayout(false);
+            this.panelIconIndex.PerformLayout();
+            this.panelIconObject.ResumeLayout(false);
+            this.panelIconObject.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -542,22 +644,22 @@ namespace whse.PrimitiveWizards.Wiz0x000d
 
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lblIntSim;
-        private System.Windows.Forms.ComboBox comboIntNumber;
+        private System.Windows.Forms.ComboBox comboInteractNumber;
         private System.Windows.Forms.Label lblIntNumber;
-        private System.Windows.Forms.TextBox textIntObject;
-        private System.Windows.Forms.ComboBox comboIntObject;
+        private System.Windows.Forms.TextBox textObjectParam;
+        private System.Windows.Forms.ComboBox comboObjectType;
         private System.Windows.Forms.Label lblIntObject;
         private System.Windows.Forms.Label textIntSim;
         private System.Windows.Forms.Label lblIconObject;
         private System.Windows.Forms.Label labelIconIndex;
-        private System.Windows.Forms.TextBox textIntNumber;
+        private System.Windows.Forms.TextBox textInteractNumber;
         private System.Windows.Forms.Label lblUseName;
         private System.Windows.Forms.Label lblCallerParams;
         private System.Windows.Forms.Label lblPriority;
         private System.Windows.Forms.TextBox textIconIndex;
-        private System.Windows.Forms.ComboBox comboIconIndex;
+        private System.Windows.Forms.ComboBox comboIconIndexType;
         private System.Windows.Forms.TextBox textIconObject;
-        private System.Windows.Forms.ComboBox comboIconObject;
+        private System.Windows.Forms.ComboBox comboIconType;
         private System.Windows.Forms.Label lblReturning;
         private System.Windows.Forms.CheckBox checkLinking;
         private System.Windows.Forms.Label lblLinking;
@@ -583,5 +685,14 @@ namespace whse.PrimitiveWizards.Wiz0x000d
         private System.Windows.Forms.Panel panelDataOwner3;
         private System.Windows.Forms.PictureBox iconPnM;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ComboBox comboObjectLocal;
+        private System.Windows.Forms.ComboBox comboObjectParam;
+        private System.Windows.Forms.TextBox textObjectLocal;
+        private System.Windows.Forms.ComboBox comboIconObject;
+        private System.Windows.Forms.Panel panelObjectParam;
+        private System.Windows.Forms.Panel panelObjectLocal;
+        private System.Windows.Forms.Panel panelIconObject;
+        private System.Windows.Forms.Panel panelInteractNumber;
+        private System.Windows.Forms.Panel panelIconIndex;
     }
 }

@@ -92,7 +92,7 @@ namespace whse.PrimitiveWizards.Wiz0x0071
 
         private void UpdatePanelState()
         {
-            textSlot.Visible = (comboSlot.SelectedIndex == 0);
+            panelSlot.Visible = (comboSlot.SelectedIndex == 0);
         }
 
         private void OnControlChanged(object sender, EventArgs e)

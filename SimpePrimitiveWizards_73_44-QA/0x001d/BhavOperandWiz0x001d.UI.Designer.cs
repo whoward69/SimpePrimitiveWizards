@@ -248,6 +248,7 @@ namespace whse.PrimitiveWizards.Wiz0x001d
             this.checkAutoClearing.Name = "checkAutoClearing";
             this.checkAutoClearing.Size = new System.Drawing.Size(15, 14);
             this.checkAutoClearing.TabIndex = 7;
+            this.toolTip.SetToolTip(this.checkAutoClearing, "Auto Clearing the Person Data Motive Decay");
             this.checkAutoClearing.UseVisualStyleBackColor = true;
             // 
             // checkAttrPicker

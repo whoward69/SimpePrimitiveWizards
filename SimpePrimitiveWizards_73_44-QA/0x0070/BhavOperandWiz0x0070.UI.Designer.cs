@@ -42,26 +42,30 @@ namespace whse.PrimitiveWizards.Wiz0x0070
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panelSlot = new System.Windows.Forms.Panel();
+            this.textSlot = new System.Windows.Forms.TextBox();
+            this.comboSlotType = new System.Windows.Forms.ComboBox();
+            this.lblSlot = new System.Windows.Forms.Label();
+            this.panelIconIndex = new System.Windows.Forms.Panel();
+            this.textIconIndex = new System.Windows.Forms.TextBox();
             this.panelEffect = new System.Windows.Forms.Panel();
+            this.labelDefaultEffect = new System.Windows.Forms.Label();
+            this.textEffect = new System.Windows.Forms.TextBox();
+            this.comboEffect = new System.Windows.Forms.ComboBox();
+            this.lblEffect = new System.Windows.Forms.Label();
+            this.panelEffectVariable = new System.Windows.Forms.Panel();
             this.comboEffectScope = new System.Windows.Forms.ComboBox();
             this.btnEffect = new System.Windows.Forms.Button();
             this.lblEffectName = new System.Windows.Forms.Label();
-            this.textEffect = new System.Windows.Forms.TextBox();
-            this.comboEffect = new System.Windows.Forms.ComboBox();
             this.lblPriority = new System.Windows.Forms.Label();
             this.comboIconType = new System.Windows.Forms.ComboBox();
-            this.comboSlotType = new System.Windows.Forms.ComboBox();
-            this.lblSlot = new System.Windows.Forms.Label();
-            this.textSlot = new System.Windows.Forms.TextBox();
-            this.textIconIndex = new System.Windows.Forms.TextBox();
-            this.lblEffect = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.lblTarget = new System.Windows.Forms.Label();
             this.checkModel = new System.Windows.Forms.CheckBox();
             this.lblAction = new System.Windows.Forms.Label();
             this.iconPnM = new System.Windows.Forms.PictureBox();
             this.comboAction = new System.Windows.Forms.ComboBox();
-            this.panelIcon = new System.Windows.Forms.Panel();
+            this.panelIconVariable = new System.Windows.Forms.Panel();
             this.comboDataOwner2 = new System.Windows.Forms.ComboBox();
             this.comboDataPicker2 = new System.Windows.Forms.ComboBox();
             this.textDataValue2 = new System.Windows.Forms.TextBox();
@@ -74,30 +78,29 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.lblIcon = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMain.SuspendLayout();
+            this.panelSlot.SuspendLayout();
+            this.panelIconIndex.SuspendLayout();
             this.panelEffect.SuspendLayout();
+            this.panelEffectVariable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
-            this.panelIcon.SuspendLayout();
+            this.panelIconVariable.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.panelSlot);
+            this.panelMain.Controls.Add(this.panelIconIndex);
             this.panelMain.Controls.Add(this.panelEffect);
-            this.panelMain.Controls.Add(this.textEffect);
-            this.panelMain.Controls.Add(this.comboEffect);
+            this.panelMain.Controls.Add(this.panelEffectVariable);
             this.panelMain.Controls.Add(this.lblPriority);
             this.panelMain.Controls.Add(this.comboIconType);
-            this.panelMain.Controls.Add(this.comboSlotType);
-            this.panelMain.Controls.Add(this.lblSlot);
-            this.panelMain.Controls.Add(this.textSlot);
-            this.panelMain.Controls.Add(this.textIconIndex);
-            this.panelMain.Controls.Add(this.lblEffect);
             this.panelMain.Controls.Add(this.lblModel);
             this.panelMain.Controls.Add(this.lblTarget);
             this.panelMain.Controls.Add(this.checkModel);
             this.panelMain.Controls.Add(this.lblAction);
             this.panelMain.Controls.Add(this.iconPnM);
             this.panelMain.Controls.Add(this.comboAction);
-            this.panelMain.Controls.Add(this.panelIcon);
+            this.panelMain.Controls.Add(this.panelIconVariable);
             this.panelMain.Controls.Add(this.comboDataPicker1);
             this.panelMain.Controls.Add(this.checkAttrPicker);
             this.panelMain.Controls.Add(this.checkDecimal);
@@ -110,15 +113,118 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.panelMain.Size = new System.Drawing.Size(440, 245);
             this.panelMain.TabIndex = 0;
             // 
+            // panelSlot
+            // 
+            this.panelSlot.Controls.Add(this.textSlot);
+            this.panelSlot.Controls.Add(this.comboSlotType);
+            this.panelSlot.Controls.Add(this.lblSlot);
+            this.panelSlot.Location = new System.Drawing.Point(0, 111);
+            this.panelSlot.Name = "panelSlot";
+            this.panelSlot.Size = new System.Drawing.Size(440, 21);
+            this.panelSlot.TabIndex = 70;
+            // 
+            // textSlot
+            // 
+            this.textSlot.Location = new System.Drawing.Point(196, 1);
+            this.textSlot.Name = "textSlot";
+            this.textSlot.Size = new System.Drawing.Size(60, 20);
+            this.textSlot.TabIndex = 8;
+            // 
+            // comboSlotType
+            // 
+            this.comboSlotType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSlotType.FormattingEnabled = true;
+            this.comboSlotType.Items.AddRange(new object[] {
+            "Target",
+            "Routing",
+            "Container"});
+            this.comboSlotType.Location = new System.Drawing.Point(100, 0);
+            this.comboSlotType.Name = "comboSlotType";
+            this.comboSlotType.Size = new System.Drawing.Size(90, 21);
+            this.comboSlotType.TabIndex = 7;
+            // 
+            // lblSlot
+            // 
+            this.lblSlot.Location = new System.Drawing.Point(5, 4);
+            this.lblSlot.Name = "lblSlot";
+            this.lblSlot.Size = new System.Drawing.Size(95, 13);
+            this.lblSlot.TabIndex = 63;
+            this.lblSlot.Text = "Slot:";
+            this.lblSlot.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panelIconIndex
+            // 
+            this.panelIconIndex.Controls.Add(this.textIconIndex);
+            this.panelIconIndex.Location = new System.Drawing.Point(196, 138);
+            this.panelIconIndex.Name = "panelIconIndex";
+            this.panelIconIndex.Size = new System.Drawing.Size(244, 21);
+            this.panelIconIndex.TabIndex = 69;
+            // 
+            // textIconIndex
+            // 
+            this.textIconIndex.Location = new System.Drawing.Point(0, 1);
+            this.textIconIndex.Name = "textIconIndex";
+            this.textIconIndex.Size = new System.Drawing.Size(60, 20);
+            this.textIconIndex.TabIndex = 10;
+            // 
             // panelEffect
             // 
-            this.panelEffect.Controls.Add(this.comboEffectScope);
-            this.panelEffect.Controls.Add(this.btnEffect);
-            this.panelEffect.Controls.Add(this.lblEffectName);
-            this.panelEffect.Location = new System.Drawing.Point(0, 84);
+            this.panelEffect.Controls.Add(this.labelDefaultEffect);
+            this.panelEffect.Controls.Add(this.textEffect);
+            this.panelEffect.Controls.Add(this.comboEffect);
+            this.panelEffect.Controls.Add(this.lblEffect);
+            this.panelEffect.Location = new System.Drawing.Point(0, 58);
             this.panelEffect.Name = "panelEffect";
             this.panelEffect.Size = new System.Drawing.Size(440, 21);
-            this.panelEffect.TabIndex = 6;
+            this.panelEffect.TabIndex = 68;
+            // 
+            // labelDefaultEffect
+            // 
+            this.labelDefaultEffect.AutoSize = true;
+            this.labelDefaultEffect.Location = new System.Drawing.Point(262, 4);
+            this.labelDefaultEffect.Name = "labelDefaultEffect";
+            this.labelDefaultEffect.Size = new System.Drawing.Size(129, 13);
+            this.labelDefaultEffect.TabIndex = 60;
+            this.labelDefaultEffect.Text = "(0xFF is the default effect)";
+            // 
+            // textEffect
+            // 
+            this.textEffect.Location = new System.Drawing.Point(196, 1);
+            this.textEffect.Name = "textEffect";
+            this.textEffect.Size = new System.Drawing.Size(60, 20);
+            this.textEffect.TabIndex = 5;
+            // 
+            // comboEffect
+            // 
+            this.comboEffect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEffect.FormattingEnabled = true;
+            this.comboEffect.Items.AddRange(new object[] {
+            "Literal",
+            "In Temp 1"});
+            this.comboEffect.Location = new System.Drawing.Point(100, 0);
+            this.comboEffect.Name = "comboEffect";
+            this.comboEffect.Size = new System.Drawing.Size(90, 21);
+            this.comboEffect.TabIndex = 4;
+            this.comboEffect.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
+            // 
+            // lblEffect
+            // 
+            this.lblEffect.Location = new System.Drawing.Point(5, 4);
+            this.lblEffect.Name = "lblEffect";
+            this.lblEffect.Size = new System.Drawing.Size(95, 13);
+            this.lblEffect.TabIndex = 59;
+            this.lblEffect.Text = "Effect:";
+            this.lblEffect.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panelEffectVariable
+            // 
+            this.panelEffectVariable.Controls.Add(this.comboEffectScope);
+            this.panelEffectVariable.Controls.Add(this.btnEffect);
+            this.panelEffectVariable.Controls.Add(this.lblEffectName);
+            this.panelEffectVariable.Location = new System.Drawing.Point(0, 84);
+            this.panelEffectVariable.Name = "panelEffectVariable";
+            this.panelEffectVariable.Size = new System.Drawing.Size(440, 21);
+            this.panelEffectVariable.TabIndex = 6;
             // 
             // comboEffectScope
             // 
@@ -154,26 +260,6 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.lblEffectName.TabIndex = 61;
             this.lblEffectName.Text = "effect";
             // 
-            // textEffect
-            // 
-            this.textEffect.Location = new System.Drawing.Point(196, 58);
-            this.textEffect.Name = "textEffect";
-            this.textEffect.Size = new System.Drawing.Size(60, 20);
-            this.textEffect.TabIndex = 5;
-            // 
-            // comboEffect
-            // 
-            this.comboEffect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboEffect.FormattingEnabled = true;
-            this.comboEffect.Items.AddRange(new object[] {
-            "Literal",
-            "In Temp 1"});
-            this.comboEffect.Location = new System.Drawing.Point(100, 57);
-            this.comboEffect.Name = "comboEffect";
-            this.comboEffect.Size = new System.Drawing.Size(90, 21);
-            this.comboEffect.TabIndex = 4;
-            this.comboEffect.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
-            // 
             // lblPriority
             // 
             this.lblPriority.Location = new System.Drawing.Point(5, 192);
@@ -182,7 +268,6 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.lblPriority.TabIndex = 67;
             this.lblPriority.Text = "Priority:";
             this.lblPriority.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip.SetToolTip(this.lblPriority, "Auto Clearing the Person Data Motive Decay");
             // 
             // comboIconType
             // 
@@ -200,51 +285,6 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.comboIconType.Size = new System.Drawing.Size(90, 21);
             this.comboIconType.TabIndex = 9;
             this.comboIconType.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
-            // 
-            // comboSlotType
-            // 
-            this.comboSlotType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboSlotType.FormattingEnabled = true;
-            this.comboSlotType.Items.AddRange(new object[] {
-            "Target",
-            "Routing",
-            "Container"});
-            this.comboSlotType.Location = new System.Drawing.Point(100, 111);
-            this.comboSlotType.Name = "comboSlotType";
-            this.comboSlotType.Size = new System.Drawing.Size(90, 21);
-            this.comboSlotType.TabIndex = 7;
-            // 
-            // lblSlot
-            // 
-            this.lblSlot.Location = new System.Drawing.Point(5, 114);
-            this.lblSlot.Name = "lblSlot";
-            this.lblSlot.Size = new System.Drawing.Size(95, 13);
-            this.lblSlot.TabIndex = 63;
-            this.lblSlot.Text = "Slot:";
-            this.lblSlot.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textSlot
-            // 
-            this.textSlot.Location = new System.Drawing.Point(196, 112);
-            this.textSlot.Name = "textSlot";
-            this.textSlot.Size = new System.Drawing.Size(60, 20);
-            this.textSlot.TabIndex = 8;
-            // 
-            // textIconIndex
-            // 
-            this.textIconIndex.Location = new System.Drawing.Point(196, 139);
-            this.textIconIndex.Name = "textIconIndex";
-            this.textIconIndex.Size = new System.Drawing.Size(60, 20);
-            this.textIconIndex.TabIndex = 10;
-            // 
-            // lblEffect
-            // 
-            this.lblEffect.Location = new System.Drawing.Point(5, 60);
-            this.lblEffect.Name = "lblEffect";
-            this.lblEffect.Size = new System.Drawing.Size(95, 13);
-            this.lblEffect.TabIndex = 59;
-            this.lblEffect.Text = "Effect:";
-            this.lblEffect.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblModel
             // 
@@ -319,15 +359,15 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.comboAction.TabIndex = 0;
             this.comboAction.SelectedIndexChanged += new System.EventHandler(this.OnControlChanged);
             // 
-            // panelIcon
+            // panelIconVariable
             // 
-            this.panelIcon.Controls.Add(this.comboDataOwner2);
-            this.panelIcon.Controls.Add(this.comboDataPicker2);
-            this.panelIcon.Controls.Add(this.textDataValue2);
-            this.panelIcon.Location = new System.Drawing.Point(0, 165);
-            this.panelIcon.Name = "panelIcon";
-            this.panelIcon.Size = new System.Drawing.Size(440, 21);
-            this.panelIcon.TabIndex = 11;
+            this.panelIconVariable.Controls.Add(this.comboDataOwner2);
+            this.panelIconVariable.Controls.Add(this.comboDataPicker2);
+            this.panelIconVariable.Controls.Add(this.textDataValue2);
+            this.panelIconVariable.Location = new System.Drawing.Point(0, 165);
+            this.panelIconVariable.Name = "panelIconVariable";
+            this.panelIconVariable.Size = new System.Drawing.Size(440, 21);
+            this.panelIconVariable.TabIndex = 11;
             // 
             // comboDataOwner2
             // 
@@ -418,7 +458,6 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.lblIcon.TabIndex = 16;
             this.lblIcon.Text = "Icon:";
             this.lblIcon.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip.SetToolTip(this.lblIcon, "Auto Clearing the Person Data Motive Decay");
             // 
             // UI
             // 
@@ -429,11 +468,17 @@ namespace whse.PrimitiveWizards.Wiz0x0070
             this.Size = new System.Drawing.Size(440, 245);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
+            this.panelSlot.ResumeLayout(false);
+            this.panelSlot.PerformLayout();
+            this.panelIconIndex.ResumeLayout(false);
+            this.panelIconIndex.PerformLayout();
             this.panelEffect.ResumeLayout(false);
             this.panelEffect.PerformLayout();
+            this.panelEffectVariable.ResumeLayout(false);
+            this.panelEffectVariable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
-            this.panelIcon.ResumeLayout(false);
-            this.panelIcon.PerformLayout();
+            this.panelIconVariable.ResumeLayout(false);
+            this.panelIconVariable.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,7 +503,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
         private System.Windows.Forms.CheckBox checkAttrPicker;
         private System.Windows.Forms.PictureBox iconPnM;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Panel panelIcon;
+        private System.Windows.Forms.Panel panelIconVariable;
         private System.Windows.Forms.ComboBox comboEffectScope;
         private System.Windows.Forms.ComboBox comboSlotType;
         private System.Windows.Forms.Label lblSlot;
@@ -471,6 +516,10 @@ namespace whse.PrimitiveWizards.Wiz0x0070
         private System.Windows.Forms.ComboBox comboIconType;
         private System.Windows.Forms.ComboBox comboEffect;
         private System.Windows.Forms.TextBox textEffect;
+        private System.Windows.Forms.Panel panelEffectVariable;
+        private System.Windows.Forms.Panel panelSlot;
+        private System.Windows.Forms.Panel panelIconIndex;
         private System.Windows.Forms.Panel panelEffect;
+        private System.Windows.Forms.Label labelDefaultEffect;
     }
 }

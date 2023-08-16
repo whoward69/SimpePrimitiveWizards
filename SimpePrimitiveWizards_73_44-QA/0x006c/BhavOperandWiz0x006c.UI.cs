@@ -27,7 +27,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
     {
         private Instruction inst;
 
-        private DataOwnerControl doObject, doAnimRes, doAnimEntry;
+        private DataOwnerControl doObject, doAnimRes, doAnimEntryLiteral, doAnimEntryParam;
 
         private bool internalchg;
 
@@ -79,12 +79,13 @@ namespace whse.PrimitiveWizards.Wiz0x006c
 
             internalchg = true;
 
-            doAnimEntry = WizardHelpers.CreateDataControl(inst, textAnimationEntry, checkDecimal, operands[OperandConstants.Operand0], operands[OperandConstants.Operand1]); // TODO - this should have an attribute picker
-            doAnimEntry.DataOwnerControlChanged += new EventHandler(OnAnimEntryChanged);
+            doAnimEntryParam = WizardHelpers.CreateDataOwnerControl(inst, null, comboAnimEntryParam, textAnimEntryParam, checkDecimal, checkAttrPicker, toolTip, DataOwner.Parameter, operands[OperandConstants.Operand0], operands[OperandConstants.Operand1]);
+            doAnimEntryLiteral = WizardHelpers.CreateDataControl(inst, textAnimEntryLiteral, checkDecimal, operands[OperandConstants.Operand0], operands[OperandConstants.Operand1]);
+            doAnimEntryLiteral.DataOwnerControlChanged += new EventHandler(OnAnimEntryChanged);
 
             comboFlipFlag.SelectedIndex = (boolset2[OperandConstants.Bit4] ? 2 : (boolset2[OperandConstants.Bit1] ? 1 : 0));
             checkBlendOut.Checked = boolset2[OperandConstants.Bit2];
-            comboLiteralOrParam.SelectedIndex = (boolset2[OperandConstants.Bit3] ? 1 : 0);
+            comboAnimLiteralOrParam.SelectedIndex = (boolset2[OperandConstants.Bit3] ? 1 : 0);
             checkShortBlendOut.Checked = boolset2[OperandConstants.Bit6];
             checkNormalAndFlipped.Checked = boolset2[OperandConstants.Bit7];
 
@@ -114,13 +115,14 @@ namespace whse.PrimitiveWizards.Wiz0x006c
                 wrappedByteArray operands = inst.Operands;
                 wrappedByteArray reserved1 = inst.Reserved1;
 
-                operands[OperandConstants.Operand0] = (byte)doAnimEntry.Value;
-                operands[OperandConstants.Operand1] = (byte)(doAnimEntry.Value >> 8);
+                ushort animValue = (comboAnimLiteralOrParam.SelectedIndex == 0) ? doAnimEntryLiteral.Value : doAnimEntryParam.Value;
+                operands[OperandConstants.Operand0] = (byte)animValue;
+                operands[OperandConstants.Operand1] = (byte)(animValue >> 8);
 
                 Boolset boolset2 = new Boolset(operands[OperandConstants.Operand2]);
                 boolset2[OperandConstants.Bit1] = (comboFlipFlag.SelectedIndex == 1);
                 boolset2[OperandConstants.Bit2] = checkBlendOut.Checked;
-                boolset2[OperandConstants.Bit3] = (comboLiteralOrParam.SelectedIndex == 1);
+                boolset2[OperandConstants.Bit3] = (comboAnimLiteralOrParam.SelectedIndex == 1);
                 boolset2[OperandConstants.Bit4] = (comboFlipFlag.SelectedIndex == 2);
                 boolset2[OperandConstants.Bit6] = checkShortBlendOut.Checked;
                 boolset2[OperandConstants.Bit7] = checkNormalAndFlipped.Checked;
@@ -161,7 +163,7 @@ namespace whse.PrimitiveWizards.Wiz0x006c
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    WizardHelpers.SetValue(textAnimationEntry, strIndex, checkDecimal);
+                    WizardHelpers.SetValue(textAnimEntryLiteral, strIndex, checkDecimal);
                     UpdateAnimationNames();
 
                     this.internalchg = internalchg;
@@ -178,10 +180,9 @@ namespace whse.PrimitiveWizards.Wiz0x006c
         {
             lblAnimationResName.Text = comboAnimationRes.SelectedIndex >= 0 ? comboAnimationRes.SelectedItem.ToString() : "---";
 
-            // TODO - if (panelMain.Visible)
             try
             {
-                lblAnimationEntryName.Text = ((pjse.BhavWiz)inst).readStr(AnimScope(), AnimInstance(), doAnimEntry.Value, -1, pjse.Detail.ErrorNames);
+                WizardHelpers.SetName(lblAnimationEntryName, toolTip, ((pjse.BhavWiz)inst).readStr(AnimScope(), AnimInstance(), doAnimEntryLiteral.Value, -1, pjse.Detail.ErrorNames));
             }
             catch (Exception)
             {
@@ -192,7 +193,10 @@ namespace whse.PrimitiveWizards.Wiz0x006c
         {
             panelAnimation.Visible = (comboAnimationType.SelectedIndex == 0);
 
-            btnAnimationPicker.Visible = lblAnimationEntryName.Visible = (comboLiteralOrParam.SelectedIndex == 0);
+            panelAnimEntryLiteral.Visible = (comboAnimLiteralOrParam.SelectedIndex == 0);
+            panelAnimEntryParam.Visible = (comboAnimLiteralOrParam.SelectedIndex == 1);
+
+            btnAnimationPicker.Visible = lblAnimationEntryName.Visible = (comboAnimLiteralOrParam.SelectedIndex == 0);
         }
 
         private void OnAnimResChanged(object sender, EventArgs e)

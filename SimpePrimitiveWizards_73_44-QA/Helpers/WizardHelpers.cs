@@ -188,5 +188,11 @@ namespace whse.PrimitiveWizards
                 textBox.Text = "0x" + SimPe.Helper.HexString(value);
             }
         }
+
+        public static void SetName(Label label, ToolTip toolTip, string value)
+        {
+            label.Text = value;
+            toolTip.SetToolTip(label, value);
+        }
     }
 }

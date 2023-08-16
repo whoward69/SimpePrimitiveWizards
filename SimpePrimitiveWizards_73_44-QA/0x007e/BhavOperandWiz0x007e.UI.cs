@@ -144,7 +144,7 @@ namespace whse.PrimitiveWizards.Wiz0x007e
         {
             try
             {
-                lblScriptName.Text = comboStrScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboStrScope.SelectedIndex], (pjse.GS.GlobalStr)doStrRes.Value, (ushort)(doStrEntry.Value - 1), -1, pjse.Detail.ErrorNames);
+                WizardHelpers.SetName(lblScriptName, toolTip, comboStrScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboStrScope.SelectedIndex], (pjse.GS.GlobalStr)doStrRes.Value, (ushort)(doStrEntry.Value - 1), -1, pjse.Detail.ErrorNames));
             }
             catch (Exception)
             {

@@ -198,7 +198,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
             this.btnSoundPicker.TabIndex = 4;
             this.btnSoundPicker.Text = ">>";
             this.btnSoundPicker.UseVisualStyleBackColor = true;
-            this.btnSoundPicker.Click += new System.EventHandler(this.OnScriptPickerClicked);
+            this.btnSoundPicker.Click += new System.EventHandler(this.OnSoundPickerClicked);
             // 
             // checkAutoVary
             // 

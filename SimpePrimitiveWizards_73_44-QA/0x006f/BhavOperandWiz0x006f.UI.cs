@@ -130,10 +130,9 @@ namespace whse.PrimitiveWizards.Wiz0x006f
 
         private void UpdateLightName()
         {
-            // TODO - if (panelMain.Visible)
             try
             {
-                lblLightName.Text = ((pjse.BhavWiz)inst).readStr(pjse.Scope.Private, pjse.GS.GlobalStr.LightSource, doLight.Value, -1, pjse.Detail.ErrorNames);
+                WizardHelpers.SetName(lblLightName, toolTip, ((pjse.BhavWiz)inst).readStr(pjse.Scope.Private, pjse.GS.GlobalStr.LightSource, doLight.Value, -1, pjse.Detail.ErrorNames));
             }
             catch (Exception)
             {
@@ -142,11 +141,11 @@ namespace whse.PrimitiveWizards.Wiz0x006f
 
         private void UpdatePanelState()
         {
-            textTickCount.Visible = (comboTickCount.SelectedIndex == 0);
+            panelTickCount.Visible = (comboTickCount.SelectedIndex == 0);
 
-            textIntensity.Visible = (comboIntensity.SelectedIndex == 0);
+            panelIntensity.Visible = (comboIntensity.SelectedIndex == 0);
 
-            textLight.Visible = btnLightPicker.Visible = lblLightName.Visible = !checkAllLights.Checked;
+            panelLight.Visible = !checkAllLights.Checked;
         }
 
         private void OnLightControlChanged(object sender, EventArgs e)

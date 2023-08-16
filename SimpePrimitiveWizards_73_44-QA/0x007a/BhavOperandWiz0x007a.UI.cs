@@ -133,9 +133,9 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             {
                 bool found = false;
 
-                lblEventTreeName.Text = pjse.BhavWiz.bhavName(inst.Parent, doEventTree.Value, ref found);
+                WizardHelpers.SetName(lblEventTreeName, toolTip, pjse.BhavWiz.bhavName(inst.Parent, doEventTree.Value, ref found));
 
-                if (!found) lblEventTreeName.Text = "---";
+                if (!found) WizardHelpers.SetName(lblEventTreeName, toolTip, "---");
 
                 lblEventTreeLink.Enabled = found;
             }
@@ -148,7 +148,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
         {
             panelStartModify.Visible = (comboAction.SelectedIndex != 2);
 
-            textTickCount.Visible = (comboTickCount.SelectedIndex == 0);
+            panelTickCount.Visible = (comboTickCount.SelectedIndex == 0);
 
             checkReset.Visible = (comboAction.SelectedIndex == 1);
 

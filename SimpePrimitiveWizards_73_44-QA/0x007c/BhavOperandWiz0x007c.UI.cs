@@ -147,17 +147,17 @@ namespace whse.PrimitiveWizards.Wiz0x007c
                 object xWant = wantInfo.GetType().GetProperty("XWant").GetValue(wantInfo, null);
                 object nodeText = xWant.GetType().GetProperty("NodeText").GetValue(xWant, null);
 
-                lblWantName.Text = nodeText.ToString();
+                WizardHelpers.SetName(lblWantName, toolTip, nodeText.ToString());
 #else
                 WantInformation wantInfo = WantInformation.LoadWant(Convert.ToUInt32(textGUID.Text, 16));
 
                 // wantInfo.Name doesn't work :(
-                lblWantName.Text = wantInfo.XWant.NodeText;
+                WizardHelpers.SetName(lblWantName, toolTip, wantInfo.XWant.NodeText);
 #endif
             }
             catch (Exception)
             {
-                lblWantName.Text = textGUID.Text;
+                WizardHelpers.SetName(lblWantName, toolTip, textGUID.Text);
             }
         }
 

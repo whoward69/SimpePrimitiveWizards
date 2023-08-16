@@ -81,7 +81,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             textGraspAnim.TextChanged += new System.EventHandler(OnAnimsChanged);
             textObjectAnim.TextChanged += new System.EventHandler(OnAnimsChanged);
 
-            UpdateScriptNames();
+            UpdateAnimNames();
             UpdatePanelState();
         }
 
@@ -156,20 +156,19 @@ namespace whse.PrimitiveWizards.Wiz0x0074
                     this.internalchg = true;
 
                     WizardHelpers.SetValue(textAnim, strIndex, checkDecimal);
-                    UpdateScriptNames();
+                    UpdateAnimNames();
 
                     this.internalchg = internalchg;
                 }
             }
         }
 
-        private void UpdateScriptNames()
+        private void UpdateAnimNames()
         {
-            // TODO - if (panelMain.Visible)
             try
             {
-                lblGraspAnimName.Text = checkGraspAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.AdultAnims, (ushort)(doGraspAnim.Value), -1, pjse.Detail.ErrorNames) : "";
-                lblObjectAnimName.Text = checkObjectAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.ObjectAnims, (ushort)(doObjectAnim.Value), -1, pjse.Detail.ErrorNames) : "";
+                WizardHelpers.SetName(lblGraspAnimName, toolTip, checkGraspAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.AdultAnims, (ushort)(doGraspAnim.Value), -1, pjse.Detail.ErrorNames) : "");
+                WizardHelpers.SetName(lblObjectAnimName, toolTip, checkObjectAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.ObjectAnims, (ushort)(doObjectAnim.Value), -1, pjse.Detail.ErrorNames) : "");
             }
             catch (Exception)
             {
@@ -182,13 +181,13 @@ namespace whse.PrimitiveWizards.Wiz0x0074
 
             lblSlot.Visible = comboSlot.Visible = slotVisible;
 
-            textSlot.Visible = slotVisible && (comboSlot.SelectedIndex == 0);
+            panelSlot.Visible = slotVisible && (comboSlot.SelectedIndex == 0);
 
             panelObject.Visible = (comboAction.SelectedIndex != 2);
 
-            btnGraspAnim.Visible = textGraspAnim.Visible = lblGraspAnimName.Visible = checkGraspAnim.Checked;
+            panelGraspAnim.Visible = checkGraspAnim.Checked;
 
-            btnObjectAnim.Visible = textObjectAnim.Visible = lblObjectAnimName.Visible = checkObjectAnim.Checked;
+            panelObjectAnim.Visible = checkObjectAnim.Checked;
         }
 
         private void OnControlChanged(object sender, EventArgs e)
@@ -202,7 +201,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
         {
             if (internalchg) return;
 
-            UpdateScriptNames();
+            UpdateAnimNames();
         }
 
         private void OnGraspAnimClicked(object sender, EventArgs e)

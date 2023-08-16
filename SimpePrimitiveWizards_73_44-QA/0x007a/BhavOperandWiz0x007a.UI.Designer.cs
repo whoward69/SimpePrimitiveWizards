@@ -76,10 +76,12 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.checkDecimal = new System.Windows.Forms.CheckBox();
             this.checkAttrPicker = new System.Windows.Forms.CheckBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.panelTickCount = new System.Windows.Forms.Panel();
             this.panelMain.SuspendLayout();
             this.panelStartModify.SuspendLayout();
             this.panelParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
+            this.panelTickCount.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -97,11 +99,11 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             // 
             // panelStartModify
             // 
+            this.panelStartModify.Controls.Add(this.panelTickCount);
             this.panelStartModify.Controls.Add(this.comboTickCount);
             this.panelStartModify.Controls.Add(this.lblReset);
             this.panelStartModify.Controls.Add(this.checkReset);
             this.panelStartModify.Controls.Add(this.lblLooping);
-            this.panelStartModify.Controls.Add(this.textTickCount);
             this.panelStartModify.Controls.Add(this.lblTickCount);
             this.panelStartModify.Controls.Add(this.checkLooping);
             this.panelStartModify.Controls.Add(this.comboEventTreeScope);
@@ -159,7 +161,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             // 
             // textTickCount
             // 
-            this.textTickCount.Location = new System.Drawing.Point(196, 0);
+            this.textTickCount.Location = new System.Drawing.Point(0, 0);
             this.textTickCount.Name = "textTickCount";
             this.textTickCount.Size = new System.Drawing.Size(60, 20);
             this.textTickCount.TabIndex = 1;
@@ -431,6 +433,14 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.checkAttrPicker.Text = "use Attribute picker";
             this.checkAttrPicker.UseVisualStyleBackColor = true;
             // 
+            // panelTickCount
+            // 
+            this.panelTickCount.Controls.Add(this.textTickCount);
+            this.panelTickCount.Location = new System.Drawing.Point(196, 0);
+            this.panelTickCount.Name = "panelTickCount";
+            this.panelTickCount.Size = new System.Drawing.Size(240, 21);
+            this.panelTickCount.TabIndex = 52;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +455,8 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.panelParameters.ResumeLayout(false);
             this.panelParameters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
+            this.panelTickCount.ResumeLayout(false);
+            this.panelTickCount.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -486,5 +498,6 @@ namespace whse.PrimitiveWizards.Wiz0x007a
         private System.Windows.Forms.CheckBox checkLooping;
         private System.Windows.Forms.Label lblLooping;
         private System.Windows.Forms.Panel panelStartModify;
+        private System.Windows.Forms.Panel panelTickCount;
     }
 }

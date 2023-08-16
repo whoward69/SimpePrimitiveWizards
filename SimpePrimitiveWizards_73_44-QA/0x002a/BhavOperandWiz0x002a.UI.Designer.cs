@@ -184,6 +184,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkCopyMaterials.Name = "checkCopyMaterials";
             this.checkCopyMaterials.Size = new System.Drawing.Size(15, 14);
             this.checkCopyMaterials.TabIndex = 6;
+            this.toolTip.SetToolTip(this.checkCopyMaterials, "Copy materials from object in Temp 5");
             this.checkCopyMaterials.UseVisualStyleBackColor = true;
             // 
             // checkMoveInSim
@@ -193,6 +194,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkMoveInSim.Name = "checkMoveInSim";
             this.checkMoveInSim.Size = new System.Drawing.Size(15, 14);
             this.checkMoveInSim.TabIndex = 8;
+            this.toolTip.SetToolTip(this.checkMoveInSim, "Move in a new Sim");
             this.checkMoveInSim.UseVisualStyleBackColor = true;
             // 
             // textLocal
@@ -218,6 +220,7 @@ namespace whse.PrimitiveWizards.Wiz0x002a
             this.checkFailIfTileNonEmpty.Name = "checkFailIfTileNonEmpty";
             this.checkFailIfTileNonEmpty.Size = new System.Drawing.Size(15, 14);
             this.checkFailIfTileNonEmpty.TabIndex = 7;
+            this.toolTip.SetToolTip(this.checkFailIfTileNonEmpty, "Fail if tile isn\'t empty");
             this.checkFailIfTileNonEmpty.UseVisualStyleBackColor = true;
             // 
             // comboCreateHow

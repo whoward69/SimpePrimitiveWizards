@@ -161,7 +161,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
         {
             try
             {
-                lblSoundName.Text = comboSoundScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboSoundScope.SelectedIndex], pjse.GS.GlobalStr.Sound, doSound.Value, -1, pjse.Detail.ErrorNames);
+                WizardHelpers.SetName(lblSoundName, toolTip, comboSoundScope.SelectedIndex < 0 ? "" : ((pjse.BhavWiz)inst).readStr(scopeArray[comboSoundScope.SelectedIndex], pjse.GS.GlobalStr.Sound, doSound.Value, -1, pjse.Detail.ErrorNames));
             }
             catch (Exception)
             {
@@ -179,7 +179,7 @@ namespace whse.PrimitiveWizards.Wiz0x0017
             UpdateSoundName();
         }
 
-        private void OnScriptPickerClicked(object sender, EventArgs e)
+        private void OnSoundPickerClicked(object sender, EventArgs e)
         {
             ShowStrChooser();
         }
