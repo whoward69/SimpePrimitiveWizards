@@ -150,7 +150,7 @@ namespace whse.PrimitiveWizards.Wiz0x007a
 
             panelTickCount.Visible = (comboTickCount.SelectedIndex == 0);
 
-            checkReset.Visible = (comboAction.SelectedIndex == 1);
+            lblReset.Visible = checkReset.Visible = (comboAction.SelectedIndex == 1);
 
             panelParameters.Visible = (comboParamType.SelectedIndex == 1);
         }

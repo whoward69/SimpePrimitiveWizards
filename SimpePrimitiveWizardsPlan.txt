@@ -1,7 +1,8 @@
 Total Primitives:	60
 PJSE Wizards:		16 (27%)
-WHSE Wizards:		24 (40%)
-Total Wizards:		40 (67%)
+WHSE Wizards:		27 (45%)
+Total Wizards:		43 (72%)
+
 
 Primitives by frequency in UC objects.package
 ---------------------------------------------
@@ -10,9 +11,6 @@ Primitives by frequency in UC objects.package
 0x22	UI Effect						812	
 0x6E	Look At							655		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x006E.html
 0x31	Notify SO Out Of Idle			511		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x0031.html
-0x14	Run Functional Tree				227		https://modthesims.info/wiki.php?title=0x0014
-0x0E	Find Best Object For Function	201		https://modthesims.info/wiki.php?title=0x000E
-0x11	Idle For Input					186		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x0011.html
 0x19	Alter Budget					133		https://modthesims.info/wiki.php?title=0x0019
 0x13	Make New Character				51	
 0x7B	Cinematic						30	
@@ -27,14 +25,12 @@ Primitives by frequency in UC objects.package
 0x73	Debug							N/A
 
 
-Primitives WITHOUT Wizards WITH Operand Table (9)
+Primitives WITHOUT Wizards WITH Operand Table (6)
 =============================================
-	0x000E	Find Best Object for Function	[combo, doc, check x6]
 	0x0010	Find Location For					(complex)
-	0x0011	Idle for Input					[int, check, combo]
-	0x0014	Run Functional Tree				[combo, check x3]
 	0x0019	Alter Budget						(better to use globals / WH_MoneyGlobals)
-	0x001A	Relationship						(complex, two node versions)
+	0x001A	Relationship					version 0x00 [nv, combo, {combo}, combo, check, check, {}, doc] - NOTE: Should be using version 0x01
+											version 0x01 [nv, combo, {doc, doc}, combo, check, check, {check}, doc]
 	0x0031	Notify SO out of Idle				(trivial)
 	0x006E	Look At								(complex, two node versions)
 	0x0075	Age									(rare & trivial)
@@ -55,7 +51,7 @@ Primitives WITHOUT Wizards WITHOUT Operand Table (11)
 	0x007D	Follow Sim
 
 
-Primitives WITH Wizards (40)
+Primitives WITH Wizards (43)
 =======================
 	0x0001	Generic Sims Call
 	0x0002	Expression
@@ -64,7 +60,10 @@ Primitives WITH Wizards (40)
 	0x000B	Distance
 	0x000C	Direction
 	0x000D	Push Interaction
+	0x000E	Find Best Object for Function
+	0x0011	Idle for Input
 	0x0012	Remove Object Instance
+	0x0014	Run Functional Tree
 	0x0016	Turn Body Towards
 	0x0017	Play / Stop Sound Event
 	0x001B	Go To Relative Position

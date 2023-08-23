@@ -43,11 +43,12 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelStartModify = new System.Windows.Forms.Panel();
+            this.panelTickCount = new System.Windows.Forms.Panel();
+            this.textTickCount = new System.Windows.Forms.TextBox();
             this.comboTickCount = new System.Windows.Forms.ComboBox();
             this.lblReset = new System.Windows.Forms.Label();
             this.checkReset = new System.Windows.Forms.CheckBox();
             this.lblLooping = new System.Windows.Forms.Label();
-            this.textTickCount = new System.Windows.Forms.TextBox();
             this.lblTickCount = new System.Windows.Forms.Label();
             this.checkLooping = new System.Windows.Forms.CheckBox();
             this.comboEventTreeScope = new System.Windows.Forms.ComboBox();
@@ -76,12 +77,11 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.checkDecimal = new System.Windows.Forms.CheckBox();
             this.checkAttrPicker = new System.Windows.Forms.CheckBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.panelTickCount = new System.Windows.Forms.Panel();
             this.panelMain.SuspendLayout();
             this.panelStartModify.SuspendLayout();
+            this.panelTickCount.SuspendLayout();
             this.panelParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
-            this.panelTickCount.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -118,6 +118,21 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.panelStartModify.Name = "panelStartModify";
             this.panelStartModify.Size = new System.Drawing.Size(440, 223);
             this.panelStartModify.TabIndex = 1;
+            // 
+            // panelTickCount
+            // 
+            this.panelTickCount.Controls.Add(this.textTickCount);
+            this.panelTickCount.Location = new System.Drawing.Point(196, 0);
+            this.panelTickCount.Name = "panelTickCount";
+            this.panelTickCount.Size = new System.Drawing.Size(240, 21);
+            this.panelTickCount.TabIndex = 52;
+            // 
+            // textTickCount
+            // 
+            this.textTickCount.Location = new System.Drawing.Point(0, 0);
+            this.textTickCount.Name = "textTickCount";
+            this.textTickCount.Size = new System.Drawing.Size(60, 20);
+            this.textTickCount.TabIndex = 1;
             // 
             // comboTickCount
             // 
@@ -158,13 +173,6 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.lblLooping.TabIndex = 49;
             this.lblLooping.Text = "Looping:";
             this.lblLooping.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textTickCount
-            // 
-            this.textTickCount.Location = new System.Drawing.Point(0, 0);
-            this.textTickCount.Name = "textTickCount";
-            this.textTickCount.Size = new System.Drawing.Size(60, 20);
-            this.textTickCount.TabIndex = 1;
             // 
             // lblTickCount
             // 
@@ -433,14 +441,6 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.checkAttrPicker.Text = "use Attribute picker";
             this.checkAttrPicker.UseVisualStyleBackColor = true;
             // 
-            // panelTickCount
-            // 
-            this.panelTickCount.Controls.Add(this.textTickCount);
-            this.panelTickCount.Location = new System.Drawing.Point(196, 0);
-            this.panelTickCount.Name = "panelTickCount";
-            this.panelTickCount.Size = new System.Drawing.Size(240, 21);
-            this.panelTickCount.TabIndex = 52;
-            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,11 +452,11 @@ namespace whse.PrimitiveWizards.Wiz0x007a
             this.panelMain.PerformLayout();
             this.panelStartModify.ResumeLayout(false);
             this.panelStartModify.PerformLayout();
+            this.panelTickCount.ResumeLayout(false);
+            this.panelTickCount.PerformLayout();
             this.panelParameters.ResumeLayout(false);
             this.panelParameters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
-            this.panelTickCount.ResumeLayout(false);
-            this.panelTickCount.PerformLayout();
             this.ResumeLayout(false);
 
         }
