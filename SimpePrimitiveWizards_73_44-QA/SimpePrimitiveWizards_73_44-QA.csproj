@@ -125,6 +125,13 @@
     <Compile Include="0x000e\BhavOperandWiz0x000e.UI.Designer.cs">
       <DependentUpon>BhavOperandWiz0x000e.UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="0x0010\BhavOperandWiz0x0010.cs" />
+    <Compile Include="0x0010\BhavOperandWiz0x0010.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x0010\BhavOperandWiz0x0010.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x0010.UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="0x0011\BhavOperandWiz0x0011.cs" />
     <Compile Include="0x0011\BhavOperandWiz0x0011.UI.cs">
       <SubType>UserControl</SubType>
@@ -159,6 +166,13 @@
     </Compile>
     <Compile Include="0x0017\BhavOperandWiz0x0017.UI.Designer.cs">
       <DependentUpon>BhavOperandWiz0x0017.UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0x001a\BhavOperandWiz0x001a.cs" />
+    <Compile Include="0x001a\BhavOperandWiz0x001a.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0x001a\BhavOperandWiz0x001a.UI.Designer.cs">
+      <DependentUpon>BhavOperandWiz0x001a.UI.cs</DependentUpon>
     </Compile>
     <Compile Include="0x001d\BhavOperandWiz0x001d.cs" />
     <Compile Include="0x001d\BhavOperandWiz0x001d.UI.cs">
@@ -300,6 +314,9 @@
     <EmbeddedResource Include="0x000e\BhavOperandWiz0x000e.UI.resx">
       <DependentUpon>BhavOperandWiz0x000e.UI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="0x0010\BhavOperandWiz0x0010.UI.resx">
+      <DependentUpon>BhavOperandWiz0x0010.UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0x0011\BhavOperandWiz0x0011.UI.resx">
       <DependentUpon>BhavOperandWiz0x0011.UI.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="0x0017\BhavOperandWiz0x0017.UI.resx">
       <DependentUpon>BhavOperandWiz0x0017.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0x001a\BhavOperandWiz0x001a.UI.resx">
+      <DependentUpon>BhavOperandWiz0x001a.UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="0x001d\BhavOperandWiz0x001d.UI.resx">
       <DependentUpon>BhavOperandWiz0x001d.UI.cs</DependentUpon>

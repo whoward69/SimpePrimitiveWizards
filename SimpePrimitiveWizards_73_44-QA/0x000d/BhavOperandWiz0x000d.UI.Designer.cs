@@ -44,9 +44,6 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelInteractNumber = new System.Windows.Forms.Panel();
             this.textInteractNumber = new System.Windows.Forms.TextBox();
-            this.panelObjectLocal = new System.Windows.Forms.Panel();
-            this.textObjectLocal = new System.Windows.Forms.TextBox();
-            this.comboObjectLocal = new System.Windows.Forms.ComboBox();
             this.panelObjectParam = new System.Windows.Forms.Panel();
             this.textObjectParam = new System.Windows.Forms.TextBox();
             this.comboObjectParam = new System.Windows.Forms.ComboBox();
@@ -92,10 +89,12 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelIconObject = new System.Windows.Forms.Panel();
             this.comboIconObject = new System.Windows.Forms.ComboBox();
             this.textIconObject = new System.Windows.Forms.TextBox();
+            this.panelObjectLocal = new System.Windows.Forms.Panel();
+            this.textObjectLocal = new System.Windows.Forms.TextBox();
+            this.comboObjectLocal = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMain.SuspendLayout();
             this.panelInteractNumber.SuspendLayout();
-            this.panelObjectLocal.SuspendLayout();
             this.panelObjectParam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).BeginInit();
             this.panelDataOwner1.SuspendLayout();
@@ -103,6 +102,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelDataOwner3.SuspendLayout();
             this.panelIconIndex.SuspendLayout();
             this.panelIconObject.SuspendLayout();
+            this.panelObjectLocal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -160,31 +160,6 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.textInteractNumber.Size = new System.Drawing.Size(60, 20);
             this.textInteractNumber.TabIndex = 3;
             // 
-            // panelObjectLocal
-            // 
-            this.panelObjectLocal.Controls.Add(this.textObjectLocal);
-            this.panelObjectLocal.Controls.Add(this.comboObjectLocal);
-            this.panelObjectLocal.Location = new System.Drawing.Point(196, 23);
-            this.panelObjectLocal.Name = "panelObjectLocal";
-            this.panelObjectLocal.Size = new System.Drawing.Size(244, 21);
-            this.panelObjectLocal.TabIndex = 5;
-            // 
-            // textObjectLocal
-            // 
-            this.textObjectLocal.Location = new System.Drawing.Point(0, 0);
-            this.textObjectLocal.Name = "textObjectLocal";
-            this.textObjectLocal.Size = new System.Drawing.Size(60, 20);
-            this.textObjectLocal.TabIndex = 26;
-            // 
-            // comboObjectLocal
-            // 
-            this.comboObjectLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboObjectLocal.FormattingEnabled = true;
-            this.comboObjectLocal.Location = new System.Drawing.Point(0, 0);
-            this.comboObjectLocal.Name = "comboObjectLocal";
-            this.comboObjectLocal.Size = new System.Drawing.Size(104, 21);
-            this.comboObjectLocal.TabIndex = 28;
-            // 
             // panelObjectParam
             // 
             this.panelObjectParam.Controls.Add(this.textObjectParam);
@@ -236,6 +211,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             // 
             // checkDecimal
             // 
+            this.checkDecimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDecimal.AutoSize = true;
             this.checkDecimal.Location = new System.Drawing.Point(136, 295);
             this.checkDecimal.Name = "checkDecimal";
@@ -246,6 +222,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             // 
             // checkAttrPicker
             // 
+            this.checkAttrPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkAttrPicker.AutoSize = true;
             this.checkAttrPicker.Location = new System.Drawing.Point(282, 295);
             this.checkAttrPicker.Name = "checkAttrPicker";
@@ -610,6 +587,31 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.textIconObject.Size = new System.Drawing.Size(60, 20);
             this.textIconObject.TabIndex = 8;
             // 
+            // panelObjectLocal
+            // 
+            this.panelObjectLocal.Controls.Add(this.textObjectLocal);
+            this.panelObjectLocal.Controls.Add(this.comboObjectLocal);
+            this.panelObjectLocal.Location = new System.Drawing.Point(196, 23);
+            this.panelObjectLocal.Name = "panelObjectLocal";
+            this.panelObjectLocal.Size = new System.Drawing.Size(244, 21);
+            this.panelObjectLocal.TabIndex = 5;
+            // 
+            // textObjectLocal
+            // 
+            this.textObjectLocal.Location = new System.Drawing.Point(0, 0);
+            this.textObjectLocal.Name = "textObjectLocal";
+            this.textObjectLocal.Size = new System.Drawing.Size(60, 20);
+            this.textObjectLocal.TabIndex = 26;
+            // 
+            // comboObjectLocal
+            // 
+            this.comboObjectLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboObjectLocal.FormattingEnabled = true;
+            this.comboObjectLocal.Location = new System.Drawing.Point(0, 0);
+            this.comboObjectLocal.Name = "comboObjectLocal";
+            this.comboObjectLocal.Size = new System.Drawing.Size(104, 21);
+            this.comboObjectLocal.TabIndex = 28;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,8 +623,6 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelMain.PerformLayout();
             this.panelInteractNumber.ResumeLayout(false);
             this.panelInteractNumber.PerformLayout();
-            this.panelObjectLocal.ResumeLayout(false);
-            this.panelObjectLocal.PerformLayout();
             this.panelObjectParam.ResumeLayout(false);
             this.panelObjectParam.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPnM)).EndInit();
@@ -636,6 +636,8 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.panelIconIndex.PerformLayout();
             this.panelIconObject.ResumeLayout(false);
             this.panelIconObject.PerformLayout();
+            this.panelObjectLocal.ResumeLayout(false);
+            this.panelObjectLocal.PerformLayout();
             this.ResumeLayout(false);
 
         }
