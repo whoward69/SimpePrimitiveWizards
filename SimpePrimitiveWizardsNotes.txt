@@ -78,15 +78,19 @@ Actions
 
 c:
 cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_72_01\PjseCoderPlugin"
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.plugin.dll_ORIGINAL /OUT=pjse.coder.plugin.il
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" ..\pjse.coder.plugin.dll /OUT=pjse.coder.plugin.il
 
 c:
 cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_73_44-QA\PjseCoderPlugin"
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.plugin.dll_ORIGINAL /OUT=pjse.coder.plugin.il
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" ..\pjse.coder.plugin.dll /OUT=pjse.coder.plugin.il
 
 c:
 cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_77_69\PjseCoder"
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" pjse.coder.dll_ORIGINAL /OUT=pjse.coder.il
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" ..\pjse.coder.dll /OUT=pjse.coder.il
+
+c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_77_69_9\PjseCoder"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" ..\pjse.coder.dll /OUT=pjse.coder.il
 
 
 3) At the very top of the pjse.coder.plugin.il file, add a reference to the new whse.primitivewizards.dll
@@ -139,6 +143,10 @@ cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\Sim
 
 c:
 cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_77_69\PjseCoder"
+"C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" pjse.coder.il /RESOURCE=pjse.coder.res /DLL
+
+c:
+cd "\Users\whowa\Documents\Visual Studio 2022\Projects\SimpePrimitiveWizards\SimPe_0_77_69_9\PjseCoder"
 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" pjse.coder.il /RESOURCE=pjse.coder.res /DLL
 
 8) Copy the whse.primitivewizards.dll into the Plugins sub-directory
