@@ -154,7 +154,7 @@ namespace whse.PrimitiveWizards.Wiz0x0070
 
                 wrapper.ProcessData(entryArray[0].PFD, entryArray[0].Package);
 
-                ushort strIndex = (ushort)new pjse.StrChooser(true).Strnum(wrapper);
+                int strIndex = new pjse.StrChooser(true).Strnum(wrapper);
 
                 if (strIndex >= 0)
                 {

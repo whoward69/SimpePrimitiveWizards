@@ -156,14 +156,14 @@ namespace whse.PrimitiveWizards.Wiz0x006c
 
                 wrapper.ProcessData(entryArray[0].PFD, entryArray[0].Package);
 
-                ushort strIndex = (ushort)new pjse.StrChooser(true).Strnum(wrapper);
+                int strIndex = new pjse.StrChooser(true).Strnum(wrapper);
 
                 if (strIndex >= 0)
                 {
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    WizardHelpers.SetValue(textAnimEntryLiteral, strIndex, checkDecimal);
+                    WizardHelpers.SetValue(textAnimEntryLiteral, (ushort)strIndex, checkDecimal);
                     UpdateAnimationNames();
 
                     this.internalchg = internalchg;

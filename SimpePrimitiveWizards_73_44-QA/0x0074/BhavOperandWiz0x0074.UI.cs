@@ -66,6 +66,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
 
             checkHandedness.Checked = boolset9[OperandConstants.Bit2];
             checkUseSimAge.Checked = boolset9[OperandConstants.Bit3];
+            checkReachAnims.Checked = boolset9[OperandConstants.Bit4];
 
             WizardHelpers.ComboSelectIndex(comboAction, reserved1[OperandConstants.Operand10]);
 
@@ -102,6 +103,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
                 boolset9[OperandConstants.Bit1] = (comboSlot.SelectedIndex == 1);
                 boolset9[OperandConstants.Bit2] = checkHandedness.Checked;
                 boolset9[OperandConstants.Bit3] = checkUseSimAge.Checked;
+                boolset9[OperandConstants.Bit4] = checkReachAnims.Checked;
                 reserved1[OperandConstants.Operand9] = boolset9;
 
                 reserved1[OperandConstants.Operand10] = (byte)comboAction.SelectedIndex;
@@ -148,14 +150,14 @@ namespace whse.PrimitiveWizards.Wiz0x0074
 
                 wrapper.ProcessData(entryArray[0].PFD, entryArray[0].Package);
 
-                ushort strIndex = (ushort)new pjse.StrChooser(true).Strnum(wrapper);
+                int strIndex = new pjse.StrChooser(true).Strnum(wrapper);
 
                 if (strIndex >= 0)
                 {
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    WizardHelpers.SetValue(textAnim, strIndex, checkDecimal);
+                    WizardHelpers.SetValue(textAnim, (ushort)strIndex, checkDecimal);
                     UpdateAnimNames();
 
                     this.internalchg = internalchg;
@@ -167,7 +169,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
         {
             try
             {
-                WizardHelpers.SetName(lblGraspAnimName, toolTip, checkGraspAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.AdultAnims, (ushort)(doGraspAnim.Value), -1, pjse.Detail.ErrorNames) : "");
+                WizardHelpers.SetName(lblGraspAnimName, toolTip, checkGraspAnim.Checked ? ((pjse.BhavWiz)inst).readStr(checkReachAnims.Checked? pjse.GS.GlobalStr.ReachAnims : pjse.GS.GlobalStr.AdultAnims, (ushort)(doGraspAnim.Value), -1, pjse.Detail.ErrorNames) : "");
                 WizardHelpers.SetName(lblObjectAnimName, toolTip, checkObjectAnim.Checked ? ((pjse.BhavWiz)inst).readStr(pjse.GS.GlobalStr.ObjectAnims, (ushort)(doObjectAnim.Value), -1, pjse.Detail.ErrorNames) : "");
             }
             catch (Exception)
@@ -206,7 +208,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
 
         private void OnGraspAnimClicked(object sender, EventArgs e)
         {
-            ShowStrChooser(pjse.GS.GlobalStr.AdultAnims, textGraspAnim);
+            ShowStrChooser(checkReachAnims.Checked ? pjse.GS.GlobalStr.ReachAnims : pjse.GS.GlobalStr.AdultAnims, textGraspAnim);
         }
 
         private void OnObjectAnimClicked(object sender, EventArgs e)

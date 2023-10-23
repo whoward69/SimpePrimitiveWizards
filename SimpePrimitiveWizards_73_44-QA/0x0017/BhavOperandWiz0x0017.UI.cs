@@ -142,14 +142,14 @@ namespace whse.PrimitiveWizards.Wiz0x0017
 
                 wrapper.ProcessData(entryArray[0].PFD, entryArray[0].Package);
 
-                ushort strIndex = (ushort)new pjse.StrChooser(true).Strnum(wrapper);
+                int strIndex = new pjse.StrChooser(true).Strnum(wrapper);
 
                 if (strIndex >= 0)
                 {
                     bool internalchg = this.internalchg;
                     this.internalchg = true;
 
-                    WizardHelpers.SetValue(textSoundEntry, strIndex, checkDecimal);
+                    WizardHelpers.SetValue(textSoundEntry, (ushort)strIndex, checkDecimal);
                     UpdateSoundName();
 
                     this.internalchg = internalchg;

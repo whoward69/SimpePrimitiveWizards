@@ -42,6 +42,8 @@ namespace whse.PrimitiveWizards.Wiz0x0074
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.lblReachAnims = new System.Windows.Forms.Label();
+            this.checkReachAnims = new System.Windows.Forms.CheckBox();
             this.panelObjectAnim = new System.Windows.Forms.Panel();
             this.textObjectAnim = new System.Windows.Forms.TextBox();
             this.btnObjectAnim = new System.Windows.Forms.Button();
@@ -52,7 +54,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.lblGraspAnimName = new System.Windows.Forms.Label();
             this.panelSlot = new System.Windows.Forms.Panel();
             this.textSlot = new System.Windows.Forms.TextBox();
-            this.blHandedness = new System.Windows.Forms.Label();
+            this.lblHandedness = new System.Windows.Forms.Label();
             this.lblUseSimAge = new System.Windows.Forms.Label();
             this.comboSlot = new System.Windows.Forms.ComboBox();
             this.lblSlot = new System.Windows.Forms.Label();
@@ -83,10 +85,12 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.lblReachAnims);
+            this.panelMain.Controls.Add(this.checkReachAnims);
             this.panelMain.Controls.Add(this.panelObjectAnim);
             this.panelMain.Controls.Add(this.panelGraspAnim);
             this.panelMain.Controls.Add(this.panelSlot);
-            this.panelMain.Controls.Add(this.blHandedness);
+            this.panelMain.Controls.Add(this.lblHandedness);
             this.panelMain.Controls.Add(this.lblUseSimAge);
             this.panelMain.Controls.Add(this.comboSlot);
             this.panelMain.Controls.Add(this.lblSlot);
@@ -104,8 +108,30 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.panelMain.Controls.Add(this.panelObject);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(440, 245);
+            this.panelMain.Size = new System.Drawing.Size(440, 260);
             this.panelMain.TabIndex = 0;
+            // 
+            // lblReachAnims
+            // 
+            this.lblReachAnims.Location = new System.Drawing.Point(5, 232);
+            this.lblReachAnims.Name = "lblReachAnims";
+            this.lblReachAnims.Size = new System.Drawing.Size(95, 13);
+            this.lblReachAnims.TabIndex = 64;
+            this.lblReachAnims.Text = "Use Reach Anims:";
+            this.lblReachAnims.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblReachAnims, "See https://www.picknmixmods.com/Sims2/Notes/ReachPutOp9Bit4/ReachPutOp9Bit4.html" +
+        "");
+            // 
+            // checkReachAnims
+            // 
+            this.checkReachAnims.AutoSize = true;
+            this.checkReachAnims.Location = new System.Drawing.Point(100, 232);
+            this.checkReachAnims.Name = "checkReachAnims";
+            this.checkReachAnims.Size = new System.Drawing.Size(15, 14);
+            this.checkReachAnims.TabIndex = 63;
+            this.toolTip.SetToolTip(this.checkReachAnims, "Handedness in Temp 3");
+            this.checkReachAnims.UseVisualStyleBackColor = true;
+            this.checkReachAnims.CheckedChanged += new System.EventHandler(this.OnAnimsChanged);
             // 
             // panelObjectAnim
             // 
@@ -196,15 +222,15 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.textSlot.Size = new System.Drawing.Size(50, 20);
             this.textSlot.TabIndex = 3;
             // 
-            // blHandedness
+            // lblHandedness
             // 
-            this.blHandedness.Location = new System.Drawing.Point(5, 210);
-            this.blHandedness.Name = "blHandedness";
-            this.blHandedness.Size = new System.Drawing.Size(95, 13);
-            this.blHandedness.TabIndex = 59;
-            this.blHandedness.Text = "Handed in T3:";
-            this.blHandedness.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip.SetToolTip(this.blHandedness, "Handedness in Temp 3");
+            this.lblHandedness.Location = new System.Drawing.Point(5, 210);
+            this.lblHandedness.Name = "lblHandedness";
+            this.lblHandedness.Size = new System.Drawing.Size(95, 13);
+            this.lblHandedness.TabIndex = 59;
+            this.lblHandedness.Text = "Handed in T3:";
+            this.lblHandedness.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblHandedness, "Handedness in Temp 3");
             // 
             // lblUseSimAge
             // 
@@ -322,7 +348,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             this.iconPnM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPnM.Image = global::whse.PrimitiveWizards.Properties.Resources.MinionWithNotebook;
-            this.iconPnM.Location = new System.Drawing.Point(405, 210);
+            this.iconPnM.Location = new System.Drawing.Point(405, 225);
             this.iconPnM.Name = "iconPnM";
             this.iconPnM.Size = new System.Drawing.Size(32, 32);
             this.iconPnM.TabIndex = 17;
@@ -333,7 +359,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             this.checkDecimal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDecimal.AutoSize = true;
-            this.checkDecimal.Location = new System.Drawing.Point(136, 225);
+            this.checkDecimal.Location = new System.Drawing.Point(136, 240);
             this.checkDecimal.Name = "checkDecimal";
             this.checkDecimal.Size = new System.Drawing.Size(140, 17);
             this.checkDecimal.TabIndex = 12;
@@ -344,7 +370,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             // 
             this.checkAttrPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkAttrPicker.AutoSize = true;
-            this.checkAttrPicker.Location = new System.Drawing.Point(282, 225);
+            this.checkAttrPicker.Location = new System.Drawing.Point(282, 240);
             this.checkAttrPicker.Name = "checkAttrPicker";
             this.checkAttrPicker.Size = new System.Drawing.Size(117, 17);
             this.checkAttrPicker.TabIndex = 13;
@@ -402,7 +428,7 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
             this.Name = "UI";
-            this.Size = new System.Drawing.Size(440, 245);
+            this.Size = new System.Drawing.Size(440, 260);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelObjectAnim.ResumeLayout(false);
@@ -447,10 +473,12 @@ namespace whse.PrimitiveWizards.Wiz0x0074
         private System.Windows.Forms.Button btnObjectAnim;
         private System.Windows.Forms.Label lblObjectAnimName;
         private System.Windows.Forms.Label lblGraspAnimName;
-        private System.Windows.Forms.Label blHandedness;
+        private System.Windows.Forms.Label lblHandedness;
         private System.Windows.Forms.Label lblUseSimAge;
         private System.Windows.Forms.Panel panelSlot;
         private System.Windows.Forms.Panel panelObjectAnim;
         private System.Windows.Forms.Panel panelGraspAnim;
+        private System.Windows.Forms.Label lblReachAnims;
+        private System.Windows.Forms.CheckBox checkReachAnims;
     }
 }
