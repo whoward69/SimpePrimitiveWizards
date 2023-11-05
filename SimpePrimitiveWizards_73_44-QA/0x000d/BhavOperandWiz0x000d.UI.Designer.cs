@@ -93,6 +93,8 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.textObjectLocal = new System.Windows.Forms.TextBox();
             this.comboObjectLocal = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.lblContinuation = new System.Windows.Forms.Label();
+            this.checkContinuation = new System.Windows.Forms.CheckBox();
             this.panelMain.SuspendLayout();
             this.panelInteractNumber.SuspendLayout();
             this.panelObjectParam.SuspendLayout();
@@ -107,6 +109,8 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.lblContinuation);
+            this.panelMain.Controls.Add(this.checkContinuation);
             this.panelMain.Controls.Add(this.panelInteractNumber);
             this.panelMain.Controls.Add(this.panelObjectParam);
             this.panelMain.Controls.Add(this.comboObjectType);
@@ -612,6 +616,26 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             this.comboObjectLocal.Size = new System.Drawing.Size(104, 21);
             this.comboObjectLocal.TabIndex = 28;
             // 
+            // lblContinuation
+            // 
+            this.lblContinuation.Location = new System.Drawing.Point(285, 185);
+            this.lblContinuation.Name = "lblContinuation";
+            this.lblContinuation.Size = new System.Drawing.Size(130, 13);
+            this.lblContinuation.TabIndex = 32;
+            this.lblContinuation.Text = "Continuation:";
+            this.lblContinuation.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.lblContinuation, "See https://www.picknmixmods.com/Sims2/Notes/PushIntOp3Bit3/PushIntOp3Bit3.html");
+            // 
+            // checkContinuation
+            // 
+            this.checkContinuation.AutoSize = true;
+            this.checkContinuation.Location = new System.Drawing.Point(415, 185);
+            this.checkContinuation.Name = "checkContinuation";
+            this.checkContinuation.Size = new System.Drawing.Size(15, 14);
+            this.checkContinuation.TabIndex = 31;
+            this.toolTip.SetToolTip(this.checkContinuation, "See https://www.picknmixmods.com/Sims2/Notes/PushIntOp3Bit3/PushIntOp3Bit3.html");
+            this.checkContinuation.UseVisualStyleBackColor = true;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,5 +720,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
         private System.Windows.Forms.Panel panelIconObject;
         private System.Windows.Forms.Panel panelInteractNumber;
         private System.Windows.Forms.Panel panelIconIndex;
+        private System.Windows.Forms.Label lblContinuation;
+        private System.Windows.Forms.CheckBox checkContinuation;
     }
 }

@@ -8,7 +8,6 @@ Primitives by frequency in UC objects.package
 ---------------------------------------------
 0x22	UI Effect						812	
 0x6E	Look At							655		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x006E.html
-0x31	Notify SO Out Of Idle			511		https://www.picknmixmods.com/Sims2/Notes/Primitives/0x0031.html
 0x19	Alter Budget					133		https://modthesims.info/wiki.php?title=0x0019
 0x13	Make New Character				51	
 0x7B	Cinematic						30	
@@ -20,33 +19,34 @@ Primitives by frequency in UC objects.package
 0x7D	Follow Sim						1
 0x00	Sleep							N/A
 0x0F	Break Point						N/A
+0x31	Notify SO Out Of Idle			N/A
 0x73	Debug							N/A
 
 
 Primitives WITHOUT Wizards WITH Operand Table (4)
 =============================================
 	0x0019	Alter Budget						(better to use globals / WH_MoneyGlobals)
-	0x0031	Notify SO out of Idle				(trivial)
+	0x0031	Notify SO out of Idle				(trivial - has no operands!)
 	0x006E	Look At								(complex, two node versions)
 	0x0075	Age									(rare & trivial)
 
 
 Primitives WITHOUT Wizards WITHOUT Operand Table (11)
 ================================================
-	0x0000	Sleep
+	0x0000	Sleep								(use globals, don't use in code)
 	0x0003	Find Best Interaction
-	0x000F	Break Point
+	0x000F	Break Point							(debug feature)
 	0x0013	Make New Character
 	0x001E	Gosub Found Action
 	0x0021	Find 5 Worst Motives
 	0x0022	UI Effect
 	0x0025	Test Sim Interacting With
-	0x0073	Debug
+	0x0073	Debug								(debug feature)
 	0x007B	Cinematic
 	0x007D	Follow Sim
 
 
-Primitives WITH Wizards (44)
+Primitives WITH Wizards (45)
 =======================
 	0x0001	Generic Sims Call
 	0x0002	Expression

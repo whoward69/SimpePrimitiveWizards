@@ -12,7 +12,9 @@
 
 using pjse.BhavOperandWizards;
 using SimPe.PackedFiles.Wrapper;
+#if !SIMPE_77_69
 using SimPe.Plugin;
+#endif
 using System;
 using System.ComponentModel;
 #if SIMPE_77_69
@@ -36,13 +38,25 @@ namespace whse.PrimitiveWizards.Wiz0x007c
         private bool internalchg;
 
 #if SIMPE_77_69
-        private static readonly Assembly wantAssembly = Assembly.LoadFrom("Plugins\\simpe.ngbh.plugin.dll");
-        private readonly Type wantInfoType = wantAssembly?.GetType("SimPe.Plugin.WantInformation");
+        private readonly Assembly wantAssembly = null;
+        private readonly Type wantInfoType = null;
 #endif
 
         public UI()
         {
             InitializeComponent();
+
+#if SIMPE_77_69
+            try
+            {
+                wantAssembly = Assembly.LoadFrom("Plugins\\simpe.ngbh.plugin.dll");
+                wantInfoType = wantAssembly?.GetType("SimPe.Plugin.WantInformation");
+            }
+            catch
+            {
+                wantInfoType = null;
+            }
+#endif
         }
 
         public Panel WizPanel => this.panelMain;
@@ -141,13 +155,22 @@ namespace whse.PrimitiveWizards.Wiz0x007c
             try
             {
 #if SIMPE_77_69
-                object wantInfo = wantInfoType.GetMethod("LoadWant").Invoke(null, new object[] { Convert.ToUInt32(textGUID.Text, 16) });
+                if (wantInfoType != null)
+                {
+                    try
+                    {
+                        object wantInfo = wantInfoType.GetMethod("LoadWant").Invoke(null, new object[] { Convert.ToUInt32(textGUID.Text, 16) });
 
-                // wantInfo.Name doesn't work :(
-                object xWant = wantInfo.GetType().GetProperty("XWant").GetValue(wantInfo, null);
-                object nodeText = xWant.GetType().GetProperty("NodeText").GetValue(xWant, null);
+                        // wantInfo.Name doesn't work :(
+                        object xWant = wantInfo.GetType().GetProperty("XWant").GetValue(wantInfo, null);
+                        object nodeText = xWant.GetType().GetProperty("NodeText").GetValue(xWant, null);
 
-                WizardHelpers.SetName(lblWantName, toolTip, nodeText.ToString());
+                        WizardHelpers.SetName(lblWantName, toolTip, nodeText.ToString());
+                    }
+                    catch
+                    {
+                    }
+                }
 #else
                 WantInformation wantInfo = WantInformation.LoadWant(Convert.ToUInt32(textGUID.Text, 16));
 

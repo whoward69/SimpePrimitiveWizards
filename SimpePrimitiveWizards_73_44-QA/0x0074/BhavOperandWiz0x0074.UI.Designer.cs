@@ -129,7 +129,8 @@ namespace whse.PrimitiveWizards.Wiz0x0074
             this.checkReachAnims.Name = "checkReachAnims";
             this.checkReachAnims.Size = new System.Drawing.Size(15, 14);
             this.checkReachAnims.TabIndex = 63;
-            this.toolTip.SetToolTip(this.checkReachAnims, "Handedness in Temp 3");
+            this.toolTip.SetToolTip(this.checkReachAnims, "See https://www.picknmixmods.com/Sims2/Notes/ReachPutOp9Bit4/ReachPutOp9Bit4.html" +
+        "");
             this.checkReachAnims.UseVisualStyleBackColor = true;
             this.checkReachAnims.CheckedChanged += new System.EventHandler(this.OnAnimsChanged);
             // 

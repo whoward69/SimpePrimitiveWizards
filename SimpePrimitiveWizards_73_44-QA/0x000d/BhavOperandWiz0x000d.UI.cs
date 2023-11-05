@@ -66,6 +66,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
             doIconIndex = WizardHelpers.CreateDataControl(inst, textIconIndex, checkDecimal, reserved1[OperandConstants.Operand15]);
 
             checkCallerParams.Checked = boolset14[OperandConstants.Bit1];
+            checkContinuation.Checked = boolset3[OperandConstants.Bit3];
             checkUseName.Checked = boolset3[OperandConstants.Bit4];
             checkRunCheckTree.Checked = boolset3[OperandConstants.Bit6];
 
@@ -96,7 +97,7 @@ namespace whse.PrimitiveWizards.Wiz0x000d
                 Boolset boolset3 = new Boolset(operands[OperandConstants.Operand3]);
                 boolset3[OperandConstants.Bit1] = (comboIconType.SelectedIndex == 1);
                 boolset3[OperandConstants.Bit2] = (comboObjectType.SelectedIndex == 1);
-                // Bit 3 is unused
+                boolset3[OperandConstants.Bit3] = checkContinuation.Checked;
                 boolset3[OperandConstants.Bit4] = checkUseName.Checked;
                 boolset3[OperandConstants.Bit5] = (comboInteractNumber.SelectedIndex == 1);
                 boolset3[OperandConstants.Bit6] = checkRunCheckTree.Checked;
